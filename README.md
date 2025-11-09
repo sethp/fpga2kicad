@@ -13,9 +13,10 @@ curl -vfsLO https://www.xilinx.com/support/packagefiles/zuppackages/zupall.zip
 unzip zupall.zip
 ```
 
-Step 2: Pick your favorite csv and run it through the tool:
+Step 2: Pick your favorite pinout csv and run it through the tool:
 
 ```
-<zupall/xczu9egffvb1156pkg.csv uv run fpga2kicad.py
+<zupall/xczu9egffvb1156pkg.csv uv run fpga2kicad.py >kipart.csv
+uvx kipart kipart.csv -o FPGA.kicad_sym
 ```
 

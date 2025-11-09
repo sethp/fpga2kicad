@@ -1,2 +1,5 @@
 zupall.zip
 zupall/
+*.kicad*
+*.csv
+sym-lib-table
