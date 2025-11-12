@@ -2,21 +2,49 @@
 # requires-python = ">=3.13"
 # dependencies = [
 #     "kipart",
+#     "more-itertools",
 # ]
 # ///
 
 import csv
 
 from dataclasses import dataclass
+import functools
+from more_itertools import partition
+from itertools import groupby
 
 import os
 
-# @dataclass
-# class
+@functools.total_ordering
+@dataclass
+class Loc:
+    loc: str # e.g. A1 or AD15
+
+    def __eq__(self, o):
+        # NB: 'a1' != 'A1'
+        return self.loc == o.loc
+
+    def __lt__(self, o):
+        # A1 < B1 < B2 < B12 < AA1
+        def split(loc: str):
+            n = 0
+            while not loc[n].isdigit():
+                n += 1
+            return loc[:n], loc[n:]
+
+        sla, sln = split(self.loc)
+        ola, oln = split(o.loc)
+
+        return (len(sla), sla, int(sln)) < (len(ola), ola, int(oln))
+
+    def __str__(self):
+        return self.loc
+
+
 
 @dataclass
 class UsrIOPin:
-    loc: str # e.g. A1 or AD15
+    loc: Loc
     name: str
 
     iotype: str # e.g. HP or HD
@@ -24,19 +52,19 @@ class UsrIOPin:
 
 @dataclass
 class PowerPin:
-    loc: str # e.g. A1 or AD15
+    loc: Loc
     name: str
 
 @dataclass
 class UnknownPin:
-    loc: str # e.g. A1 or AD15
+    loc: Loc
     name: str
 
     fields: [str]
 
 @dataclass
 class GigXcvrPin:
-    loc: str # e.g. A1 or AD15
+    loc: Loc
     name: str
 
     iotype: str # e.g. GTH or GTY
@@ -44,7 +72,7 @@ class GigXcvrPin:
 
 @dataclass
 class MIOPin:
-    loc: str # e.g. A1 or AD15
+    loc: Loc
     name: str
 
     iotype: str # e.g. PSMIO or ... ?
@@ -53,7 +81,7 @@ class MIOPin:
 # TODO these are kind of magical; what are they really?
 @dataclass
 class ConfigPin:
-    loc: str # e.g. A1 or AD15
+    loc: Loc
     name: str
 
     iotype: str
@@ -61,7 +89,7 @@ class ConfigPin:
 
 @dataclass
 class DDRPin:
-    loc: str # e.g. A1 or AD15
+    loc: Loc
     name: str
 
     iotype: str
@@ -69,7 +97,7 @@ class DDRPin:
 
 @dataclass
 class NCPin:
-    loc: str # e.g. A1 or AD15
+    loc: Loc
     # name will always be "NC"
 
 Pin = UnknownPin | PowerPin | UsrIOPin | GigXcvrPin | MIOPin | ConfigPin | DDRPin | NCPin
@@ -132,37 +160,37 @@ def parse_pins(rows):
                 if reg != "NA":
                     raise ParseError(n, f"unexpected logic region (field 6) for io pin: {r}")
 
-                pin = UsrIOPin(loc, name, iotype, bank)
+                pin = UsrIOPin(Loc(loc), name, iotype, bank)
             elif name.startswith("MGT") or name.startswith("PS_MGT"):
                 # TODO improve error
                 if not all([f == "NA" for f in (mem, reg)]):
                     raise ParseError(n, f"unexpected extra fields for power pin: {r}")
 
-                pin = GigXcvrPin(loc, name, iotype, bank)
+                pin = GigXcvrPin(Loc(loc), name, iotype, bank)
             elif name.startswith("PS_MIO"):
                 # TODO improve error
                 if not all([f == "NA" for f in (mem, reg)]):
                     raise ParseError(n, f"unexpected extra fields for mio pin: {r}")
 
-                pin = MIOPin(loc, name, iotype, bank)
+                pin = MIOPin(Loc(loc), name, iotype, bank)
             elif iotype == "PSCONFIG":
                 # TODO improve error
                 if not all([f == "NA" for f in (mem, reg)]):
                     raise ParseError(n, f"unexpected extra fields for config pin: {r}")
 
-                pin = ConfigPin(loc, name, iotype, bank)
+                pin = ConfigPin(Loc(loc), name, iotype, bank)
             elif iotype == "PSDDR":
                 # TODO improve error
                 if not all([f == "NA" for f in (mem, reg)]):
                     raise ParseError(n, f"unexpected extra fields for config pin: {r}")
 
-                pin = DDRPin(loc, name, iotype, bank)
+                pin = DDRPin(Loc(loc), name, iotype, bank)
             elif name == "NC":
                 # TODO improve error
                 if not all([f == "NA" for f in reg[2:]]):
                     raise ParseError(n, f"unexpected extra fields for config pin: {r}")
 
-                pin = NCPin(loc)
+                pin = NCPin(Loc(loc))
             elif ("GND" in name
                 or "VCC" in name):
 
@@ -171,9 +199,9 @@ def parse_pins(rows):
                 #     raise ParseError(n, f"unexpected extra fields (2+) for power pin: {r}")
 
                 # TODO finer classification (esp. in/out ?)
-                pin = PowerPin(loc, name)
+                pin = PowerPin(Loc(loc), name)
             else:
-                pin = UnknownPin(loc, name, r[2:])
+                pin = UnknownPin(Loc(loc), name, r[2:])
 
             if not pin:
                 raise ValueError(f'failed to parse pin')
@@ -237,37 +265,123 @@ pin,name,type,side,unit,style,hidden""")
 
     out = csv.writer(outs)
 
+    @dataclass
     class PowerSortKey:
-        def __init__(self, *fields):
-            self.fields = fields
+        p: PowerPin
 
         def __lt__(self, o):
-            return self.fields < o.fields
+            return (self.p.name, self.p.loc) < (o.p.name, o.p.loc)
 
 
+    @dataclass
+    class GndSortKey:
+        p: PowerPin # only grounds
 
-    # TODO lol three problems:
-    # 1. 20 is nowhere _near_ enough; we'll want to do something like go down both sides too
-    # 2. lexicgraphical soring is not good for pins; we end up with A1,A11,...,A9,AA14,...
-    # 3. ADCGND & other "special" GNDs
-    #
-    # TODO plus we should tease apart GND and VCC types at least (and handling?)
+        def __lt__(self, o):
+            # FIXME this list is incomplete (missing ADC_GND, ADC_SUB_GND, DAC_GND, DAC_SUB_GND)
+            # FIXME also, likely to change over time
+            j, k = (["GND", "RSVDGND", "GNDADC", "GND_PSADC"].index(n) for n in (self.p.name, o.p.name))
+
+            return j < k or self.p.loc < o.p.loc
+
+    # TODO these cry out for a model like
+    #       [ unit(s) @ [group1, ..., Spacer, ...] , unit(s) @ [group2, ...]]
+    # and then something that maps ^ to "rows"
+    # (would ease fuzzy "make me three same-sized units of gnds")
+
+    pwr, gnds = partition(lambda x: "GND" in x.name, by_type.pop(PowerPin))
 
     n = 0
-    for pp in sorted(by_type[PowerPin], key=lambda pp: PowerSortKey(pp.name, pp.loc)):
+    lname = "GND"
+    for pp in sorted(gnds, key=GndSortKey):
+        if pp.name != lname:
+            # TODO this happens to be correct for the example
+            #   but assuming unit, side and that there's space left
+            #   (e.g. missing n += 1) isn't great
+            out.writerow(["*", "", "", "right", "gnd1", "", ""])
+            lname = pp.name
         out.writerow([
             pp.loc,
             pp.name,
-            "",     # type TODO
-            "left", # side (left/right/top/bottom)
-            f'pwr{n//20}', # unit
+            "gnd",     # type (kicad's "power_input")
+            "left" if (n % (80*2)) < 80 else "right", # side (left/right/top/bottom)
+            f'gnd{n//(80*2)}', # unit
             "line", # style (TODO ?)
             "no",   # hidden
         ])
         n += 1
 
-    del by_type[PowerPin]
+    n = 0
+    for pp in sorted(pwr, key=PowerSortKey):
+        out.writerow([
+            pp.loc,
+            pp.name,
+            "pwr",     # type (kicad's "power_input")
+            "left" if (n % (80*2)) < 80 else "right", # side (left/right/top/bottom)
+            f'pwr{n//(80*2)}', # unit
+            "line", # style (TODO ?)
+            "no",   # hidden
+        ])
+        n += 1
 
+
+    from operator import itemgetter, attrgetter
+    key = attrgetter('iotype')
+    by_iotype = groupby(sorted(by_type.pop(UsrIOPin), key=key), key)
+
+    for iotype, pins in by_iotype:
+        # sorted is stable, meaning any sort we apply here across all
+        # banks will hold within a bank, below
+        pins = sorted(pins, key=lambda p: p.name)
+
+        key = attrgetter('bank')
+        by_bank = groupby(sorted(pins, key=key), key)
+
+        for bank, pins in by_bank:
+            n = 0
+            for p in pins:
+                out.writerow([
+                    p.loc,
+                    p.name,
+                    "bidirectional",
+                    "right", # side (left/right/top/bottom)
+                    f'{iotype}_io_{bank}{n//80}', # unit TODO
+                    "line", # style (TODO ?)
+                    "no",   # hidden
+                ])
+
+                n += 1
+
+    key = attrgetter('iotype')
+    by_iotype = groupby(sorted(by_type.pop(GigXcvrPin), key=key), key)
+
+    for iotype, pins in by_iotype:
+        # sorted is stable, meaning any sort we apply here across all
+        # banks will hold within a bank, below
+        pins = sorted(pins, key=lambda p: p.name)
+
+        key = attrgetter('bank')
+        by_bank = groupby(sorted(pins, key=key), key)
+
+        for bank, pins in by_bank:
+            n = 0
+            for p in pins:
+                out.writerow([
+                    p.loc,
+                    p.name,
+                    "bidirectional",
+                    "right", # side (left/right/top/bottom)
+                    f'm{iotype}_{bank}{n//80}', # unit TODO
+                    "line", # style (TODO ?)
+                    "no",   # hidden
+                ])
+
+                n += 1
+
+
+
+
+    # catch-all
     n = 0
     for p in [p for p_ty in by_type.values() for p in p_ty]:
         out.writerow([
