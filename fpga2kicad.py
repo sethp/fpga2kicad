@@ -289,68 +289,7 @@ pin,name,type,side,unit,style,hidden""")
     # and then something that maps ^ to "rows"
     # (would ease fuzzy "make me three same-sized units of gnds")
 
-    pwr, gnds = partition(lambda x: "GND" in x.name, by_type.pop(PowerPin))
-
-    n = 0
-    lname = "GND"
-    for pp in sorted(gnds, key=GndSortKey):
-        if pp.name != lname:
-            # TODO this happens to be correct for the example
-            #   but assuming unit, side and that there's space left
-            #   (e.g. missing n += 1) isn't great
-            out.writerow(["*", "", "", "right", "gnd1", "", ""])
-            lname = pp.name
-        out.writerow([
-            pp.loc,
-            pp.name,
-            "gnd",     # type (kicad's "power_input")
-            "left" if (n % (80*2)) < 80 else "right", # side (left/right/top/bottom)
-            f'gnd{n//(80*2)}', # unit
-            "line", # style (TODO ?)
-            "no",   # hidden
-        ])
-        n += 1
-
-    n = 0
-    for pp in sorted(pwr, key=PowerSortKey):
-        out.writerow([
-            pp.loc,
-            pp.name,
-            "pwr",     # type (kicad's "power_input")
-            "left" if (n % (80*2)) < 80 else "right", # side (left/right/top/bottom)
-            f'pwr{n//(80*2)}', # unit
-            "line", # style (TODO ?)
-            "no",   # hidden
-        ])
-        n += 1
-
-
     from operator import itemgetter, attrgetter
-    key = attrgetter('iotype')
-    by_iotype = groupby(sorted(by_type.pop(UsrIOPin), key=key), key)
-
-    for iotype, pins in by_iotype:
-        # sorted is stable, meaning any sort we apply here across all
-        # banks will hold within a bank, below
-        pins = sorted(pins, key=lambda p: p.name)
-
-        key = attrgetter('bank')
-        by_bank = groupby(sorted(pins, key=key), key)
-
-        for bank, pins in by_bank:
-            n = 0
-            for p in pins:
-                out.writerow([
-                    p.loc,
-                    p.name,
-                    "bidirectional",
-                    "right", # side (left/right/top/bottom)
-                    f'{iotype}_io_{bank}{n//80}', # unit TODO
-                    "line", # style (TODO ?)
-                    "no",   # hidden
-                ])
-
-                n += 1
 
     key = attrgetter('iotype')
     by_iotype = groupby(sorted(by_type.pop(GigXcvrPin), key=key), key)
@@ -379,7 +318,120 @@ pin,name,type,side,unit,style,hidden""")
                 n += 1
 
 
+    key = attrgetter('iotype')
+    by_iotype = groupby(sorted(by_type.pop(UsrIOPin), key=key), key)
 
+    for iotype, pins in by_iotype:
+        # sorted is stable, meaning any sort we apply here across all
+        # banks will hold within a bank, below
+        pins = sorted(pins, key=lambda p: p.name)
+
+        key = attrgetter('bank')
+        by_bank = groupby(sorted(pins, key=key), key)
+
+        for bank, pins in by_bank:
+            n = 0
+            for p in pins:
+                out.writerow([
+                    p.loc,
+                    p.name,
+                    "bidirectional",
+                    "right", # side (left/right/top/bottom)
+                    f'{iotype}_io_{bank}{n//80}', # unit TODO
+                    "line", # style (TODO ?)
+                    "no",   # hidden
+                ])
+
+                n += 1
+
+
+    # TODO are MIO pins ever not "PSMIO" iotype?
+    key = attrgetter('iotype')
+    by_iotype = groupby(sorted(by_type.pop(MIOPin), key=key), key)
+
+    for iotype, pins in by_iotype:
+        # sorted is stable, meaning any sort we apply here across all
+        # banks will hold within a bank, below
+        pins = sorted(pins, key=lambda p: p.name)
+
+        key = attrgetter('bank')
+        by_bank = groupby(sorted(pins, key=key), key)
+
+        for bank, pins in by_bank:
+            n = 0
+            for p in pins:
+                out.writerow([
+                    p.loc,
+                    p.name,
+                    "bidirectional",
+                    "right", # side (left/right/top/bottom)
+                    f'{iotype}_{bank}{n//80}', # unit TODO
+                    "line", # style (TODO ?)
+                    "no",   # hidden
+                ])
+
+                n += 1
+
+
+
+    # TODO are these pins ever not "PSConfig" iotype?
+    key = attrgetter('iotype')
+    by_iotype = groupby(sorted(by_type.pop(ConfigPin), key=key), key)
+
+    for iotype, pins in by_iotype:
+        # sorted is stable, meaning any sort we apply here across all
+        # banks will hold within a bank, below
+        pins = sorted(pins, key=lambda p: p.name)
+
+        key = attrgetter('bank')
+        by_bank = groupby(sorted(pins, key=key), key)
+
+        for bank, pins in by_bank:
+            n = 0
+            for p in pins:
+                out.writerow([
+                    p.loc,
+                    p.name,
+                    "bidirectional",
+                    "right", # side (left/right/top/bottom)
+                    f'{iotype}_{bank}{n//150}', # unit TODO
+                    "line", # style (TODO ?)
+                    "no",   # hidden
+                ])
+
+                n += 1
+
+
+    # TODO are DDR pins ever not "PSDDR" iotype?
+    key = attrgetter('iotype')
+    by_iotype = groupby(sorted(by_type.pop(DDRPin), key=key), key)
+
+    for iotype, pins in by_iotype:
+        # sorted is stable, meaning any sort we apply here across all
+        # banks will hold within a bank, below
+        pins = sorted(pins, key=lambda p: p.name)
+
+        key = attrgetter('bank')
+        by_bank = groupby(sorted(pins, key=key), key)
+
+        for bank, pins in by_bank:
+            n = 0
+            for p in pins:
+                out.writerow([
+                    p.loc,
+                    p.name,
+                    "bidirectional",
+                    "right", # side (left/right/top/bottom)
+                    f'{iotype}_{bank}{n//150}', # unit TODO
+                    "line", # style (TODO ?)
+                    "no",   # hidden
+                ])
+
+                n += 1
+
+
+    # these are for later (after the catch-all)
+    pwr, gnds = partition(lambda x: "GND" in x.name, by_type.pop(PowerPin))
 
     # catch-all
     n = 0
@@ -394,6 +446,40 @@ pin,name,type,side,unit,style,hidden""")
             "no",   # hidden
         ])
         n += 1
+
+    n = 0
+    for pp in sorted(pwr, key=PowerSortKey):
+        out.writerow([
+            pp.loc,
+            pp.name,
+            "pwr",     # type (kicad's "power_input")
+            "left" if (n % (80*2)) < 80 else "right", # side (left/right/top/bottom)
+            f'pwr{n//(80*2)}', # unit
+            "line", # style (TODO ?)
+            "no",   # hidden
+        ])
+        n += 1
+
+    n = 0
+    lname = "GND"
+    for pp in sorted(gnds, key=GndSortKey):
+        if pp.name != lname:
+            # TODO this happens to be correct for the example
+            #   but assuming unit, side and that there's space left
+            #   (e.g. missing n += 1) isn't great
+            out.writerow(["*", "", "", "right", "gnd1", "", ""])
+            lname = pp.name
+        out.writerow([
+            pp.loc,
+            pp.name,
+            "gnd",     # type (kicad's "power_input")
+            "left" if (n % (80*2)) < 80 else "right", # side (left/right/top/bottom)
+            f'gnd{n//(80*2)}', # unit
+            "line", # style (TODO ?)
+            "no",   # hidden
+        ])
+        n += 1
+
 
 
 if __name__ == "__main__":
