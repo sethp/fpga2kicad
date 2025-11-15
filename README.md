@@ -2,6 +2,8 @@
 
 Converts an AMD (Xilinx) pin listing to a kicad schematic symbol. (Note: Not a footprint)
 
+:warning: Very much a WIP, this is currently only being used for/tested with the xczu9egffvb1156 .
+
 ## Usage
 
 Step 0: Install uv: https://docs.astral.sh/uv/
