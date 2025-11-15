@@ -265,25 +265,6 @@ pin,name,type,side,unit,style,hidden""")
 
     out = csv.writer(outs)
 
-    @dataclass
-    class PowerSortKey:
-        p: PowerPin
-
-        def __lt__(self, o):
-            return (self.p.name, self.p.loc) < (o.p.name, o.p.loc)
-
-
-    @dataclass
-    class GndSortKey:
-        p: PowerPin # only grounds
-
-        def __lt__(self, o):
-            # FIXME this list is incomplete (missing ADC_GND, ADC_SUB_GND, DAC_GND, DAC_SUB_GND)
-            # FIXME also, likely to change over time
-            j, k = (["GND", "RSVDGND", "GNDADC", "GND_PSADC"].index(n) for n in (self.p.name, o.p.name))
-
-            return j < k or self.p.loc < o.p.loc
-
     # TODO these cry out for a model like
     #       [ unit(s) @ [group1, ..., Spacer, ...] , unit(s) @ [group2, ...]]
     # and then something that maps ^ to "rows"
@@ -446,6 +427,26 @@ pin,name,type,side,unit,style,hidden""")
             "no",   # hidden
         ])
         n += 1
+
+
+    @dataclass
+    class PowerSortKey:
+        p: PowerPin
+
+        def __lt__(self, o):
+            return (self.p.name, self.p.loc) < (o.p.name, o.p.loc)
+
+
+    @dataclass
+    class GndSortKey:
+        p: PowerPin # only grounds
+
+        def __lt__(self, o):
+            # FIXME this list is incomplete (missing ADC_GND, ADC_SUB_GND, DAC_GND, DAC_SUB_GND)
+            # FIXME also, likely to change over time
+            j, k = (["GND", "RSVDGND", "GNDADC", "GND_PSADC"].index(n) for n in (self.p.name, o.p.name))
+
+            return j < k or self.p.loc < o.p.loc
 
     n = 0
     for pp in sorted(pwr, key=PowerSortKey):
