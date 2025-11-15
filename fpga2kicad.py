@@ -316,7 +316,7 @@ pin,name,type,side,unit,style,hidden""")
                     p.name,
                     "bidirectional",
                     "right", # side (left/right/top/bottom)
-                    f'm{iotype}_{bank}{n//80}', # unit TODO
+                    f'm{iotype}_{bank}{n//80}', # unit
                     "line", # style (TODO ?)
                     "no",   # hidden
                 ])
@@ -343,7 +343,7 @@ pin,name,type,side,unit,style,hidden""")
                     p.name,
                     "bidirectional",
                     "right", # side (left/right/top/bottom)
-                    f'{iotype}_io_{bank}{n//80}', # unit TODO
+                    f'{iotype}_io_{bank}{n//80}', # unit
                     "line", # style (TODO ?)
                     "no",   # hidden
                 ])
@@ -371,7 +371,7 @@ pin,name,type,side,unit,style,hidden""")
                     p.name,
                     "bidirectional",
                     "right", # side (left/right/top/bottom)
-                    f'{iotype}_{bank}{n//80}', # unit TODO
+                    f'{iotype}_{bank}{n//80}', # unit
                     "line", # style (TODO ?)
                     "no",   # hidden
                 ])
@@ -400,7 +400,7 @@ pin,name,type,side,unit,style,hidden""")
                     p.name,
                     "bidirectional",
                     "right", # side (left/right/top/bottom)
-                    f'{iotype}_{bank}{n//150}', # unit TODO
+                    f'{iotype}_{bank}{n//150}', # unit
                     "line", # style (TODO ?)
                     "no",   # hidden
                 ])
