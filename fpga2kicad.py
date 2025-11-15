@@ -265,6 +265,31 @@ pin,name,type,side,unit,style,hidden""")
 
     out = csv.writer(outs)
 
+    @functools.total_ordering
+    @dataclass
+    class LastNumKey:
+        s: str  #  xxxx_12_yyy < xxxx_13_yyy < xxxx_124_yyy
+
+        def __eq__(self, o):
+            return self.s == o.s
+
+
+        # FIXME could probably memoize this in a constructor
+        def __lt__(self, o):
+            def splitnum(s: str):
+                m = -1
+                while not s[m].isdigit():
+                    m -= 1
+
+                n = m
+                while s[n-1].isdigit():
+                    n -= 1
+
+                return s[:n], int(s[n:len(s)+m+1]), s[(m+1):]
+
+            return splitnum(self.s) < splitnum(o.s)
+
+
     # TODO these cry out for a model like
     #       [ unit(s) @ [group1, ..., Spacer, ...] , unit(s) @ [group2, ...]]
     # and then something that maps ^ to "rows"
@@ -333,7 +358,7 @@ pin,name,type,side,unit,style,hidden""")
     for iotype, pins in by_iotype:
         # sorted is stable, meaning any sort we apply here across all
         # banks will hold within a bank, below
-        pins = sorted(pins, key=lambda p: p.name)
+        pins = sorted(pins, key=lambda p: LastNumKey(p.name))
 
         key = attrgetter('bank')
         by_bank = groupby(sorted(pins, key=key), key)
