@@ -7,56 +7,56 @@
     (in_bom yes)
     (on_board yes)
     (property "Reference" "U"
-      (at -41.910000000000004 178.435 0)
+      (at -41.910000000000004 106.045 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify right)
         (hide no)))
     (property "Value" "XCZU9EG"
-      (at -41.910000000000004 175.89499999999998 0)
+      (at -41.910000000000004 103.50500000000001 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify right)
         (hide no)))
     (property "Footprint" "FFVB1156_XIL"
-      (at -41.910000000000004 175.26 0)
+      (at -41.910000000000004 102.87 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify right)
         (hide yes)))
     (property "Datasheet" "XCZU9EG-2FFVB1156I"
-      (at -41.910000000000004 175.26 0)
+      (at -41.910000000000004 102.87 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify right)
         (hide yes)))
     (property "Description" ""
-      (at -41.910000000000004 175.26 0)
+      (at -41.910000000000004 102.87 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)
         (hide yes)))
     (property "ki_keywords" "XCZU9EG-2FFVB1156I"
-      (at -41.910000000000004 175.26 0)
+      (at -41.910000000000004 102.87 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)
         (hide yes)))
     (property "ki_locked" ""
-      (at -41.910000000000004 175.26 0)
+      (at -41.910000000000004 102.87 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)
         (hide yes)))
     (property "ki_fp_filters" "FFVB1156_XIL FFVB1156_XIL-M FFVB1156_XIL-L"
-      (at -41.910000000000004 175.26 0)
+      (at -41.910000000000004 102.87 0)
       (effects
         (font
           (size 1.27 1.27))
@@ -7051,466 +7051,15 @@
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_22_1"
       (rectangle
-        (start -21.59 -175.26)
-        (end 21.59 175.26)
+        (start -21.59 -92.71000000000001)
+        (end 21.59 92.71000000000001)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
       (pin bidirectional line
-        (at 29.21 171.45 180)
-        (length 7.62)
-        (name "PS_DDR_A0"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AP29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 168.91 180)
-        (length 7.62)
-        (name "PS_DDR_A1"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AP30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 166.37 180)
-        (length 7.62)
-        (name "PS_DDR_A10"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AL28"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 163.83 180)
-        (length 7.62)
-        (name "PS_DDR_A11"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AK27"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 161.29000000000002 180)
-        (length 7.62)
-        (name "PS_DDR_A12"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AJ25"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 158.75000000000003 180)
-        (length 7.62)
-        (name "PS_DDR_A13"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AL25"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 156.21000000000004 180)
-        (length 7.62)
-        (name "PS_DDR_A14"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AK25"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 153.67000000000004 180)
-        (length 7.62)
-        (name "PS_DDR_A15"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AK24"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 151.13000000000005 180)
-        (length 7.62)
-        (name "PS_DDR_A16"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AM24"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 148.59000000000006 180)
-        (length 7.62)
-        (name "PS_DDR_A17"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AF25"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 146.05000000000007 180)
-        (length 7.62)
-        (name "PS_DDR_A2"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AP26"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 143.51000000000008 180)
-        (length 7.62)
-        (name "PS_DDR_A3"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AP27"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 140.97000000000008 180)
-        (length 7.62)
-        (name "PS_DDR_A4"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AP25"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 138.4300000000001 180)
-        (length 7.62)
-        (name "PS_DDR_A5"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AN24"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 135.8900000000001 180)
-        (length 7.62)
-        (name "PS_DDR_A6"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AM29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 133.3500000000001 180)
-        (length 7.62)
-        (name "PS_DDR_A7"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AM28"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 130.81000000000012 180)
-        (length 7.62)
-        (name "PS_DDR_A8"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AM26"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 128.27000000000012 180)
-        (length 7.62)
-        (name "PS_DDR_A9"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AM25"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 125.73000000000012 180)
-        (length 7.62)
-        (name "PS_DDR_ACT_N"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG25"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 123.19000000000011 180)
-        (length 7.62)
-        (name "PS_DDR_ALERT_N"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AF22"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 120.6500000000001 180)
-        (length 7.62)
-        (name "PS_DDR_BA0"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AH26"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 118.1100000000001 180)
-        (length 7.62)
-        (name "PS_DDR_BA1"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG26"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 115.57000000000009 180)
-        (length 7.62)
-        (name "PS_DDR_BG0"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AK28"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 113.03000000000009 180)
-        (length 7.62)
-        (name "PS_DDR_BG1"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AH27"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 110.49000000000008 180)
-        (length 7.62)
-        (name "PS_DDR_CK0"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AN26"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 107.95000000000007 180)
-        (length 7.62)
-        (name "PS_DDR_CK1"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AL26"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 105.41000000000007 180)
-        (length 7.62)
-        (name "PS_DDR_CKE0"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AN29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 102.87000000000006 180)
-        (length 7.62)
-        (name "PS_DDR_CKE1"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AJ27"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 100.33000000000006 180)
-        (length 7.62)
-        (name "PS_DDR_CK_N0"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AN27"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 97.79000000000005 180)
-        (length 7.62)
-        (name "PS_DDR_CK_N1"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AL27"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 95.25000000000004 180)
-        (length 7.62)
-        (name "PS_DDR_CS_N0"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AN28"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 92.71000000000004 180)
-        (length 7.62)
-        (name "PS_DDR_CS_N1"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AL30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 90.17000000000003 180)
-        (length 7.62)
-        (name "PS_DDR_DM0"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AN17"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 87.63000000000002 180)
-        (length 7.62)
-        (name "PS_DDR_DM1"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AM21"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 85.09000000000002 180)
-        (length 7.62)
-        (name "PS_DDR_DM2"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AK19"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 82.55000000000001 180)
-        (length 7.62)
-        (name "PS_DDR_DM3"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AH24"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 80.01 180)
-        (length 7.62)
-        (name "PS_DDR_DM4"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AH31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 77.47 180)
-        (length 7.62)
-        (name "PS_DDR_DM5"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AE30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 74.92999999999999 180)
-        (length 7.62)
-        (name "PS_DDR_DM6"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AJ31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 72.38999999999999 180)
-        (length 7.62)
-        (name "PS_DDR_DM7"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AE34"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 69.84999999999998 180)
-        (length 7.62)
-        (name "PS_DDR_DM8"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AN34"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 67.30999999999997 180)
+        (at -29.21 90.17 0)
         (length 7.62)
         (name "PS_DDR_DQ0"
           (effects
@@ -7521,7 +7070,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 64.76999999999997 180)
+        (at -29.21 87.63 0)
         (length 7.62)
         (name "PS_DDR_DQ1"
           (effects
@@ -7532,117 +7081,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 62.22999999999997 180)
-        (length 7.62)
-        (name "PS_DDR_DQ10"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AP24"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 59.68999999999997 180)
-        (length 7.62)
-        (name "PS_DDR_DQ11"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AN23"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 57.14999999999997 180)
-        (length 7.62)
-        (name "PS_DDR_DQ12"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AL21"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 54.60999999999997 180)
-        (length 7.62)
-        (name "PS_DDR_DQ13"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AL22"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 52.06999999999997 180)
-        (length 7.62)
-        (name "PS_DDR_DQ14"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AM23"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 49.52999999999997 180)
-        (length 7.62)
-        (name "PS_DDR_DQ15"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AL23"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 46.989999999999974 180)
-        (length 7.62)
-        (name "PS_DDR_DQ16"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AL20"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 44.449999999999974 180)
-        (length 7.62)
-        (name "PS_DDR_DQ17"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AK20"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 41.909999999999975 180)
-        (length 7.62)
-        (name "PS_DDR_DQ18"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AJ20"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 39.369999999999976 180)
-        (length 7.62)
-        (name "PS_DDR_DQ19"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AK18"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 36.82999999999998 180)
+        (at -29.21 85.08999999999999 0)
         (length 7.62)
         (name "PS_DDR_DQ2"
           (effects
@@ -7653,117 +7092,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 34.28999999999998 180)
-        (length 7.62)
-        (name "PS_DDR_DQ20"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG20"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 31.74999999999998 180)
-        (length 7.62)
-        (name "PS_DDR_DQ21"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AH18"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 29.20999999999998 180)
-        (length 7.62)
-        (name "PS_DDR_DQ22"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG19"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 26.66999999999998 180)
-        (length 7.62)
-        (name "PS_DDR_DQ23"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG18"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 24.12999999999998 180)
-        (length 7.62)
-        (name "PS_DDR_DQ24"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG21"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 21.589999999999982 180)
-        (length 7.62)
-        (name "PS_DDR_DQ25"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AH21"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 19.049999999999983 180)
-        (length 7.62)
-        (name "PS_DDR_DQ26"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG24"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 16.509999999999984 180)
-        (length 7.62)
-        (name "PS_DDR_DQ27"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG23"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 13.969999999999985 180)
-        (length 7.62)
-        (name "PS_DDR_DQ28"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AK22"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 11.429999999999986 180)
-        (length 7.62)
-        (name "PS_DDR_DQ29"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AJ21"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 8.889999999999986 180)
+        (at -29.21 82.54999999999998 0)
         (length 7.62)
         (name "PS_DDR_DQ3"
           (effects
@@ -7774,117 +7103,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 6.349999999999986 180)
-        (length 7.62)
-        (name "PS_DDR_DQ30"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AJ22"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 3.8099999999999863 180)
-        (length 7.62)
-        (name "PS_DDR_DQ31"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AK23"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 1.2699999999999863 180)
-        (length 7.62)
-        (name "PS_DDR_DQ32"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -1.2700000000000138 180)
-        (length 7.62)
-        (name "PS_DDR_DQ33"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -3.810000000000014 180)
-        (length 7.62)
-        (name "PS_DDR_DQ34"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -6.350000000000014 180)
-        (length 7.62)
-        (name "PS_DDR_DQ35"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG28"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -8.890000000000015 180)
-        (length 7.62)
-        (name "PS_DDR_DQ36"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AJ30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -11.430000000000014 180)
-        (length 7.62)
-        (name "PS_DDR_DQ37"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AK29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -13.970000000000013 180)
-        (length 7.62)
-        (name "PS_DDR_DQ38"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AK30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -16.510000000000012 180)
-        (length 7.62)
-        (name "PS_DDR_DQ39"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AJ29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -19.05000000000001 180)
+        (at -29.21 80.00999999999998 0)
         (length 7.62)
         (name "PS_DDR_DQ4"
           (effects
@@ -7895,117 +7114,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -21.59000000000001 180)
-        (length 7.62)
-        (name "PS_DDR_DQ40"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AE27"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -24.13000000000001 180)
-        (length 7.62)
-        (name "PS_DDR_DQ41"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AF28"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -26.67000000000001 180)
-        (length 7.62)
-        (name "PS_DDR_DQ42"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AF30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -29.210000000000008 180)
-        (length 7.62)
-        (name "PS_DDR_DQ43"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AF31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -31.750000000000007 180)
-        (length 7.62)
-        (name "PS_DDR_DQ44"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AD28"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -34.290000000000006 180)
-        (length 7.62)
-        (name "PS_DDR_DQ45"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AD27"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -36.830000000000005 180)
-        (length 7.62)
-        (name "PS_DDR_DQ46"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AD29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -39.370000000000005 180)
-        (length 7.62)
-        (name "PS_DDR_DQ47"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AD30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -41.910000000000004 180)
-        (length 7.62)
-        (name "PS_DDR_DQ48"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AH33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -44.45 180)
-        (length 7.62)
-        (name "PS_DDR_DQ49"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AJ34"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -46.99 180)
+        (at -29.21 77.46999999999997 0)
         (length 7.62)
         (name "PS_DDR_DQ5"
           (effects
@@ -8016,117 +7125,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -49.53 180)
-        (length 7.62)
-        (name "PS_DDR_DQ50"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AH34"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -52.07 180)
-        (length 7.62)
-        (name "PS_DDR_DQ51"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AH32"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -54.61 180)
-        (length 7.62)
-        (name "PS_DDR_DQ52"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AK34"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -57.15 180)
-        (length 7.62)
-        (name "PS_DDR_DQ53"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AK33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -59.69 180)
-        (length 7.62)
-        (name "PS_DDR_DQ54"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AL32"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -62.23 180)
-        (length 7.62)
-        (name "PS_DDR_DQ55"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AL31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -64.77 180)
-        (length 7.62)
-        (name "PS_DDR_DQ56"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -67.31 180)
-        (length 7.62)
-        (name "PS_DDR_DQ57"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG34"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -69.85000000000001 180)
-        (length 7.62)
-        (name "PS_DDR_DQ58"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AF32"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -72.39000000000001 180)
-        (length 7.62)
-        (name "PS_DDR_DQ59"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AF33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -74.93000000000002 180)
+        (at -29.21 74.92999999999996 0)
         (length 7.62)
         (name "PS_DDR_DQ6"
           (effects
@@ -8137,117 +7136,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -77.47000000000003 180)
-        (length 7.62)
-        (name "PS_DDR_DQ60"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AD31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -80.01000000000003 180)
-        (length 7.62)
-        (name "PS_DDR_DQ61"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AD32"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -82.55000000000004 180)
-        (length 7.62)
-        (name "PS_DDR_DQ62"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AD34"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -85.09000000000005 180)
-        (length 7.62)
-        (name "PS_DDR_DQ63"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AD33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -87.63000000000005 180)
-        (length 7.62)
-        (name "PS_DDR_DQ64"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AN31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -90.17000000000006 180)
-        (length 7.62)
-        (name "PS_DDR_DQ65"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AP31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -92.71000000000006 180)
-        (length 7.62)
-        (name "PS_DDR_DQ66"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AP32"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -95.25000000000007 180)
-        (length 7.62)
-        (name "PS_DDR_DQ67"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AP33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -97.79000000000008 180)
-        (length 7.62)
-        (name "PS_DDR_DQ68"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AM31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -100.33000000000008 180)
-        (length 7.62)
-        (name "PS_DDR_DQ69"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AM33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -102.87000000000009 180)
+        (at -29.21 72.38999999999996 0)
         (length 7.62)
         (name "PS_DDR_DQ7"
           (effects
@@ -8258,29 +7147,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -105.4100000000001 180)
-        (length 7.62)
-        (name "PS_DDR_DQ70"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AM34"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -107.9500000000001 180)
-        (length 7.62)
-        (name "PS_DDR_DQ71"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AL33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 29.21 -110.49000000000011 180)
+        (at -29.21 69.84999999999995 0)
         (length 7.62)
         (name "PS_DDR_DQ8"
           (effects
@@ -8291,7 +7158,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -113.03000000000011 180)
+        (at -29.21 67.30999999999995 0)
         (length 7.62)
         (name "PS_DDR_DQ9"
           (effects
@@ -8302,106 +7169,986 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -115.57000000000012 180)
+        (at -29.21 64.76999999999994 0)
         (length 7.62)
-        (name "PS_DDR_DQS_N0"
+        (name "PS_DDR_DQ10"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AN19"
+        (number "AP24"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -118.11000000000013 180)
+        (at -29.21 62.22999999999994 0)
         (length 7.62)
-        (name "PS_DDR_DQS_N1"
+        (name "PS_DDR_DQ11"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AN22"
+        (number "AN23"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -120.65000000000013 180)
+        (at -29.21 59.68999999999994 0)
         (length 7.62)
-        (name "PS_DDR_DQS_N2"
+        (name "PS_DDR_DQ12"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AJ19"
+        (number "AL21"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -123.19000000000014 180)
+        (at -29.21 57.14999999999994 0)
         (length 7.62)
-        (name "PS_DDR_DQS_N3"
+        (name "PS_DDR_DQ13"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AH23"
+        (number "AL22"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -125.73000000000015 180)
+        (at -29.21 54.60999999999994 0)
         (length 7.62)
-        (name "PS_DDR_DQS_N4"
+        (name "PS_DDR_DQ14"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AH29"
+        (number "AM23"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -128.27000000000015 180)
+        (at -29.21 52.06999999999994 0)
         (length 7.62)
-        (name "PS_DDR_DQS_N5"
+        (name "PS_DDR_DQ15"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AE29"
+        (number "AL23"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -130.81000000000014 180)
+        (at -29.21 49.529999999999944 0)
         (length 7.62)
-        (name "PS_DDR_DQS_N6"
+        (name "PS_DDR_DQ16"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AK32"
+        (number "AL20"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -133.35000000000014 180)
+        (at -29.21 46.989999999999945 0)
         (length 7.62)
-        (name "PS_DDR_DQS_N7"
+        (name "PS_DDR_DQ17"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AE33"
+        (number "AK20"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -135.89000000000013 180)
+        (at -29.21 44.449999999999946 0)
         (length 7.62)
-        (name "PS_DDR_DQS_N8"
+        (name "PS_DDR_DQ18"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AN33"
+        (number "AJ20"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -138.43000000000012 180)
+        (at -29.21 41.90999999999995 0)
+        (length 7.62)
+        (name "PS_DDR_DQ19"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AK18"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 39.36999999999995 0)
+        (length 7.62)
+        (name "PS_DDR_DQ20"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AG20"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 36.82999999999995 0)
+        (length 7.62)
+        (name "PS_DDR_DQ21"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AH18"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 34.28999999999995 0)
+        (length 7.62)
+        (name "PS_DDR_DQ22"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AG19"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 31.74999999999995 0)
+        (length 7.62)
+        (name "PS_DDR_DQ23"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AG18"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 29.20999999999995 0)
+        (length 7.62)
+        (name "PS_DDR_DQ24"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AG21"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 26.669999999999952 0)
+        (length 7.62)
+        (name "PS_DDR_DQ25"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AH21"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 24.129999999999953 0)
+        (length 7.62)
+        (name "PS_DDR_DQ26"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AG24"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 21.589999999999954 0)
+        (length 7.62)
+        (name "PS_DDR_DQ27"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AG23"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 19.049999999999955 0)
+        (length 7.62)
+        (name "PS_DDR_DQ28"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AK22"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 16.509999999999955 0)
+        (length 7.62)
+        (name "PS_DDR_DQ29"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AJ21"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 13.969999999999956 0)
+        (length 7.62)
+        (name "PS_DDR_DQ30"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AJ22"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 11.429999999999957 0)
+        (length 7.62)
+        (name "PS_DDR_DQ31"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AK23"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 8.889999999999958 0)
+        (length 7.62)
+        (name "PS_DDR_DQ32"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AG31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 6.349999999999958 0)
+        (length 7.62)
+        (name "PS_DDR_DQ33"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AG30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 3.809999999999958 0)
+        (length 7.62)
+        (name "PS_DDR_DQ34"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AG29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 1.2699999999999578 0)
+        (length 7.62)
+        (name "PS_DDR_DQ35"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AG28"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -1.2700000000000422 0)
+        (length 7.62)
+        (name "PS_DDR_DQ36"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AJ30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -3.8100000000000422 0)
+        (length 7.62)
+        (name "PS_DDR_DQ37"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AK29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -6.350000000000042 0)
+        (length 7.62)
+        (name "PS_DDR_DQ38"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AK30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -8.890000000000043 0)
+        (length 7.62)
+        (name "PS_DDR_DQ39"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AJ29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -11.430000000000042 0)
+        (length 7.62)
+        (name "PS_DDR_DQ40"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AE27"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -13.970000000000041 0)
+        (length 7.62)
+        (name "PS_DDR_DQ41"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AF28"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -16.51000000000004 0)
+        (length 7.62)
+        (name "PS_DDR_DQ42"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AF30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -19.05000000000004 0)
+        (length 7.62)
+        (name "PS_DDR_DQ43"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AF31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -21.59000000000004 0)
+        (length 7.62)
+        (name "PS_DDR_DQ44"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AD28"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -24.130000000000038 0)
+        (length 7.62)
+        (name "PS_DDR_DQ45"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AD27"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -26.670000000000037 0)
+        (length 7.62)
+        (name "PS_DDR_DQ46"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AD29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -29.210000000000036 0)
+        (length 7.62)
+        (name "PS_DDR_DQ47"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AD30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -31.750000000000036 0)
+        (length 7.62)
+        (name "PS_DDR_DQ48"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AH33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -34.290000000000035 0)
+        (length 7.62)
+        (name "PS_DDR_DQ49"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AJ34"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -36.830000000000034 0)
+        (length 7.62)
+        (name "PS_DDR_DQ50"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AH34"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -39.37000000000003 0)
+        (length 7.62)
+        (name "PS_DDR_DQ51"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AH32"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -41.91000000000003 0)
+        (length 7.62)
+        (name "PS_DDR_DQ52"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AK34"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -44.45000000000003 0)
+        (length 7.62)
+        (name "PS_DDR_DQ53"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AK33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -46.99000000000003 0)
+        (length 7.62)
+        (name "PS_DDR_DQ54"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AL32"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -49.53000000000003 0)
+        (length 7.62)
+        (name "PS_DDR_DQ55"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AL31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -52.07000000000003 0)
+        (length 7.62)
+        (name "PS_DDR_DQ56"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AG33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -54.61000000000003 0)
+        (length 7.62)
+        (name "PS_DDR_DQ57"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AG34"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -57.15000000000003 0)
+        (length 7.62)
+        (name "PS_DDR_DQ58"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AF32"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -59.690000000000026 0)
+        (length 7.62)
+        (name "PS_DDR_DQ59"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AF33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -62.230000000000025 0)
+        (length 7.62)
+        (name "PS_DDR_DQ60"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AD31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -64.77000000000002 0)
+        (length 7.62)
+        (name "PS_DDR_DQ61"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AD32"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -67.31000000000003 0)
+        (length 7.62)
+        (name "PS_DDR_DQ62"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AD34"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -69.85000000000004 0)
+        (length 7.62)
+        (name "PS_DDR_DQ63"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AD33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -72.39000000000004 0)
+        (length 7.62)
+        (name "PS_DDR_DQ64"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AN31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -74.93000000000005 0)
+        (length 7.62)
+        (name "PS_DDR_DQ65"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AP31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -77.47000000000006 0)
+        (length 7.62)
+        (name "PS_DDR_DQ66"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AP32"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -80.01000000000006 0)
+        (length 7.62)
+        (name "PS_DDR_DQ67"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AP33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -82.55000000000007 0)
+        (length 7.62)
+        (name "PS_DDR_DQ68"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AM31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -85.09000000000007 0)
+        (length 7.62)
+        (name "PS_DDR_DQ69"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AM33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -87.63000000000008 0)
+        (length 7.62)
+        (name "PS_DDR_DQ70"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AM34"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -29.21 -90.17000000000009 0)
+        (length 7.62)
+        (name "PS_DDR_DQ71"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AL33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 88.9 180)
+        (length 7.62)
+        (name "PS_DDR_A0"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AP29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 86.36 180)
+        (length 7.62)
+        (name "PS_DDR_A1"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AP30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 83.82 180)
+        (length 7.62)
+        (name "PS_DDR_A2"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AP26"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 81.27999999999999 180)
+        (length 7.62)
+        (name "PS_DDR_A3"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AP27"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 78.73999999999998 180)
+        (length 7.62)
+        (name "PS_DDR_A4"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AP25"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 76.19999999999997 180)
+        (length 7.62)
+        (name "PS_DDR_A5"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AN24"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 73.65999999999997 180)
+        (length 7.62)
+        (name "PS_DDR_A6"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AM29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 71.11999999999996 180)
+        (length 7.62)
+        (name "PS_DDR_A7"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AM28"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 68.57999999999996 180)
+        (length 7.62)
+        (name "PS_DDR_A8"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AM26"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 66.03999999999995 180)
+        (length 7.62)
+        (name "PS_DDR_A9"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AM25"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 63.49999999999995 180)
+        (length 7.62)
+        (name "PS_DDR_A10"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AL28"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 60.95999999999995 180)
+        (length 7.62)
+        (name "PS_DDR_A11"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AK27"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 58.41999999999995 180)
+        (length 7.62)
+        (name "PS_DDR_A12"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AJ25"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 55.87999999999995 180)
+        (length 7.62)
+        (name "PS_DDR_A13"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AL25"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 53.339999999999954 180)
+        (length 7.62)
+        (name "PS_DDR_A14"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AK25"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 50.799999999999955 180)
+        (length 7.62)
+        (name "PS_DDR_A15"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AK24"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 48.259999999999955 180)
+        (length 7.62)
+        (name "PS_DDR_A16"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AM24"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 45.719999999999956 180)
+        (length 7.62)
+        (name "PS_DDR_A17"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AF25"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 40.63999999999996 180)
+        (length 7.62)
+        (name "PS_DDR_DM0"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AN17"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 38.09999999999996 180)
+        (length 7.62)
+        (name "PS_DDR_DM1"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AM21"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 35.55999999999996 180)
+        (length 7.62)
+        (name "PS_DDR_DM2"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AK19"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 33.01999999999996 180)
+        (length 7.62)
+        (name "PS_DDR_DM3"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AH24"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 30.47999999999996 180)
+        (length 7.62)
+        (name "PS_DDR_DM4"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AH31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 27.939999999999962 180)
+        (length 7.62)
+        (name "PS_DDR_DM5"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AE30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 25.399999999999963 180)
+        (length 7.62)
+        (name "PS_DDR_DM6"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AJ31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 22.859999999999964 180)
+        (length 7.62)
+        (name "PS_DDR_DM7"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AE34"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 20.319999999999965 180)
+        (length 7.62)
+        (name "PS_DDR_DM8"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AN34"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 12.699999999999967 180)
         (length 7.62)
         (name "PS_DDR_DQS_P0"
           (effects
@@ -8412,7 +8159,18 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -140.9700000000001 180)
+        (at 29.21 10.159999999999968 180)
+        (length 7.62)
+        (name "PS_DDR_DQS_N0"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AN19"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 7.619999999999968 180)
         (length 7.62)
         (name "PS_DDR_DQS_P1"
           (effects
@@ -8423,7 +8181,18 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -143.5100000000001 180)
+        (at 29.21 5.079999999999968 180)
+        (length 7.62)
+        (name "PS_DDR_DQS_N1"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AN22"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 2.539999999999968 180)
         (length 7.62)
         (name "PS_DDR_DQS_P2"
           (effects
@@ -8434,7 +8203,18 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -146.0500000000001 180)
+        (at 29.21 -3.197442310920451e-14 180)
+        (length 7.62)
+        (name "PS_DDR_DQS_N2"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AJ19"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -2.540000000000032 180)
         (length 7.62)
         (name "PS_DDR_DQS_P3"
           (effects
@@ -8445,7 +8225,18 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -148.5900000000001 180)
+        (at 29.21 -5.080000000000032 180)
+        (length 7.62)
+        (name "PS_DDR_DQS_N3"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AH23"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -7.620000000000032 180)
         (length 7.62)
         (name "PS_DDR_DQS_P4"
           (effects
@@ -8456,7 +8247,18 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -151.13000000000008 180)
+        (at 29.21 -10.160000000000032 180)
+        (length 7.62)
+        (name "PS_DDR_DQS_N4"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AH29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -12.700000000000031 180)
         (length 7.62)
         (name "PS_DDR_DQS_P5"
           (effects
@@ -8467,7 +8269,18 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -153.67000000000007 180)
+        (at 29.21 -15.24000000000003 180)
+        (length 7.62)
+        (name "PS_DDR_DQS_N5"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AE29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -17.78000000000003 180)
         (length 7.62)
         (name "PS_DDR_DQS_P6"
           (effects
@@ -8478,7 +8291,18 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -156.21000000000006 180)
+        (at 29.21 -20.32000000000003 180)
+        (length 7.62)
+        (name "PS_DDR_DQS_N6"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AK32"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -22.860000000000028 180)
         (length 7.62)
         (name "PS_DDR_DQS_P7"
           (effects
@@ -8489,7 +8313,18 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -158.75000000000006 180)
+        (at 29.21 -25.400000000000027 180)
+        (length 7.62)
+        (name "PS_DDR_DQS_N7"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AE33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -27.940000000000026 180)
         (length 7.62)
         (name "PS_DDR_DQS_P8"
           (effects
@@ -8500,29 +8335,40 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -161.29000000000005 180)
+        (at 29.21 -30.480000000000025 180)
         (length 7.62)
-        (name "PS_DDR_ODT0"
+        (name "PS_DDR_DQS_N8"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AM30"
+        (number "AN33"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -163.83000000000004 180)
+        (at 29.21 -35.560000000000024 180)
         (length 7.62)
-        (name "PS_DDR_ODT1"
+        (name "PS_DDR_ACT_N"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AJ26"
+        (number "AG25"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -166.37000000000003 180)
+        (at 29.21 -38.10000000000002 180)
+        (length 7.62)
+        (name "PS_DDR_ALERT_N"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AF22"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -40.64000000000002 180)
         (length 7.62)
         (name "PS_DDR_PARITY"
           (effects
@@ -8533,7 +8379,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -168.91000000000003 180)
+        (at 29.21 -43.18000000000002 180)
         (length 7.62)
         (name "PS_DDR_RAM_RST_N"
           (effects
@@ -8544,13 +8390,167 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -171.45000000000002 180)
+        (at 29.21 -45.72000000000002 180)
         (length 7.62)
         (name "PS_DDR_ZQ"
           (effects
             (font
               (size 1.27 1.27))))
         (number "AF23"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -50.80000000000002 180)
+        (length 7.62)
+        (name "PS_DDR_BA0"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AH26"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -53.34000000000002 180)
+        (length 7.62)
+        (name "PS_DDR_BG0"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AK28"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -55.88000000000002 180)
+        (length 7.62)
+        (name "PS_DDR_CK0"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AN26"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -58.420000000000016 180)
+        (length 7.62)
+        (name "PS_DDR_CKE0"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AN29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -60.960000000000015 180)
+        (length 7.62)
+        (name "PS_DDR_CK_N0"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AN27"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -63.500000000000014 180)
+        (length 7.62)
+        (name "PS_DDR_CS_N0"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AN28"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -66.04000000000002 180)
+        (length 7.62)
+        (name "PS_DDR_ODT0"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AM30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -71.12000000000003 180)
+        (length 7.62)
+        (name "PS_DDR_BA1"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AG26"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -73.66000000000004 180)
+        (length 7.62)
+        (name "PS_DDR_BG1"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AH27"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -76.20000000000005 180)
+        (length 7.62)
+        (name "PS_DDR_CK1"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AL26"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -78.74000000000005 180)
+        (length 7.62)
+        (name "PS_DDR_CKE1"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AJ27"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -81.28000000000006 180)
+        (length 7.62)
+        (name "PS_DDR_CK_N1"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AL27"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -83.82000000000006 180)
+        (length 7.62)
+        (name "PS_DDR_CS_N1"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AL30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 29.21 -86.36000000000007 180)
+        (length 7.62)
+        (name "PS_DDR_ODT1"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AJ26"
           (effects
             (font
               (size 1.27 1.27))))))

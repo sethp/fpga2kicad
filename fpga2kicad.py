@@ -274,12 +274,14 @@ pin,name,type,side,unit,style,hidden""")
             return self.s == o.s
 
 
-        # FIXME could probably memoize this in a constructor
         def __lt__(self, o):
+            # FIXME could probably memoize this in a constructor
             def splitnum(s: str):
                 m = -1
                 while not s[m].isdigit():
                     m -= 1
+                    if m < -len(s):
+                        return (s, '', '')
 
                 n = m
                 while s[n-1].isdigit():
@@ -288,6 +290,26 @@ pin,name,type,side,unit,style,hidden""")
                 return s[:n], int(s[n:len(s)+m+1]), s[(m+1):]
 
             return splitnum(self.s) < splitnum(o.s)
+
+
+    class DiffPairKey:
+        pn: str # P or N
+        num: int
+
+        def __init__(self, p: Pin):
+            n = -1
+            while p.name[n].isdigit():
+                n -= 1
+            s = p.name[n:]
+            if not (s.startswith('P') or s.startswith('N')):
+                raise ValueError(f'not a diff pair pin: {p}')
+
+            self.pn = s[0]
+            self.num = int(s[1:])
+
+        def __lt__(self, o):
+            # sort P before N
+            return (self.num, o.pn) < (o.num, self.pn)
 
 
     # TODO these cry out for a model like
@@ -408,32 +430,96 @@ pin,name,type,side,unit,style,hidden""")
                 n += 1
 
 
-    # TODO are DDR pins ever not "PSDDR" iotype?
+    pins = by_type.pop(DDRPin)
+
+    def grouped(pins, key):
+        it = groupby(sorted(pins, key=key), key)
+        # from the docs:
+        # "The returned group is itself an iterator that shares the underlying iterable with groupby()."
+        # so we need to eagerly evaluate the iterator if we want to be able to do unpacking
+        # (otherwise the check for "any more values to unpack?" advances the iterator and throws
+        # away the entire group)
+        return [(k, list(g)) for k, g in it]
+
+    # DDR pins are only not "PSDDR" iotype (will throw otherwise)
+    # TODO better error message than "ValueError: too many values to unpack (expected 1)"
     key = attrgetter('iotype')
-    by_iotype = groupby(sorted(by_type.pop(DDRPin), key=key), key)
+    ((iotype, pins),) = grouped(pins, key)
 
-    for iotype, pins in by_iotype:
-        # sorted is stable, meaning any sort we apply here across all
-        # banks will hold within a bank, below
-        pins = sorted(pins, key=lambda p: p.name)
+    # effectively asserts that we have exactly one bank of pins
+    # TODO better error message than "ValueError: too many values to unpack (expected 1)"
+    key = attrgetter('bank')
+    ((bank, pins),) = grouped(pins, key)
 
-        key = attrgetter('bank')
-        by_bank = groupby(sorted(pins, key=key), key)
+    # pre-sort by numeric suffix (this order preserved when a later key compares equal)
+    # i.e. PS_DDR_A9 < PS_DDR_A10 < ... < PS_DDR_DQ10 < ...
+    pins = sorted(pins, key=lambda p: LastNumKey(p.name))
 
-        for bank, pins in by_bank:
-            n = 0
-            for p in pins:
-                out.writerow([
-                    p.loc,
-                    p.name,
-                    "bidirectional",
-                    "right", # side (left/right/top/bottom)
-                    f'{iotype}_{bank}{n//150}', # unit TODO
-                    "line", # style (TODO ?)
-                    "no",   # hidden
-                ])
+    import re
+    # TODO: probably should use `search`, or assert that there are only PS_DDR_... pins
+    def matching(pattern):
+        """
+        NB: re.match only matches at the beginning of the string!
+        """
+        # cf. https://docs.python.org/3/library/re.html#search-vs-match
+        pat = re.compile(pattern)
+        return lambda p: pat.match(p.name)
 
-                n += 1
+    (pins, dq_pins) = partition(matching(
+        # NB: explicitly excludes DDR_DQS pins
+        r'PS_DDR_DQ[0-9]'
+    ), pins)
+    (pins, addr_pins) = partition(matching(r'PS_DDR_A[0-9]'), pins)
+    (pins, dm_pins) = partition(matching(r'PS_DDR_DM[0-9]'), pins)
+    (pins, dqs_pins) = partition(matching(r'PS_DDR_DQS'), pins)
+    dqs_pins = sorted(dqs_pins, key=DiffPairKey)
+
+    (pins, numbered_pins) = partition(lambda p: p.name[-1].isdigit(), pins)
+
+    def sided(pins, side="right"):
+        return [
+            (pin, side) for pin in pins
+        ]
+
+    class Spacer:
+        pass
+
+    def spaced(it):
+        for g in it:
+            for i in g:
+                yield i
+            yield Spacer()
+
+    unit = f'{iotype}_{bank}'
+    for (p, side) in [
+        *sided(dq_pins, "left"),
+        *sided([
+            *addr_pins,
+            Spacer(),
+            *dm_pins,
+            Spacer(),
+            Spacer(),
+            *dqs_pins,
+            Spacer(),
+            *pins,
+            Spacer(),
+            # TODO why is this? (why group BA0 and BG0 together?)
+            *spaced([pp for _, pp in grouped(numbered_pins, lambda p: p.name[-1])])
+        ], "right"),
+    ]:
+        if isinstance(p, Spacer):
+            out.writerow(["*", "", "", side, unit, "", ""])
+            continue
+
+        out.writerow([
+            p.loc,
+            p.name,
+            "bidirectional",
+            side, # side (left/right/top/bottom)
+            unit, # unit
+            "line", # style (TODO ?)
+            "no",   # hidden
+        ])
 
 
     # these are for later (after the catch-all)
