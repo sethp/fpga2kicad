@@ -161,7 +161,7 @@ def parse_pins(rows):
                     raise ParseError(n, f"unexpected logic region (field 6) for io pin: {r}")
 
                 pin = UsrIOPin(Loc(loc), name, iotype, bank)
-            elif name.startswith("MGT") or name.startswith("PS_MGT"):
+            elif iotype.startswith("GT") or iotype.startswith("PSGT"):
                 # TODO improve error
                 if not all([f == "NA" for f in (mem, reg)]):
                     raise ParseError(n, f"unexpected extra fields for power pin: {r}")
@@ -192,7 +192,8 @@ def parse_pins(rows):
 
                 pin = NCPin(Loc(loc))
             elif ("GND" in name
-                or "VCC" in name):
+                or "VCC" in name
+                or "VTT" in name):
 
                 # TODO why do power pins have banks?
                 # if not all([f == "NA" for f in r[2:]]):
@@ -296,16 +297,31 @@ pin,name,type,side,unit,style,hidden""")
         pn: str # P or N
         num: int
 
-        def __init__(self, p):
-            name = p.name if hasattr(p, 'name') else p
-            n = -1
+        # accepts xxx01P or xxxP01
+        def __init__(self, pin: Pin | str):
+            name = pin.name if hasattr(pin, 'name') else pin
+
+            pn = None
+            if name.endswith('P') or name.endswith('N'):
+                pn = name[-1]
+                name = name[:-1]
+                n = -2
+            else:
+                n = -1
+
             while name[n].isdigit():
                 n -= 1
             s = name[n:]
-            if not (s.startswith('P') or s.startswith('N')):
-                raise ValueError(f'not a diff pair pin: {p}')
+            pn = pn or s[0]
+            if not (pn == 'P' or pn == 'N'):
+                raise ValueError(f'could not find P/N suffix (not a diff pair?): {pin}')
 
-            self.pn = s[0]
+            try:
+                num = int(s[1:])
+            except ValueError as e:
+                raise ValueError(f'could not parse ordinal from `{pin}`: {e}')
+
+            self.pn = pn
             self.num = int(s[1:])
 
         def __lt__(self, o):
@@ -339,25 +355,7 @@ pin,name,type,side,unit,style,hidden""")
         by_bank = groupby(sorted(pins, key=key), key)
 
         for bank, pins in by_bank:
-
             unit = f'm{iotype}_{bank}'
-
-            # TODO lol wat?
-            if iotype == 'NA' and bank == 'NA':
-                n = 0
-                for p in pins:
-                    out.writerow([
-                        p.loc,
-                        p.name,
-                        "bidirectional",
-                        "right", # side (left/right/top/bottom)
-                        unit,
-                        "line", # style (TODO ?)
-                        "no",   # hidden
-                    ])
-
-                    n += 1
-                continue
 
             # we want
             # |----------------------|
@@ -370,14 +368,9 @@ pin,name,type,side,unit,style,hidden""")
             #    ...
             # |----------------------|
 
-            (pins, clk_pins) = partition(matching(r'(PS_)?MGTREFCLK[0-9][PN]'), pins)
+            pins = sorted(pins, key=lambda p: DiffPairKey(p.name[:-len(f'_{bank}')]))
 
-            # TODO this works, but....
-            try:
-                pins = sorted(pins, key=lambda p: DiffPairKey(p.name[:-len("_xxx")]))
-            except:
-                dbg_dump(f'{unit=}')
-                raise
+            (pins, clk_pins) = partition(matching(r'(PS_)?MGTREFCLK[0-9][PN]'), pins)
             for p in pins:
                 out.writerow([
                     p.loc,
@@ -403,6 +396,31 @@ pin,name,type,side,unit,style,hidden""")
                     "no",   # hidden
                 ])
 
+    # Why is this here? Well, early revisions misclassified e.g. MGTVCC_L pin
+    # as a GigXcvrPin, despite lack of an iotype or bank.
+    #
+    # That meant they showed up in the pin listing (and therefore unit listing)
+    # much earlier than the other power pins (unit G for the xczu9cgffvb1156pkg)
+    # and in the absence of a good migration path for library symbol unit
+    # relabeling, we'll be carrying this forward for the foreseeable future.
+    #
+    # (Even this positioning represents a swap, becasue previously this block
+    # came in between the MGT banks and PS_MGT bank(s), but it's only swapping
+    # two adjacent units rather than re-labeling everything going forward, which
+    # is an easier manual migration to describe and perform)
+    power_pins = by_type.pop(PowerPin)
+    (power_pins, mgt_pwr) = partition(lambda p: "MGT" in p.name, power_pins)
+
+    for p in mgt_pwr:
+        out.writerow([
+            p.loc,
+            p.name,
+            "pwr",
+            "right", # side (left/right/top/bottom)
+            "mgt_power",
+            "line", # style (TODO ?)
+            "no",   # hidden
+        ])
 
     key = attrgetter('iotype')
     by_iotype = groupby(sorted(by_type.pop(UsrIOPin), key=key), key)
@@ -572,7 +590,7 @@ pin,name,type,side,unit,style,hidden""")
 
 
     # these are for later (after the catch-all)
-    pwr, gnds = partition(lambda x: "GND" in x.name, by_type.pop(PowerPin))
+    pwr, gnds = partition(lambda x: "GND" in x.name, power_pins)
 
     # catch-all
     n = 0
