@@ -63,16 +63,28 @@
         (justify left)
         (hide yes)))
     (symbol "XCZU9EG_1_1"
+      (unit_name mGTH_128)
       (rectangle
-        (start -20.32 -26.67)
-        (end 20.32 26.67)
+        (start -20.32 -19.05)
+        (end 20.32 19.05)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
-      (pin bidirectional line
-        (at 27.94 24.13 180)
+      (pin input line
+        (at -27.94 16.51 0)
+        (length 7.62)
+        (name "MGTHRXP0_128"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "T33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 13.970000000000002 0)
         (length 7.62)
         (name "MGTHRXN0_128"
           (effects
@@ -82,8 +94,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 21.59 180)
+      (pin input line
+        (at -27.94 11.430000000000003 0)
+        (length 7.62)
+        (name "MGTHRXP1_128"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "P33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 8.890000000000004 0)
         (length 7.62)
         (name "MGTHRXN1_128"
           (effects
@@ -93,8 +116,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 19.05 180)
+      (pin input line
+        (at -27.94 6.350000000000004 0)
+        (length 7.62)
+        (name "MGTHRXP2_128"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "N31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 3.810000000000004 0)
         (length 7.62)
         (name "MGTHRXN2_128"
           (effects
@@ -104,8 +138,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 16.51 180)
+      (pin input line
+        (at -27.94 1.270000000000004 0)
+        (length 7.62)
+        (name "MGTHRXP3_128"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "M33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 -1.269999999999996 0)
         (length 7.62)
         (name "MGTHRXN3_128"
           (effects
@@ -116,161 +161,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 13.970000000000002 180)
-        (length 7.62)
-        (name "MGTHRXP0_128"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "T33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 11.430000000000003 180)
-        (length 7.62)
-        (name "MGTHRXP1_128"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "P33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 8.890000000000004 180)
-        (length 7.62)
-        (name "MGTHRXP2_128"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "N31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 6.350000000000004 180)
-        (length 7.62)
-        (name "MGTHRXP3_128"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "M33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 3.810000000000004 180)
-        (length 7.62)
-        (name "MGTHTXN0_128"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "T30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 1.270000000000004 180)
-        (length 7.62)
-        (name "MGTHTXN1_128"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "R32"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -1.269999999999996 180)
-        (length 7.62)
-        (name "MGTHTXN2_128"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "P30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -3.809999999999996 180)
-        (length 7.62)
-        (name "MGTHTXN3_128"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "M30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -6.349999999999996 180)
-        (length 7.62)
-        (name "MGTHTXP0_128"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "T29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -8.889999999999997 180)
-        (length 7.62)
-        (name "MGTHTXP1_128"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "R31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -11.429999999999996 180)
-        (length 7.62)
-        (name "MGTHTXP2_128"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "P29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -13.969999999999995 180)
-        (length 7.62)
-        (name "MGTHTXP3_128"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "M29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -16.509999999999994 180)
-        (length 7.62)
-        (name "MGTREFCLK0N_128"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "R28"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -19.049999999999994 180)
-        (length 7.62)
-        (name "MGTREFCLK0P_128"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "R27"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -21.589999999999993 180)
+        (at -27.94 -8.889999999999997 0)
         (length 7.62)
         (name "MGTREFCLK1N_128"
           (effects
@@ -281,7 +172,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 -24.129999999999992 180)
+        (at -27.94 -11.429999999999996 0)
         (length 7.62)
         (name "MGTREFCLK1P_128"
           (effects
@@ -290,18 +181,140 @@
         (number "N27"
           (effects
             (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -27.94 -13.969999999999995 0)
+        (length 7.62)
+        (name "MGTREFCLK0N_128"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "R28"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -27.94 -16.509999999999994 0)
+        (length 7.62)
+        (name "MGTREFCLK0P_128"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "R27"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 8.89 180)
+        (length 7.62)
+        (name "MGTHTXP0_128"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "T29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 6.3500000000000005 180)
+        (length 7.62)
+        (name "MGTHTXN0_128"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "T30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 3.8100000000000005 180)
+        (length 7.62)
+        (name "MGTHTXP1_128"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "R31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 1.2700000000000005 180)
+        (length 7.62)
+        (name "MGTHTXN1_128"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "R32"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -1.2699999999999996 180)
+        (length 7.62)
+        (name "MGTHTXP2_128"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "P29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -3.8099999999999996 180)
+        (length 7.62)
+        (name "MGTHTXN2_128"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "P30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -6.35 180)
+        (length 7.62)
+        (name "MGTHTXP3_128"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "M29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -8.89 180)
+        (length 7.62)
+        (name "MGTHTXN3_128"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "M30"
+          (effects
+            (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_2_1"
+      (unit_name mGTH_129)
       (rectangle
-        (start -20.32 -26.67)
-        (end 20.32 26.67)
+        (start -20.32 -19.05)
+        (end 20.32 19.05)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
-      (pin bidirectional line
-        (at 27.94 24.13 180)
+      (pin input line
+        (at -27.94 16.51 0)
+        (length 7.62)
+        (name "MGTHRXP0_129"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "L31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 13.970000000000002 0)
         (length 7.62)
         (name "MGTHRXN0_129"
           (effects
@@ -311,8 +324,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 21.59 180)
+      (pin input line
+        (at -27.94 11.430000000000003 0)
+        (length 7.62)
+        (name "MGTHRXP1_129"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "K33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 8.890000000000004 0)
         (length 7.62)
         (name "MGTHRXN1_129"
           (effects
@@ -322,8 +346,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 19.05 180)
+      (pin input line
+        (at -27.94 6.350000000000004 0)
+        (length 7.62)
+        (name "MGTHRXP2_129"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "H33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 3.810000000000004 0)
         (length 7.62)
         (name "MGTHRXN2_129"
           (effects
@@ -333,8 +368,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 16.51 180)
+      (pin input line
+        (at -27.94 1.270000000000004 0)
+        (length 7.62)
+        (name "MGTHRXP3_129"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "F33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 -1.269999999999996 0)
         (length 7.62)
         (name "MGTHRXN3_129"
           (effects
@@ -345,161 +391,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 13.970000000000002 180)
-        (length 7.62)
-        (name "MGTHRXP0_129"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "L31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 11.430000000000003 180)
-        (length 7.62)
-        (name "MGTHRXP1_129"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "K33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 8.890000000000004 180)
-        (length 7.62)
-        (name "MGTHRXP2_129"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "H33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 6.350000000000004 180)
-        (length 7.62)
-        (name "MGTHRXP3_129"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "F33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 3.810000000000004 180)
-        (length 7.62)
-        (name "MGTHTXN0_129"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "K30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 1.270000000000004 180)
-        (length 7.62)
-        (name "MGTHTXN1_129"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "J32"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -1.269999999999996 180)
-        (length 7.62)
-        (name "MGTHTXN2_129"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "H30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -3.809999999999996 180)
-        (length 7.62)
-        (name "MGTHTXN3_129"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "G32"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -6.349999999999996 180)
-        (length 7.62)
-        (name "MGTHTXP0_129"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "K29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -8.889999999999997 180)
-        (length 7.62)
-        (name "MGTHTXP1_129"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "J31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -11.429999999999996 180)
-        (length 7.62)
-        (name "MGTHTXP2_129"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "H29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -13.969999999999995 180)
-        (length 7.62)
-        (name "MGTHTXP3_129"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "G31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -16.509999999999994 180)
-        (length 7.62)
-        (name "MGTREFCLK0N_129"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "L28"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -19.049999999999994 180)
-        (length 7.62)
-        (name "MGTREFCLK0P_129"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "L27"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -21.589999999999993 180)
+        (at -27.94 -8.889999999999997 0)
         (length 7.62)
         (name "MGTREFCLK1N_129"
           (effects
@@ -510,7 +402,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 -24.129999999999992 180)
+        (at -27.94 -11.429999999999996 0)
         (length 7.62)
         (name "MGTREFCLK1P_129"
           (effects
@@ -519,18 +411,140 @@
         (number "J27"
           (effects
             (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -27.94 -13.969999999999995 0)
+        (length 7.62)
+        (name "MGTREFCLK0N_129"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "L28"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -27.94 -16.509999999999994 0)
+        (length 7.62)
+        (name "MGTREFCLK0P_129"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "L27"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 8.89 180)
+        (length 7.62)
+        (name "MGTHTXP0_129"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "K29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 6.3500000000000005 180)
+        (length 7.62)
+        (name "MGTHTXN0_129"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "K30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 3.8100000000000005 180)
+        (length 7.62)
+        (name "MGTHTXP1_129"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "J31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 1.2700000000000005 180)
+        (length 7.62)
+        (name "MGTHTXN1_129"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "J32"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -1.2699999999999996 180)
+        (length 7.62)
+        (name "MGTHTXP2_129"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "H29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -3.8099999999999996 180)
+        (length 7.62)
+        (name "MGTHTXN2_129"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "H30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -6.35 180)
+        (length 7.62)
+        (name "MGTHTXP3_129"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "G31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -8.89 180)
+        (length 7.62)
+        (name "MGTHTXN3_129"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "G32"
+          (effects
+            (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_3_1"
+      (unit_name mGTH_130)
       (rectangle
-        (start -20.32 -26.67)
-        (end 20.32 26.67)
+        (start -20.32 -19.05)
+        (end 20.32 19.05)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
-      (pin bidirectional line
-        (at 27.94 24.13 180)
+      (pin input line
+        (at -27.94 16.51 0)
+        (length 7.62)
+        (name "MGTHRXP0_130"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "E31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 13.970000000000002 0)
         (length 7.62)
         (name "MGTHRXN0_130"
           (effects
@@ -540,8 +554,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 21.59 180)
+      (pin input line
+        (at -27.94 11.430000000000003 0)
+        (length 7.62)
+        (name "MGTHRXP1_130"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "D33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 8.890000000000004 0)
         (length 7.62)
         (name "MGTHRXN1_130"
           (effects
@@ -551,8 +576,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 19.05 180)
+      (pin input line
+        (at -27.94 6.350000000000004 0)
+        (length 7.62)
+        (name "MGTHRXP2_130"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "C31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 3.810000000000004 0)
         (length 7.62)
         (name "MGTHRXN2_130"
           (effects
@@ -562,8 +598,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 16.51 180)
+      (pin input line
+        (at -27.94 1.270000000000004 0)
+        (length 7.62)
+        (name "MGTHRXP3_130"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "B33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 -1.269999999999996 0)
         (length 7.62)
         (name "MGTHRXN3_130"
           (effects
@@ -574,139 +621,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 13.970000000000002 180)
-        (length 7.62)
-        (name "MGTHRXP0_130"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "E31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 11.430000000000003 180)
-        (length 7.62)
-        (name "MGTHRXP1_130"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "D33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 8.890000000000004 180)
-        (length 7.62)
-        (name "MGTHRXP2_130"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "C31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 6.350000000000004 180)
-        (length 7.62)
-        (name "MGTHRXP3_130"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "B33"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 3.810000000000004 180)
-        (length 7.62)
-        (name "MGTHTXN0_130"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "F30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 1.270000000000004 180)
-        (length 7.62)
-        (name "MGTHTXN1_130"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "D30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -1.269999999999996 180)
-        (length 7.62)
-        (name "MGTHTXN2_130"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "B30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -3.809999999999996 180)
-        (length 7.62)
-        (name "MGTHTXN3_130"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "A32"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -6.349999999999996 180)
-        (length 7.62)
-        (name "MGTHTXP0_130"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "F29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -8.889999999999997 180)
-        (length 7.62)
-        (name "MGTHTXP1_130"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "D29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -11.429999999999996 180)
-        (length 7.62)
-        (name "MGTHTXP2_130"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "B29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -13.969999999999995 180)
-        (length 7.62)
-        (name "MGTHTXP3_130"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "A31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -16.509999999999994 180)
+        (at -27.94 -8.889999999999997 0)
         (length 7.62)
         (name "MGTREFCLK0N_130"
           (effects
@@ -717,7 +632,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 -19.049999999999994 180)
+        (at -27.94 -11.429999999999996 0)
         (length 7.62)
         (name "MGTREFCLK0P_130"
           (effects
@@ -728,7 +643,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 -21.589999999999993 180)
+        (at -27.94 -13.969999999999995 0)
         (length 7.62)
         (name "MGTREFCLK1N_130"
           (effects
@@ -739,7 +654,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 -24.129999999999992 180)
+        (at -27.94 -16.509999999999994 0)
         (length 7.62)
         (name "MGTREFCLK1P_130"
           (effects
@@ -748,18 +663,118 @@
         (number "E27"
           (effects
             (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 8.89 180)
+        (length 7.62)
+        (name "MGTHTXP0_130"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "F29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 6.3500000000000005 180)
+        (length 7.62)
+        (name "MGTHTXN0_130"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "F30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 3.8100000000000005 180)
+        (length 7.62)
+        (name "MGTHTXP1_130"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "D29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 1.2700000000000005 180)
+        (length 7.62)
+        (name "MGTHTXN1_130"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "D30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -1.2699999999999996 180)
+        (length 7.62)
+        (name "MGTHTXP2_130"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "B29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -3.8099999999999996 180)
+        (length 7.62)
+        (name "MGTHTXN2_130"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "B30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -6.35 180)
+        (length 7.62)
+        (name "MGTHTXP3_130"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "A31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -8.89 180)
+        (length 7.62)
+        (name "MGTHTXN3_130"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "A32"
+          (effects
+            (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_4_1"
+      (unit_name mGTH_228)
       (rectangle
-        (start -20.32 -26.67)
-        (end 20.32 26.67)
+        (start -20.32 -19.05)
+        (end 20.32 19.05)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
-      (pin bidirectional line
-        (at 27.94 24.13 180)
+      (pin input line
+        (at -27.94 16.51 0)
+        (length 7.62)
+        (name "MGTHRXP0_228"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "T2"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 13.970000000000002 0)
         (length 7.62)
         (name "MGTHRXN0_228"
           (effects
@@ -769,8 +784,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 21.59 180)
+      (pin input line
+        (at -27.94 11.430000000000003 0)
+        (length 7.62)
+        (name "MGTHRXP1_228"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "P2"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 8.890000000000004 0)
         (length 7.62)
         (name "MGTHRXN1_228"
           (effects
@@ -780,8 +806,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 19.05 180)
+      (pin input line
+        (at -27.94 6.350000000000004 0)
+        (length 7.62)
+        (name "MGTHRXP2_228"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "M2"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 3.810000000000004 0)
         (length 7.62)
         (name "MGTHRXN2_228"
           (effects
@@ -791,8 +828,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 16.51 180)
+      (pin input line
+        (at -27.94 1.270000000000004 0)
+        (length 7.62)
+        (name "MGTHRXP3_228"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "L4"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 -1.269999999999996 0)
         (length 7.62)
         (name "MGTHRXN3_228"
           (effects
@@ -803,161 +851,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 13.970000000000002 180)
-        (length 7.62)
-        (name "MGTHRXP0_228"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "T2"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 11.430000000000003 180)
-        (length 7.62)
-        (name "MGTHRXP1_228"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "P2"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 8.890000000000004 180)
-        (length 7.62)
-        (name "MGTHRXP2_228"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "M2"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 6.350000000000004 180)
-        (length 7.62)
-        (name "MGTHRXP3_228"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "L4"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 3.810000000000004 180)
-        (length 7.62)
-        (name "MGTHTXN0_228"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "R3"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 1.270000000000004 180)
-        (length 7.62)
-        (name "MGTHTXN1_228"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "P5"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -1.269999999999996 180)
-        (length 7.62)
-        (name "MGTHTXN2_228"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "N3"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -3.809999999999996 180)
-        (length 7.62)
-        (name "MGTHTXN3_228"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "M5"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -6.349999999999996 180)
-        (length 7.62)
-        (name "MGTHTXP0_228"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "R4"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -8.889999999999997 180)
-        (length 7.62)
-        (name "MGTHTXP1_228"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "P6"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -11.429999999999996 180)
-        (length 7.62)
-        (name "MGTHTXP2_228"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "N4"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -13.969999999999995 180)
-        (length 7.62)
-        (name "MGTHTXP3_228"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "M6"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -16.509999999999994 180)
-        (length 7.62)
-        (name "MGTREFCLK0N_228"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "L7"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -19.049999999999994 180)
-        (length 7.62)
-        (name "MGTREFCLK0P_228"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "L8"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -21.589999999999993 180)
+        (at -27.94 -8.889999999999997 0)
         (length 7.62)
         (name "MGTREFCLK1N_228"
           (effects
@@ -968,7 +862,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 -24.129999999999992 180)
+        (at -27.94 -11.429999999999996 0)
         (length 7.62)
         (name "MGTREFCLK1P_228"
           (effects
@@ -977,18 +871,140 @@
         (number "J8"
           (effects
             (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -27.94 -13.969999999999995 0)
+        (length 7.62)
+        (name "MGTREFCLK0N_228"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "L7"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -27.94 -16.509999999999994 0)
+        (length 7.62)
+        (name "MGTREFCLK0P_228"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "L8"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 8.89 180)
+        (length 7.62)
+        (name "MGTHTXP0_228"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "R4"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 6.3500000000000005 180)
+        (length 7.62)
+        (name "MGTHTXN0_228"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "R3"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 3.8100000000000005 180)
+        (length 7.62)
+        (name "MGTHTXP1_228"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "P6"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 1.2700000000000005 180)
+        (length 7.62)
+        (name "MGTHTXN1_228"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "P5"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -1.2699999999999996 180)
+        (length 7.62)
+        (name "MGTHTXP2_228"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "N4"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -3.8099999999999996 180)
+        (length 7.62)
+        (name "MGTHTXN2_228"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "N3"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -6.35 180)
+        (length 7.62)
+        (name "MGTHTXP3_228"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "M6"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -8.89 180)
+        (length 7.62)
+        (name "MGTHTXN3_228"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "M5"
+          (effects
+            (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_5_1"
+      (unit_name mGTH_229)
       (rectangle
-        (start -20.32 -26.67)
-        (end 20.32 26.67)
+        (start -20.32 -19.05)
+        (end 20.32 19.05)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
-      (pin bidirectional line
-        (at 27.94 24.13 180)
+      (pin input line
+        (at -27.94 16.51 0)
+        (length 7.62)
+        (name "MGTHRXP0_229"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "K2"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 13.970000000000002 0)
         (length 7.62)
         (name "MGTHRXN0_229"
           (effects
@@ -998,8 +1014,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 21.59 180)
+      (pin input line
+        (at -27.94 11.430000000000003 0)
+        (length 7.62)
+        (name "MGTHRXP1_229"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "J4"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 8.890000000000004 0)
         (length 7.62)
         (name "MGTHRXN1_229"
           (effects
@@ -1009,8 +1036,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 19.05 180)
+      (pin input line
+        (at -27.94 6.350000000000004 0)
+        (length 7.62)
+        (name "MGTHRXP2_229"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "H2"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 3.810000000000004 0)
         (length 7.62)
         (name "MGTHRXN2_229"
           (effects
@@ -1020,8 +1058,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 16.51 180)
+      (pin input line
+        (at -27.94 1.270000000000004 0)
+        (length 7.62)
+        (name "MGTHRXP3_229"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "F2"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 -1.269999999999996 0)
         (length 7.62)
         (name "MGTHRXN3_229"
           (effects
@@ -1032,161 +1081,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 13.970000000000002 180)
-        (length 7.62)
-        (name "MGTHRXP0_229"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "K2"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 11.430000000000003 180)
-        (length 7.62)
-        (name "MGTHRXP1_229"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "J4"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 8.890000000000004 180)
-        (length 7.62)
-        (name "MGTHRXP2_229"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "H2"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 6.350000000000004 180)
-        (length 7.62)
-        (name "MGTHRXP3_229"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "F2"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 3.810000000000004 180)
-        (length 7.62)
-        (name "MGTHTXN0_229"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "K5"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 1.270000000000004 180)
-        (length 7.62)
-        (name "MGTHTXN1_229"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "H5"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -1.269999999999996 180)
-        (length 7.62)
-        (name "MGTHTXN2_229"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "G3"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -3.809999999999996 180)
-        (length 7.62)
-        (name "MGTHTXN3_229"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "F5"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -6.349999999999996 180)
-        (length 7.62)
-        (name "MGTHTXP0_229"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "K6"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -8.889999999999997 180)
-        (length 7.62)
-        (name "MGTHTXP1_229"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "H6"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -11.429999999999996 180)
-        (length 7.62)
-        (name "MGTHTXP2_229"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "G4"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -13.969999999999995 180)
-        (length 7.62)
-        (name "MGTHTXP3_229"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "F6"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -16.509999999999994 180)
-        (length 7.62)
-        (name "MGTREFCLK0N_229"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "G7"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -19.049999999999994 180)
-        (length 7.62)
-        (name "MGTREFCLK0P_229"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "G8"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -21.589999999999993 180)
+        (at -27.94 -8.889999999999997 0)
         (length 7.62)
         (name "MGTREFCLK1N_229"
           (effects
@@ -1197,7 +1092,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 -24.129999999999992 180)
+        (at -27.94 -11.429999999999996 0)
         (length 7.62)
         (name "MGTREFCLK1P_229"
           (effects
@@ -1206,18 +1101,140 @@
         (number "E8"
           (effects
             (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -27.94 -13.969999999999995 0)
+        (length 7.62)
+        (name "MGTREFCLK0N_229"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "G7"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -27.94 -16.509999999999994 0)
+        (length 7.62)
+        (name "MGTREFCLK0P_229"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "G8"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 8.89 180)
+        (length 7.62)
+        (name "MGTHTXP0_229"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "K6"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 6.3500000000000005 180)
+        (length 7.62)
+        (name "MGTHTXN0_229"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "K5"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 3.8100000000000005 180)
+        (length 7.62)
+        (name "MGTHTXP1_229"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "H6"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 1.2700000000000005 180)
+        (length 7.62)
+        (name "MGTHTXN1_229"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "H5"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -1.2699999999999996 180)
+        (length 7.62)
+        (name "MGTHTXP2_229"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "G4"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -3.8099999999999996 180)
+        (length 7.62)
+        (name "MGTHTXN2_229"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "G3"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -6.35 180)
+        (length 7.62)
+        (name "MGTHTXP3_229"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "F6"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -8.89 180)
+        (length 7.62)
+        (name "MGTHTXN3_229"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "F5"
+          (effects
+            (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_6_1"
+      (unit_name mGTH_230)
       (rectangle
-        (start -20.32 -26.67)
-        (end 20.32 26.67)
+        (start -20.32 -19.05)
+        (end 20.32 19.05)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
-      (pin bidirectional line
-        (at 27.94 24.13 180)
+      (pin input line
+        (at -27.94 16.51 0)
+        (length 7.62)
+        (name "MGTHRXP0_230"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "D2"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 13.970000000000002 0)
         (length 7.62)
         (name "MGTHRXN0_230"
           (effects
@@ -1227,8 +1244,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 21.59 180)
+      (pin input line
+        (at -27.94 11.430000000000003 0)
+        (length 7.62)
+        (name "MGTHRXP1_230"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "C4"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 8.890000000000004 0)
         (length 7.62)
         (name "MGTHRXN1_230"
           (effects
@@ -1238,8 +1266,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 19.05 180)
+      (pin input line
+        (at -27.94 6.350000000000004 0)
+        (length 7.62)
+        (name "MGTHRXP2_230"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "B2"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 3.810000000000004 0)
         (length 7.62)
         (name "MGTHRXN2_230"
           (effects
@@ -1249,8 +1288,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 16.51 180)
+      (pin input line
+        (at -27.94 1.270000000000004 0)
+        (length 7.62)
+        (name "MGTHRXP3_230"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "A4"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -27.94 -1.269999999999996 0)
         (length 7.62)
         (name "MGTHRXN3_230"
           (effects
@@ -1261,139 +1311,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 13.970000000000002 180)
-        (length 7.62)
-        (name "MGTHRXP0_230"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "D2"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 11.430000000000003 180)
-        (length 7.62)
-        (name "MGTHRXP1_230"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "C4"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 8.890000000000004 180)
-        (length 7.62)
-        (name "MGTHRXP2_230"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "B2"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 6.350000000000004 180)
-        (length 7.62)
-        (name "MGTHRXP3_230"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "A4"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 3.810000000000004 180)
-        (length 7.62)
-        (name "MGTHTXN0_230"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "E3"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 1.270000000000004 180)
-        (length 7.62)
-        (name "MGTHTXN1_230"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "D5"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -1.269999999999996 180)
-        (length 7.62)
-        (name "MGTHTXN2_230"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "B5"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -3.809999999999996 180)
-        (length 7.62)
-        (name "MGTHTXN3_230"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "A7"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -6.349999999999996 180)
-        (length 7.62)
-        (name "MGTHTXP0_230"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "E4"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -8.889999999999997 180)
-        (length 7.62)
-        (name "MGTHTXP1_230"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "D6"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -11.429999999999996 180)
-        (length 7.62)
-        (name "MGTHTXP2_230"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "B6"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -13.969999999999995 180)
-        (length 7.62)
-        (name "MGTHTXP3_230"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "A8"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -16.509999999999994 180)
+        (at -27.94 -8.889999999999997 0)
         (length 7.62)
         (name "MGTREFCLK0N_230"
           (effects
@@ -1404,7 +1322,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 -19.049999999999994 180)
+        (at -27.94 -11.429999999999996 0)
         (length 7.62)
         (name "MGTREFCLK0P_230"
           (effects
@@ -1415,7 +1333,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 -21.589999999999993 180)
+        (at -27.94 -13.969999999999995 0)
         (length 7.62)
         (name "MGTREFCLK1N_230"
           (effects
@@ -1426,7 +1344,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 -24.129999999999992 180)
+        (at -27.94 -16.509999999999994 0)
         (length 7.62)
         (name "MGTREFCLK1P_230"
           (effects
@@ -1435,8 +1353,97 @@
         (number "B10"
           (effects
             (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 8.89 180)
+        (length 7.62)
+        (name "MGTHTXP0_230"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "E4"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 6.3500000000000005 180)
+        (length 7.62)
+        (name "MGTHTXN0_230"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "E3"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 3.8100000000000005 180)
+        (length 7.62)
+        (name "MGTHTXP1_230"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "D6"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 1.2700000000000005 180)
+        (length 7.62)
+        (name "MGTHTXN1_230"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "D5"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -1.2699999999999996 180)
+        (length 7.62)
+        (name "MGTHTXP2_230"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "B6"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -3.8099999999999996 180)
+        (length 7.62)
+        (name "MGTHTXN2_230"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "B5"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -6.35 180)
+        (length 7.62)
+        (name "MGTHTXP3_230"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "A8"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 -8.89 180)
+        (length 7.62)
+        (name "MGTHTXN3_230"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "A7"
+          (effects
+            (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_7_1"
+      (unit_name mNA_NA)
       (rectangle
         (start -19.05 -66.04)
         (end 19.05 66.04)
@@ -1448,148 +1455,16 @@
       (pin bidirectional line
         (at 26.67 60.96 180)
         (length 7.62)
-        (name "MGTAVCC_L"
+        (name "MGTRREF_L"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "F28"
+        (number "A29"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
         (at 26.67 58.42 180)
-        (length 7.62)
-        (name "MGTAVCC_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "G29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 55.88 180)
-        (length 7.62)
-        (name "MGTAVCC_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "H27"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 53.34 180)
-        (length 7.62)
-        (name "MGTAVCC_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "L29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 50.800000000000004 180)
-        (length 7.62)
-        (name "MGTAVCC_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "P28"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 48.260000000000005 180)
-        (length 7.62)
-        (name "MGTAVCC_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "R29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 45.720000000000006 180)
-        (length 7.62)
-        (name "MGTAVCC_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "A10"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 43.18000000000001 180)
-        (length 7.62)
-        (name "MGTAVCC_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "B8"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 40.64000000000001 180)
-        (length 7.62)
-        (name "MGTAVCC_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "C6"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 38.10000000000001 180)
-        (length 7.62)
-        (name "MGTAVCC_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "D7"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 35.56000000000001 180)
-        (length 7.62)
-        (name "MGTAVCC_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "E5"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 33.02000000000001 180)
-        (length 7.62)
-        (name "MGTAVCC_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "G6"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 30.48000000000001 180)
-        (length 7.62)
-        (name "MGTAVCC_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "K8"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 27.940000000000012 180)
         (length 7.62)
         (name "MGTAVTTRCAL_L"
           (effects
@@ -1600,260 +1475,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 26.67 25.400000000000013 180)
-        (length 7.62)
-        (name "MGTAVTTRCAL_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "A5"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 22.860000000000014 180)
-        (length 7.62)
-        (name "MGTAVTT_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "B31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 20.320000000000014 180)
-        (length 7.62)
-        (name "MGTAVTT_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "C29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 17.780000000000015 180)
-        (length 7.62)
-        (name "MGTAVTT_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "D32"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 15.240000000000016 180)
-        (length 7.62)
-        (name "MGTAVTT_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "E30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 12.700000000000017 180)
-        (length 7.62)
-        (name "MGTAVTT_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "F31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 10.160000000000018 180)
-        (length 7.62)
-        (name "MGTAVTT_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "H32"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 7.620000000000018 180)
-        (length 7.62)
-        (name "MGTAVTT_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "J30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 5.080000000000018 180)
-        (length 7.62)
-        (name "MGTAVTT_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "K31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 2.540000000000018 180)
-        (length 7.62)
-        (name "MGTAVTT_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "M32"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 1.7763568394002505e-14 180)
-        (length 7.62)
-        (name "MGTAVTT_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "N30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 -2.5399999999999823 180)
-        (length 7.62)
-        (name "MGTAVTT_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "P31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 -5.079999999999982 180)
-        (length 7.62)
-        (name "MGTAVTT_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "B3"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 -7.619999999999982 180)
-        (length 7.62)
-        (name "MGTAVTT_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "D4"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 -10.159999999999982 180)
-        (length 7.62)
-        (name "MGTAVTT_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "F3"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 -12.699999999999982 180)
-        (length 7.62)
-        (name "MGTAVTT_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "H4"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 -15.23999999999998 180)
-        (length 7.62)
-        (name "MGTAVTT_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "J5"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 -17.77999999999998 180)
-        (length 7.62)
-        (name "MGTAVTT_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "K3"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 -20.31999999999998 180)
-        (length 7.62)
-        (name "MGTAVTT_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "L6"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 -22.859999999999978 180)
-        (length 7.62)
-        (name "MGTAVTT_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "M4"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 -25.399999999999977 180)
-        (length 7.62)
-        (name "MGTAVTT_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "N5"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 -27.939999999999976 180)
-        (length 7.62)
-        (name "MGTAVTT_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "P3"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 -30.479999999999976 180)
-        (length 7.62)
-        (name "MGTRREF_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "A29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 26.67 -33.019999999999975 180)
+        (at 26.67 55.88 180)
         (length 7.62)
         (name "MGTRREF_R"
           (effects
@@ -1864,13 +1486,398 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 26.67 -35.559999999999974 180)
+        (at 26.67 53.34 180)
         (length 7.62)
-        (name "MGTVCCAUX_L"
+        (name "MGTAVTTRCAL_R"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "K28"
+        (number "A5"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 50.800000000000004 180)
+        (length 7.62)
+        (name "PS_MGTRREF_505"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AB28"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 48.260000000000005 180)
+        (length 7.62)
+        (name "MGTAVCC_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "F28"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 45.720000000000006 180)
+        (length 7.62)
+        (name "MGTAVCC_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "G29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 43.18000000000001 180)
+        (length 7.62)
+        (name "MGTAVCC_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "H27"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 40.64000000000001 180)
+        (length 7.62)
+        (name "MGTAVCC_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "L29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 38.10000000000001 180)
+        (length 7.62)
+        (name "MGTAVCC_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "P28"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 35.56000000000001 180)
+        (length 7.62)
+        (name "MGTAVCC_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "R29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 33.02000000000001 180)
+        (length 7.62)
+        (name "MGTAVCC_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "A10"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 30.48000000000001 180)
+        (length 7.62)
+        (name "MGTAVCC_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "B8"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 27.940000000000012 180)
+        (length 7.62)
+        (name "MGTAVCC_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "C6"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 25.400000000000013 180)
+        (length 7.62)
+        (name "MGTAVCC_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "D7"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 22.860000000000014 180)
+        (length 7.62)
+        (name "MGTAVCC_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "E5"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 20.320000000000014 180)
+        (length 7.62)
+        (name "MGTAVCC_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "G6"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 17.780000000000015 180)
+        (length 7.62)
+        (name "MGTAVCC_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "K8"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 15.240000000000016 180)
+        (length 7.62)
+        (name "MGTAVTT_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "B31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 12.700000000000017 180)
+        (length 7.62)
+        (name "MGTAVTT_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "C29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 10.160000000000018 180)
+        (length 7.62)
+        (name "MGTAVTT_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "D32"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 7.620000000000018 180)
+        (length 7.62)
+        (name "MGTAVTT_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "E30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 5.080000000000018 180)
+        (length 7.62)
+        (name "MGTAVTT_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "F31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 2.540000000000018 180)
+        (length 7.62)
+        (name "MGTAVTT_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "H32"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 1.7763568394002505e-14 180)
+        (length 7.62)
+        (name "MGTAVTT_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "J30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 -2.5399999999999823 180)
+        (length 7.62)
+        (name "MGTAVTT_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "K31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 -5.079999999999982 180)
+        (length 7.62)
+        (name "MGTAVTT_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "M32"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 -7.619999999999982 180)
+        (length 7.62)
+        (name "MGTAVTT_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "N30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 -10.159999999999982 180)
+        (length 7.62)
+        (name "MGTAVTT_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "P31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 -12.699999999999982 180)
+        (length 7.62)
+        (name "MGTAVTT_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "B3"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 -15.23999999999998 180)
+        (length 7.62)
+        (name "MGTAVTT_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "D4"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 -17.77999999999998 180)
+        (length 7.62)
+        (name "MGTAVTT_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "F3"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 -20.31999999999998 180)
+        (length 7.62)
+        (name "MGTAVTT_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "H4"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 -22.859999999999978 180)
+        (length 7.62)
+        (name "MGTAVTT_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "J5"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 -25.399999999999977 180)
+        (length 7.62)
+        (name "MGTAVTT_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "K3"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 -27.939999999999976 180)
+        (length 7.62)
+        (name "MGTAVTT_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "L6"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 -30.479999999999976 180)
+        (length 7.62)
+        (name "MGTAVTT_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "M4"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 -33.019999999999975 180)
+        (length 7.62)
+        (name "MGTAVTT_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "N5"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 26.67 -35.559999999999974 180)
+        (length 7.62)
+        (name "MGTAVTT_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "P3"
           (effects
             (font
               (size 1.27 1.27)))))
@@ -1881,18 +1888,18 @@
           (effects
             (font
               (size 1.27 1.27))))
-        (number "M27"
+        (number "K28"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
         (at 26.67 -40.63999999999997 180)
         (length 7.62)
-        (name "MGTVCCAUX_R"
+        (name "MGTVCCAUX_L"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "F8"
+        (number "M27"
           (effects
             (font
               (size 1.27 1.27)))))
@@ -1903,18 +1910,18 @@
           (effects
             (font
               (size 1.27 1.27))))
-        (number "H7"
+        (number "F8"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
         (at 26.67 -45.71999999999997 180)
         (length 7.62)
-        (name "PS_MGTRAVCC"
+        (name "MGTVCCAUX_R"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AA29"
+        (number "H7"
           (effects
             (font
               (size 1.27 1.27)))))
@@ -1925,7 +1932,7 @@
           (effects
             (font
               (size 1.27 1.27))))
-        (number "V28"
+        (number "AA29"
           (effects
             (font
               (size 1.27 1.27)))))
@@ -1936,7 +1943,7 @@
           (effects
             (font
               (size 1.27 1.27))))
-        (number "W30"
+        (number "V28"
           (effects
             (font
               (size 1.27 1.27)))))
@@ -1947,18 +1954,18 @@
           (effects
             (font
               (size 1.27 1.27))))
-        (number "Y27"
+        (number "W30"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
         (at 26.67 -55.87999999999997 180)
         (length 7.62)
-        (name "PS_MGTRAVTT"
+        (name "PS_MGTRAVCC"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AB32"
+        (number "Y27"
           (effects
             (font
               (size 1.27 1.27)))))
@@ -1969,7 +1976,7 @@
           (effects
             (font
               (size 1.27 1.27))))
-        (number "V32"
+        (number "AB32"
           (effects
             (font
               (size 1.27 1.27)))))
@@ -1980,120 +1987,44 @@
           (effects
             (font
               (size 1.27 1.27))))
-        (number "Y31"
+        (number "V32"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
         (at 26.67 -63.499999999999964 180)
         (length 7.62)
-        (name "PS_MGTRREF_505"
+        (name "PS_MGTRAVTT"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AB28"
+        (number "Y31"
           (effects
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_8_1"
+      (unit_name mPSGTR_505)
       (rectangle
-        (start -22.86 -31.75)
-        (end 22.86 31.75)
+        (start -22.86 -24.13)
+        (end 22.86 24.13)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
-      (pin bidirectional line
-        (at 30.48 29.21 180)
+      (pin input line
+        (at -30.48 21.59 0)
         (length 7.62)
-        (name "PS_MGTREFCLK0N_505"
+        (name "PS_MGTRRXP0_505"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AA28"
+        (number "AB33"
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 30.48 26.67 180)
-        (length 7.62)
-        (name "PS_MGTREFCLK0P_505"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AA27"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 30.48 24.130000000000003 180)
-        (length 7.62)
-        (name "PS_MGTREFCLK1N_505"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "W28"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 30.48 21.590000000000003 180)
-        (length 7.62)
-        (name "PS_MGTREFCLK1P_505"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "W27"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 30.48 19.050000000000004 180)
-        (length 7.62)
-        (name "PS_MGTREFCLK2N_505"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "U28"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 30.48 16.510000000000005 180)
-        (length 7.62)
-        (name "PS_MGTREFCLK2P_505"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "U27"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 30.48 13.970000000000006 180)
-        (length 7.62)
-        (name "PS_MGTREFCLK3N_505"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "U32"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 30.48 11.430000000000007 180)
-        (length 7.62)
-        (name "PS_MGTREFCLK3P_505"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "U31"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 30.48 8.890000000000008 180)
+      (pin input line
+        (at -30.48 19.05 0)
         (length 7.62)
         (name "PS_MGTRRXN0_505"
           (effects
@@ -2103,8 +2034,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 30.48 6.350000000000008 180)
+      (pin input line
+        (at -30.48 16.51 0)
+        (length 7.62)
+        (name "PS_MGTRRXP1_505"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AA31"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -30.48 13.970000000000002 0)
         (length 7.62)
         (name "PS_MGTRRXN1_505"
           (effects
@@ -2114,8 +2056,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 30.48 3.8100000000000076 180)
+      (pin input line
+        (at -30.48 11.430000000000003 0)
+        (length 7.62)
+        (name "PS_MGTRRXP2_505"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "Y33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -30.48 8.890000000000004 0)
         (length 7.62)
         (name "PS_MGTRRXN2_505"
           (effects
@@ -2125,8 +2078,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 30.48 1.2700000000000076 180)
+      (pin input line
+        (at -30.48 6.350000000000004 0)
+        (length 7.62)
+        (name "PS_MGTRRXP3_505"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "V33"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at -30.48 3.810000000000004 0)
         (length 7.62)
         (name "PS_MGTRRXN3_505"
           (effects
@@ -2137,95 +2101,95 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 30.48 -1.2699999999999925 180)
+        (at -30.48 -3.809999999999996 0)
         (length 7.62)
-        (name "PS_MGTRRXP0_505"
+        (name "PS_MGTREFCLK0N_505"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AB33"
+        (number "AA28"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 30.48 -3.8099999999999925 180)
+        (at -30.48 -6.349999999999996 0)
         (length 7.62)
-        (name "PS_MGTRRXP1_505"
+        (name "PS_MGTREFCLK0P_505"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AA31"
+        (number "AA27"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 30.48 -6.3499999999999925 180)
+        (at -30.48 -8.889999999999997 0)
         (length 7.62)
-        (name "PS_MGTRRXP2_505"
+        (name "PS_MGTREFCLK1N_505"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "Y33"
+        (number "W28"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 30.48 -8.889999999999993 180)
+        (at -30.48 -11.429999999999996 0)
         (length 7.62)
-        (name "PS_MGTRRXP3_505"
+        (name "PS_MGTREFCLK1P_505"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "V33"
+        (number "W27"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 30.48 -11.429999999999993 180)
+        (at -30.48 -13.969999999999995 0)
         (length 7.62)
-        (name "PS_MGTRTXN0_505"
+        (name "PS_MGTREFCLK2N_505"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "AB30"
+        (number "U28"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 30.48 -13.969999999999992 180)
+        (at -30.48 -16.509999999999994 0)
         (length 7.62)
-        (name "PS_MGTRTXN1_505"
+        (name "PS_MGTREFCLK2P_505"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "Y30"
+        (number "U27"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 30.48 -16.50999999999999 180)
+        (at -30.48 -19.049999999999994 0)
         (length 7.62)
-        (name "PS_MGTRTXN2_505"
+        (name "PS_MGTREFCLK3N_505"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "W32"
+        (number "U32"
           (effects
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 30.48 -19.04999999999999 180)
+        (at -30.48 -21.589999999999993 0)
         (length 7.62)
-        (name "PS_MGTRTXN3_505"
+        (name "PS_MGTREFCLK3P_505"
           (effects
             (font
               (size 1.27 1.27))))
-        (number "V30"
+        (number "U31"
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 30.48 -21.58999999999999 180)
+      (pin output line
+        (at 30.48 8.89 180)
         (length 7.62)
         (name "PS_MGTRTXP0_505"
           (effects
@@ -2235,8 +2199,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 30.48 -24.12999999999999 180)
+      (pin output line
+        (at 30.48 6.3500000000000005 180)
+        (length 7.62)
+        (name "PS_MGTRTXN0_505"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AB30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 30.48 3.8100000000000005 180)
         (length 7.62)
         (name "PS_MGTRTXP1_505"
           (effects
@@ -2246,8 +2221,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 30.48 -26.669999999999987 180)
+      (pin output line
+        (at 30.48 1.2700000000000005 180)
+        (length 7.62)
+        (name "PS_MGTRTXN1_505"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "Y30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 30.48 -1.2699999999999996 180)
         (length 7.62)
         (name "PS_MGTRTXP2_505"
           (effects
@@ -2257,8 +2243,19 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 30.48 -29.209999999999987 180)
+      (pin output line
+        (at 30.48 -3.8099999999999996 180)
+        (length 7.62)
+        (name "PS_MGTRTXN2_505"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "W32"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 30.48 -6.35 180)
         (length 7.62)
         (name "PS_MGTRTXP3_505"
           (effects
@@ -2267,8 +2264,20 @@
         (number "V29"
           (effects
             (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 30.48 -8.89 180)
+        (length 7.62)
+        (name "PS_MGTRTXN3_505"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "V30"
+          (effects
+            (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_9_1"
+      (unit_name HD_io_440)
       (rectangle
         (start -24.13 -31.75)
         (end 24.13 31.75)
@@ -2542,6 +2551,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_10_1"
+      (unit_name HD_io_470)
       (rectangle
         (start -24.13 -31.75)
         (end 24.13 31.75)
@@ -2815,6 +2825,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_11_1"
+      (unit_name HD_io_480)
       (rectangle
         (start -21.59 -31.75)
         (end 21.59 31.75)
@@ -3088,6 +3099,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_12_1"
+      (unit_name HD_io_490)
       (rectangle
         (start -21.59 -31.75)
         (end 21.59 31.75)
@@ -3361,6 +3373,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_13_1"
+      (unit_name HD_io_500)
       (rectangle
         (start -21.59 -31.75)
         (end 21.59 31.75)
@@ -3634,6 +3647,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_14_1"
+      (unit_name HP_io_640)
       (rectangle
         (start -33.02 -67.31)
         (end 33.02 67.31)
@@ -4215,6 +4229,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_15_1"
+      (unit_name HP_io_650)
       (rectangle
         (start -41.910000000000004 -67.31)
         (end 41.910000000000004 67.31)
@@ -4796,6 +4811,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_16_1"
+      (unit_name HP_io_660)
       (rectangle
         (start -33.02 -67.31)
         (end 33.02 67.31)
@@ -5377,6 +5393,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_17_1"
+      (unit_name HP_io_670)
       (rectangle
         (start -33.02 -67.31)
         (end 33.02 67.31)
@@ -5958,6 +5975,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_18_1"
+      (unit_name PSMIO_5000)
       (rectangle
         (start -11.43 -34.29)
         (end 11.43 34.29)
@@ -6253,6 +6271,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_19_1"
+      (unit_name PSMIO_5010)
       (rectangle
         (start -11.43 -34.29)
         (end 11.43 34.29)
@@ -6548,6 +6567,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_20_1"
+      (unit_name PSMIO_5020)
       (rectangle
         (start -11.43 -34.29)
         (end 11.43 34.29)
@@ -6843,6 +6863,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_21_1"
+      (unit_name PSCONFIG_5030)
       (rectangle
         (start -20.32 -24.13)
         (end 20.32 24.13)
@@ -7050,6 +7071,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_22_1"
+      (unit_name PSDDR_504)
       (rectangle
         (start -21.59 -92.71000000000001)
         (end 21.59 92.71000000000001)
@@ -8555,6 +8577,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_23_1"
+      (unit_name misc0)
       (rectangle
         (start -16.51 -19.05)
         (end 16.51 19.05)
@@ -8718,6 +8741,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_24_1"
+      (unit_name pwr0)
       (rectangle
         (start -20.32 -102.87)
         (end 20.32 102.87)
@@ -9981,6 +10005,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_25_1"
+      (unit_name gnd0)
       (rectangle
         (start -6.35 -102.87)
         (end 6.35 102.87)
@@ -11750,6 +11775,7 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_26_1"
+      (unit_name gnd1)
       (rectangle
         (start -12.7 -102.87)
         (end 12.7 102.87)

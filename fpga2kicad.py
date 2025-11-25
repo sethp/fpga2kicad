@@ -296,11 +296,12 @@ pin,name,type,side,unit,style,hidden""")
         pn: str # P or N
         num: int
 
-        def __init__(self, p: Pin):
+        def __init__(self, p):
+            name = p.name if hasattr(p, 'name') else p
             n = -1
-            while p.name[n].isdigit():
+            while name[n].isdigit():
                 n -= 1
-            s = p.name[n:]
+            s = name[n:]
             if not (s.startswith('P') or s.startswith('N')):
                 raise ValueError(f'not a diff pair pin: {p}')
 
@@ -310,6 +311,17 @@ pin,name,type,side,unit,style,hidden""")
         def __lt__(self, o):
             # sort P before N
             return (self.num, o.pn) < (o.num, self.pn)
+
+
+    import re
+    def matching(pattern):
+        """
+        NB: re.match only matches at the beginning of the string!
+        """
+        # cf. https://docs.python.org/3/library/re.html#search-vs-match
+        pat = re.compile(pattern)
+        return lambda p: pat.match(p.name)
+
 
 
     # TODO these cry out for a model like
@@ -323,27 +335,73 @@ pin,name,type,side,unit,style,hidden""")
     by_iotype = groupby(sorted(by_type.pop(GigXcvrPin), key=key), key)
 
     for iotype, pins in by_iotype:
-        # sorted is stable, meaning any sort we apply here across all
-        # banks will hold within a bank, below
-        pins = sorted(pins, key=lambda p: p.name)
-
         key = attrgetter('bank')
         by_bank = groupby(sorted(pins, key=key), key)
 
         for bank, pins in by_bank:
-            n = 0
+
+            unit = f'm{iotype}_{bank}'
+
+            # TODO lol wat?
+            if iotype == 'NA' and bank == 'NA':
+                n = 0
+                for p in pins:
+                    out.writerow([
+                        p.loc,
+                        p.name,
+                        "bidirectional",
+                        "right", # side (left/right/top/bottom)
+                        unit,
+                        "line", # style (TODO ?)
+                        "no",   # hidden
+                    ])
+
+                    n += 1
+                continue
+
+            # we want
+            # |----------------------|
+            # | rx_p0          tx_p0 |
+            # | rx_n0          tx_n0 |
+            #    ...            ...
+            # |                      |
+            # | refclk_p0            |
+            # | refclk_n0            |
+            #    ...
+            # |----------------------|
+
+            (pins, clk_pins) = partition(matching(r'(PS_)?MGTREFCLK[0-9][PN]'), pins)
+
+            # TODO this works, but....
+            try:
+                pins = sorted(pins, key=lambda p: DiffPairKey(p.name[:-len("_xxx")]))
+            except:
+                dbg_dump(f'{unit=}')
+                raise
             for p in pins:
                 out.writerow([
                     p.loc,
                     p.name,
-                    "bidirectional",
-                    "right", # side (left/right/top/bottom)
-                    f'm{iotype}_{bank}{n//80}', # unit
+                    "input" if 'RX' in p.name else 'output',
+                    "left" if 'RX' in p.name else 'right',
+                    unit,
                     "line", # style (TODO ?)
                     "no",   # hidden
                 ])
 
-                n += 1
+            out.writerow(["*", "", "", "left", unit, "", ""])
+            out.writerow(["*", "", "", "left", unit, "", ""])
+
+            for p in clk_pins:
+                out.writerow([
+                    p.loc,
+                    p.name,
+                    "bidirectional",
+                    "left",
+                    unit,
+                    "line", # style (TODO ?)
+                    "no",   # hidden
+                ])
 
 
     key = attrgetter('iotype')
@@ -455,16 +513,7 @@ pin,name,type,side,unit,style,hidden""")
     # i.e. PS_DDR_A9 < PS_DDR_A10 < ... < PS_DDR_DQ10 < ...
     pins = sorted(pins, key=lambda p: LastNumKey(p.name))
 
-    import re
     # TODO: probably should use `search`, or assert that there are only PS_DDR_... pins
-    def matching(pattern):
-        """
-        NB: re.match only matches at the beginning of the string!
-        """
-        # cf. https://docs.python.org/3/library/re.html#search-vs-match
-        pat = re.compile(pattern)
-        return lambda p: pat.match(p.name)
-
     (pins, dq_pins) = partition(matching(
         # NB: explicitly excludes DDR_DQS pins
         r'PS_DDR_DQ[0-9]'
