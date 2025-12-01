@@ -8,12 +8,11 @@
 
 import csv
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from enum import StrEnum
 import functools
 from more_itertools import partition
 from itertools import groupby
-
-import os
 
 @functools.total_ordering
 @dataclass
@@ -40,20 +39,121 @@ class Loc:
     def __str__(self):
         return self.loc
 
+@dataclass
+class UsrIOPinAddr:
+    # UG571:
+    #   Each bank is subdivided into four byte groups, each group containing 13 I/O pins as
+    #   shown in Figure 2-1. Each byte group is further sub-divided into two nibble groups,
+    #   as shown in Figure 2-2.
+    byte_group: int # [0 to 3]
+    nibble: str # 'U' for upper or 'L' for lower
+    byte_pos: int # [0 to 12]
+
+    def __post_init__(self):
+        if self.nibble not in ('U', 'L'):
+            raise ValueError(f'Invalid nibble designator `{self.nibble}`: expected `U` or `L` (upper/lower)')
+        if self.byte_group < 0 or self.byte_group > 3:
+            raise ValueError(f'Byte group out of range: {self.byte_group} (expected [0 to 3])')
+        if self.byte_pos < 0 or self.byte_pos > 12:
+            raise ValueError(f'Byte position out of range: {self.byte_pos} (expected [0 to 12])')
 
 
+
+# TODO split v into hd/hp variants
 @dataclass
 class UsrIOPin:
     loc: Loc
     name: str
 
-    iotype: str # e.g. HP or HD
+    class IOType(StrEnum):
+        HD = "HD"
+        HP = "HP"
+
+    iotype: IOType
     bank: str
+
+    # via ug1075 Chapter 1 § "Pin Definitions" (Table 1-4, p.22):
+    #
+    #  IO_L[1 to 24][P or N]_T[0 to 3][U or L]_N[0 to 12]_[multi-function]_[bank number] or
+    #  IO_T[0 to 3][U or L]_N[0 to 12]_[multi-function]_[bank number]
+    #
+    #  Each user I/O pin name consists of several indicator labels, where:
+    #  • IO indicates a user I/O pin.
+    #  • L[1 to 24] indicates a unique differential pair with P (positive) and N (negative)
+    #    sides. User I/O pins without the L indicator are single-ended.
+    #  • T[0 to 3][U or L] indicates the assigned byte group and nibble location (upper or
+    #    lower portion) within that group for the pin.
+    #  • N[0 to 12] the number of the I/O within its byte group.
+    #  • [multi-function] indicates any other functions that the pin can provide. If not used
+    #    for this function, the pin can be a user I/O.
+    #  • [bank number] indicates the assigned bank for the user I/O pin.
+    #
+    # Also: some pins are simply named
+    #   IO_L[...]_[multi-function]_[bank number]
+
+    diff_pair: str | None = field(init=False) # L[1 to 24][P or N]
+    addr: UsrIOPinAddr | None = field(init=False)
+
+    multi_func: str = field(init=False) # might be '' (empty string)
+
+    def __post_init__(self):
+        def consume_lit(s, lit):
+            if not s.startswith(lit):
+                raise ValueError(f'Expected `{s}` to start with {lit}')
+            return s[:len(lit)], s[len(lit):]
+
+        def consume_while(s, pred):
+            n = 0
+            while n < len(s) and pred(s[n]):
+                n += 1
+            return s[:n], s[n:]
+
+        def consume_int(s):
+            v, s = consume_while(s, lambda c: c.isdigit())
+            return int(v), s
+
+        s = self.name
+
+        suf = f'{self.bank}'
+        if not s.endswith(suf):
+            raise ValueError(f'Missing bank suffix for pin `{self.name}`: expected `{suf}')
+        s = s[:-len(suf)]
+
+        _, s = consume_lit(s, "IO_")
+        if s[0] == 'L':
+            # L[1 to 24][P or N]_
+            self.diff_pair, s = consume_while(s, lambda c: c != '_')
+            s = s[1:] # eat the "_"
+        else:
+            self.diff_pair = None
+
+        if s[0] == 'T':
+            # T[0 to 3][U or L]_N[0 to 12]_
+            _, s = consume_lit(s, "T")
+            byte_group, s = consume_int(s)
+            nibble, s = s[0], s[1:] # checked in addr's __post_init__()
+            _, s = consume_lit(s, "_N")
+            byte_pos, s = consume_int(s)
+            _, s = consume_lit(s, "_")
+
+            self.addr = UsrIOPinAddr(byte_group, nibble, byte_pos)
+        else:
+            self.addr = None
+
+        if len(s) > 0:
+            self.multifunction, s = s[:-1], s[-1:]
+            _, s = consume_lit(s, "_")
+
+        if len(s) != 0:
+            raise ValueError(f'trailing characters for pin {self.name=}: {s=}')
+
 
 @dataclass
 class PowerPin:
     loc: Loc
     name: str
+
+    bank: str | None
 
 @dataclass
 class UnknownPin:
@@ -154,17 +254,20 @@ def parse_pins(rows):
             pin: Pin = None # None so we can catch any missing pins (see below)
 
             if name.startswith("IO_"):
-                # TODO okay why do io pins have memory groups?
-                # if mem != "NA":
-                #     raise ParseError(n, f"unexpected memory group (field 3) for io pin: {r}")
                 if reg != "NA":
                     raise ParseError(n, f"unexpected logic region (field 6) for io pin: {r}")
+
+                # parses either HD or HP into its corresponding enum variant, raising
+                # AttributeError when we don't recognize it
+                iotype = getattr(UsrIOPin.IOType, iotype)
+                if iotype == "HD" and  mem != "NA":
+                    raise ParseError(n, f"unexpected memory group (field 3) for io pin: {r}")
 
                 pin = UsrIOPin(Loc(loc), name, iotype, bank)
             elif iotype.startswith("GT") or iotype.startswith("PSGT"):
                 # TODO improve error
                 if not all([f == "NA" for f in (mem, reg)]):
-                    raise ParseError(n, f"unexpected extra fields for power pin: {r}")
+                    raise ParseError(n, f"unexpected extra fields for transceiver pin: {r}")
 
                 pin = GigXcvrPin(Loc(loc), name, iotype, bank)
             elif name.startswith("PS_MIO"):
@@ -182,13 +285,13 @@ def parse_pins(rows):
             elif iotype == "PSDDR":
                 # TODO improve error
                 if not all([f == "NA" for f in (mem, reg)]):
-                    raise ParseError(n, f"unexpected extra fields for config pin: {r}")
+                    raise ParseError(n, f"unexpected extra fields for ddr pin: {r}")
 
                 pin = DDRPin(Loc(loc), name, iotype, bank)
             elif name == "NC":
                 # TODO improve error
                 if not all([f == "NA" for f in reg[2:]]):
-                    raise ParseError(n, f"unexpected extra fields for config pin: {r}")
+                    raise ParseError(n, f"unexpected extra fields for NC pin: {r}")
 
                 pin = NCPin(Loc(loc))
             elif ("GND" in name
@@ -200,7 +303,7 @@ def parse_pins(rows):
                 #     raise ParseError(n, f"unexpected extra fields (2+) for power pin: {r}")
 
                 # TODO finer classification (esp. in/out ?)
-                pin = PowerPin(Loc(loc), name)
+                pin = PowerPin(Loc(loc), name, bank or None)
             else:
                 pin = UnknownPin(Loc(loc), name, r[2:])
 
@@ -228,10 +331,6 @@ def parse_pins(rows):
         raise ParseError(n, f"expected {total} pins, but saw {len(pins)}")
 
     return hdr, pins
-
-
-def dbg_dump(s, fd=3):
-    os.write(fd, f'dbg@{fd}  {s}\n'.encode("utf-8"))
 
 
 def main(ins, outs):
@@ -425,28 +524,148 @@ pin,name,type,side,unit,style,hidden""")
     key = attrgetter('iotype')
     by_iotype = groupby(sorted(by_type.pop(UsrIOPin), key=key), key)
 
+    # TODO once UsrIOPin is split along hd/hp lines, this can be split into two much simpler keys
+    @dataclass
+    class UsrIOSortKey:
+        p: UsrIOPin
+
+        def __lt__(self, o):
+            # looks like all "hp" pins have an addr, but none of the "hd" pins do
+            if (self.p.addr is None) != (o.p.addr is None):
+                # sort addr-less pins first
+                return self.p.addr is None
+            elif self.p.addr is None:
+                if self.p.diff_pair is not None and o.p.diff_pair is not None:
+                    return DiffPairKey(self.p.diff_pair) < DiffPairKey(o.p.diff_pair)
+                elif o.p.diff_pair is not None:
+                    assert self.p.diff_pair is None
+                    return True
+                # TODO v
+                # so far all of the pins
+                raise ValueError(f'TODO sorting {self.p} against {o.p}')
+
+            # making these "match" the order in UG571 (bits in descending order) puts N then P
+            # (see p. 149)
+            # e.g. L22N
+            #      L22P
+            #
+            # so we prefer ascending order, here
+            return (self.p.addr.byte_group, self.p.addr.byte_pos) < (o.p.addr.byte_group, o.p.addr.byte_pos)
+
+    hd_pins = []
+    hp_pins = []
+
     for iotype, pins in by_iotype:
-        # sorted is stable, meaning any sort we apply here across all
-        # banks will hold within a bank, below
-        pins = sorted(pins, key=lambda p: p.name)
+        if iotype == "HD":
+            hd_pins.extend(pins)
+        elif iotype == "HP":
+            hp_pins.extend(pins)
+        else:
+            raise ValueError(f"unrecognized {iotype=}")
 
-        key = attrgetter('bank')
-        by_bank = groupby(sorted(pins, key=key), key)
+    key = attrgetter('bank')
+    # sorted is stable, meaning any sort we apply here across all
+    # banks will hold within a bank
+    hd_pins = sorted(hd_pins, key=UsrIOSortKey)
+    hd_pins = sorted(hd_pins, key=key)
+    hd_by_bank = groupby(hd_pins, key)
 
-        for bank, pins in by_bank:
-            n = 0
-            for p in pins:
-                out.writerow([
-                    p.loc,
-                    p.name,
-                    "bidirectional",
-                    "right", # side (left/right/top/bottom)
-                    f'{iotype}_io_{bank}{n//80}', # unit
-                    "line", # style (TODO ?)
-                    "no",   # hidden
-                ])
+    hp_pins = sorted(hp_pins, key=UsrIOSortKey)
+    hp_pins = sorted(hp_pins, key=key)
+    hp_by_bank = groupby(hp_pins, key)
 
-                n += 1
+    iotype = UsrIOPin.IOType.HD
+    for bank, pins in hd_by_bank:
+        # TODO ontology lol
+        (power_pins, bank_pwr) = partition(lambda pp: pp.bank == bank, power_pins)
+
+        unit = f'{iotype}_io_{bank}'
+        for p in sorted(bank_pwr, key=lambda p: p.loc):
+            out.writerow([
+                p.loc,
+                p.name,
+                "pwr",
+                "top", # side (left/right/top/bottom)
+                unit, # unit
+                "line", # style (TODO ?)
+                "no",   # hidden
+            ])
+
+        for p in pins:
+            out.writerow([
+                p.loc,
+                p.name,
+                "bidirectional",
+                "right", # side (left/right/top/bottom)
+                unit, # unit
+                "line", # style (TODO ?)
+                "no",   # hidden
+            ])
+
+    # TODO might be nice to "justify" the pin names so it's clearer what the grouping/order is
+    # kicad align the pin name label to the edge of the symbol unit
+    # e.g. currently (right sided):
+    #     IO_L1P_T0L_N0_DBC_65 - AE10
+    #     IO_L1P_T0L_N1_DBC_65 - AF10
+    #         IO_L2P_T0L_N2_65 - AH12
+    #         IO_L2P_T0L_N3_65 - AH11
+    #   IO_L3P_T0L_N4_AD15P_65 - AE12
+    #   IO_L3N_T0L_N4_AD15N_65 - AE12
+    #
+    # would be nice (?)
+    #   IO_L1P_T0L_N0_DBC___65 - AE10
+    #   IO_L1P_T0L_N1_DBC___65 - AF10
+    #   IO_L2P_T0L_N2_______65 - AH12
+    #   IO_L2P_T0L_N3_______65 - AH11
+    #   IO_L3P_T0L_N4_AD15P_65 - AE12
+    #   IO_L3N_T0L_N4_AD15N_65 - AE12
+    #
+    # (just within a nibble or across nibbles? some secondary function names are looong: SMBALERT, PERSTN0)
+
+    iotype = UsrIOPin.IOType.HP
+    for bank, pins in hp_by_bank:
+        # TODO ontology lol
+        (power_pins, bank_pwr) = partition(lambda pp: pp.bank == bank, power_pins)
+
+        unit =  f'{iotype}_io_{bank}'
+        for p in sorted(bank_pwr, key=lambda p: p.loc):
+            out.writerow([
+                p.loc,
+                p.name,
+                "pwr",
+                "top", # side (left/right/top/bottom)
+                unit, # unit
+                "line", # style (TODO ?)
+                "no",   # hidden
+            ])
+
+        last_bytegroup = None
+        last_nibble = None
+        for p in pins:
+            bg = p.addr.byte_group
+            nib = p.addr.nibble
+            if last_bytegroup is None:
+                last_bytegroup = bg
+            if last_nibble is None:
+                last_nibble = nib
+            if last_bytegroup != bg:
+                out.writerow(["*", "", "", "right", unit, "", ""])
+                out.writerow(["*", "", "", "right", unit, "", ""])
+                last_bytegroup = bg
+                last_nibble = nib
+            elif last_nibble != nib:
+                out.writerow(["*", "", "", "right", unit, "", ""])
+                last_nibble = nib
+
+            out.writerow([
+                p.loc,
+                p.name,
+                "bidirectional",
+                "right", # side (left/right/top/bottom)
+                unit, # unit
+                "line", # style (TODO ?)
+                "no",   # hidden
+            ])
 
 
     # TODO are MIO pins ever not "PSMIO" iotype?
@@ -469,7 +688,7 @@ pin,name,type,side,unit,style,hidden""")
                     p.name,
                     "bidirectional",
                     "right", # side (left/right/top/bottom)
-                    f'{iotype}_{bank}{n//80}', # unit
+                    f'{iotype}_{bank}_{n//80}', # unit
                     "line", # style (TODO ?)
                     "no",   # hidden
                 ])
@@ -498,7 +717,7 @@ pin,name,type,side,unit,style,hidden""")
                     p.name,
                     "bidirectional",
                     "right", # side (left/right/top/bottom)
-                    f'{iotype}_{bank}{n//150}', # unit
+                    f'{iotype}_{bank}_{n//150}', # unit
                     "line", # style (TODO ?)
                     "no",   # hidden
                 ])
@@ -659,6 +878,10 @@ pin,name,type,side,unit,style,hidden""")
         ])
         n += 1
 
+
+import os
+def dbg_dump(s, fd=3):
+    os.write(fd, f'dbg@{fd}  {s}\n'.encode("utf-8"))
 
 
 if __name__ == "__main__":
