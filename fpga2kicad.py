@@ -696,37 +696,6 @@ pin,name,type,side,unit,style,hidden""")
                 n += 1
 
 
-
-    # TODO are these pins ever not "PSConfig" iotype?
-    key = attrgetter('iotype')
-    by_iotype = groupby(sorted(by_type.pop(ConfigPin), key=key), key)
-
-    for iotype, pins in by_iotype:
-        # sorted is stable, meaning any sort we apply here across all
-        # banks will hold within a bank, below
-        pins = sorted(pins, key=lambda p: p.name)
-
-        key = attrgetter('bank')
-        by_bank = groupby(sorted(pins, key=key), key)
-
-        for bank, pins in by_bank:
-            n = 0
-            for p in pins:
-                out.writerow([
-                    p.loc,
-                    p.name,
-                    "bidirectional",
-                    "right", # side (left/right/top/bottom)
-                    f'{iotype}_{bank}_{n//150}', # unit
-                    "line", # style (TODO ?)
-                    "no",   # hidden
-                ])
-
-                n += 1
-
-
-    pins = by_type.pop(DDRPin)
-
     def grouped(pins, key):
         it = groupby(sorted(pins, key=key), key)
         # from the docs:
@@ -736,7 +705,90 @@ pin,name,type,side,unit,style,hidden""")
         # away the entire group)
         return [(k, list(g)) for k, g in it]
 
-    # DDR pins are only not "PSDDR" iotype (will throw otherwise)
+    class Spacer:
+        pass
+
+    pins = by_type.pop(ConfigPin)
+
+    # Config pins are only "PSCONFIG" iotype (will throw otherwise)
+    # TODO better error message than "ValueError: too many values to unpack (expected 1)"
+    key = attrgetter('iotype')
+    ((iotype, pins),) = grouped(pins, key)
+
+    # effectively asserts that we have exactly one bank of pins
+    # TODO better error message than "ValueError: too many values to unpack (expected 1)"
+    key = attrgetter('bank')
+    ((bank, pins),) = grouped(pins, key)
+
+    pins = sorted(pins, key=lambda p: p.name)
+
+    (pins, jtag_pins) = partition(matching(r'PS_JTAG_'), pins)
+    (pins, mode_pins) = partition(matching(r'PS_MODE'), pins)
+    (pins, clk_pins) = partition(matching(r'PS_REF_CLK|PS_PAD[IO]'), pins)
+
+    # Put ref clk first, followed by rtc clock
+    clk_pins = sorted(clk_pins, key=lambda p: p.name[:len("PS_?")], reverse=True)
+
+    # config pins (note grouping)
+    # cf. UG1075 Table 1-4 (p.23-24)
+    cfg_pin_types = {
+        "PS_REF_CLK": "input",
+        "PS_PADI": "input",
+        "PS_PADO": "output",
+
+        "PS_DONE": "output",
+        "PS_ERROR_OUT": "output",
+        "PS_ERROR_STATUS": "output",
+        "PS_INIT_B": "bidirectional",
+        "PS_POR_B": "input",
+        "PS_PROG_B": "input",
+        "PS_SRST_B": "input",
+
+        "PS_JTAG_TCK": "input",
+        "PS_JTAG_TDI": "input",
+        "PS_JTAG_TDO": "output",
+        "PS_JTAG_TMS": "input",
+
+        "PS_MODE0": "bidirectional",
+        "PS_MODE1": "bidirectional",
+        "PS_MODE2": "bidirectional",
+        "PS_MODE3": "bidirectional",
+    }
+    unit = f'{iotype}_{bank}'
+    side = "right"
+    for p in [
+        *clk_pins,
+        Spacer(),
+        *pins,
+        Spacer(),
+        *jtag_pins,
+        Spacer(),
+        *mode_pins
+    ]:
+        if isinstance(p, Spacer):
+            out.writerow(["*", "", "", side, unit, "", ""])
+            continue
+
+        name = p.name
+        style = "line"
+        if name.endswith("_B"):
+            name = f'~{{{p.name}}}'
+            style = "inv"
+
+        out.writerow([
+            p.loc,
+            name,
+            cfg_pin_types[p.name], # TODO better error message than KeyError
+            side, # side (left/right/top/bottom)
+            unit,
+            style, # style (TODO ?)
+            "no",   # hidden
+        ])
+
+
+    pins = by_type.pop(DDRPin)
+
+    # DDR pins are only "PSDDR" iotype (will throw otherwise)
     # TODO better error message than "ValueError: too many values to unpack (expected 1)"
     key = attrgetter('iotype')
     ((iotype, pins),) = grouped(pins, key)
@@ -766,9 +818,6 @@ pin,name,type,side,unit,style,hidden""")
         return [
             (pin, side) for pin in pins
         ]
-
-    class Spacer:
-        pass
 
     def spaced(it):
         for g in it:

@@ -7072,17 +7072,50 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_21_1"
-      (unit_name PSCONFIG_503_0)
+      (unit_name PSCONFIG_503)
       (rectangle
-        (start -20.32 -24.13)
-        (end 20.32 24.13)
+        (start -20.32 -27.94)
+        (end 20.32 27.94)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
-      (pin bidirectional line
-        (at 27.94 21.59 180)
+      (pin input line
+        (at 27.94 25.4 180)
+        (length 7.62)
+        (name "PS_REF_CLK"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "U24"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at 27.94 22.86 180)
+        (length 7.62)
+        (name "PS_PADI"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "V21"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 20.32 180)
+        (length 7.62)
+        (name "PS_PADO"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "V22"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin output line
+        (at 27.94 15.240000000000002 180)
         (length 7.62)
         (name "PS_DONE"
           (effects
@@ -7092,8 +7125,8 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 19.05 180)
+      (pin output line
+        (at 27.94 12.700000000000003 180)
         (length 7.62)
         (name "PS_ERROR_OUT"
           (effects
@@ -7103,8 +7136,8 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 16.51 180)
+      (pin output line
+        (at 27.94 10.160000000000004 180)
         (length 7.62)
         (name "PS_ERROR_STATUS"
           (effects
@@ -7114,10 +7147,10 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 13.970000000000002 180)
+      (pin bidirectional inverted
+        (at 27.94 7.620000000000004 180)
         (length 7.62)
-        (name "PS_INIT_B"
+        (name "~{PS_INIT_B}"
           (effects
             (font
               (size 1.27 1.27))))
@@ -7125,8 +7158,41 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 11.430000000000003 180)
+      (pin input inverted
+        (at 27.94 5.080000000000004 180)
+        (length 7.62)
+        (name "~{PS_POR_B}"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "V23"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input inverted
+        (at 27.94 2.5400000000000036 180)
+        (length 7.62)
+        (name "~{PS_PROG_B}"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "U21"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input inverted
+        (at 27.94 3.552713678800501e-15 180)
+        (length 7.62)
+        (name "~{PS_SRST_B}"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "U23"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at 27.94 -5.0799999999999965 180)
         (length 7.62)
         (name "PS_JTAG_TCK"
           (effects
@@ -7136,8 +7202,8 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 8.890000000000004 180)
+      (pin input line
+        (at 27.94 -7.6199999999999966 180)
         (length 7.62)
         (name "PS_JTAG_TDI"
           (effects
@@ -7147,8 +7213,8 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 6.350000000000004 180)
+      (pin output line
+        (at 27.94 -10.159999999999997 180)
         (length 7.62)
         (name "PS_JTAG_TDO"
           (effects
@@ -7158,8 +7224,8 @@
           (effects
             (font
               (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 3.810000000000004 180)
+      (pin input line
+        (at 27.94 -12.699999999999996 180)
         (length 7.62)
         (name "PS_JTAG_TMS"
           (effects
@@ -7170,7 +7236,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 1.270000000000004 180)
+        (at 27.94 -17.779999999999994 180)
         (length 7.62)
         (name "PS_MODE0"
           (effects
@@ -7181,7 +7247,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 -1.269999999999996 180)
+        (at 27.94 -20.319999999999993 180)
         (length 7.62)
         (name "PS_MODE1"
           (effects
@@ -7192,7 +7258,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 -3.809999999999996 180)
+        (at 27.94 -22.859999999999992 180)
         (length 7.62)
         (name "PS_MODE2"
           (effects
@@ -7203,79 +7269,13 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 27.94 -6.349999999999996 180)
+        (at 27.94 -25.39999999999999 180)
         (length 7.62)
         (name "PS_MODE3"
           (effects
             (font
               (size 1.27 1.27))))
         (number "R23"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -8.889999999999997 180)
-        (length 7.62)
-        (name "PS_PADI"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "V21"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -11.429999999999996 180)
-        (length 7.62)
-        (name "PS_PADO"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "V22"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -13.969999999999995 180)
-        (length 7.62)
-        (name "PS_POR_B"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "V23"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -16.509999999999994 180)
-        (length 7.62)
-        (name "PS_PROG_B"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "U21"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -19.049999999999994 180)
-        (length 7.62)
-        (name "PS_REF_CLK"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "U24"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin bidirectional line
-        (at 27.94 -21.589999999999993 180)
-        (length 7.62)
-        (name "PS_SRST_B"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "U23"
           (effects
             (font
               (size 1.27 1.27))))))
