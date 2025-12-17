@@ -1719,37 +1719,15 @@
     (symbol "XCZU9EG_8_1"
       (unit_name mgt_power)
       (rectangle
-        (start -17.78 -62.230000000000004)
-        (end 17.78 62.230000000000004)
+        (start -19.05 -66.04)
+        (end 19.05 66.04)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
       (pin power_in line
-        (at 25.4 58.42 180)
-        (length 7.62)
-        (name "MGTAVTTRCAL_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "A30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at 25.4 55.88 180)
-        (length 7.62)
-        (name "MGTAVTTRCAL_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "A5"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at 25.4 53.34 180)
+        (at 26.67 62.230000000000004 180)
         (length 7.62)
         (name "MGTAVCC_L"
           (effects
@@ -1760,7 +1738,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 50.800000000000004 180)
+        (at 26.67 59.690000000000005 180)
         (length 7.62)
         (name "MGTAVCC_L"
           (effects
@@ -1771,7 +1749,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 48.260000000000005 180)
+        (at 26.67 57.150000000000006 180)
         (length 7.62)
         (name "MGTAVCC_L"
           (effects
@@ -1782,7 +1760,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 45.720000000000006 180)
+        (at 26.67 54.61000000000001 180)
         (length 7.62)
         (name "MGTAVCC_L"
           (effects
@@ -1793,7 +1771,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 43.18000000000001 180)
+        (at 26.67 52.07000000000001 180)
         (length 7.62)
         (name "MGTAVCC_L"
           (effects
@@ -1804,7 +1782,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 40.64000000000001 180)
+        (at 26.67 49.53000000000001 180)
         (length 7.62)
         (name "MGTAVCC_L"
           (effects
@@ -1815,7 +1793,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 38.10000000000001 180)
+        (at 26.67 46.99000000000001 180)
         (length 7.62)
         (name "MGTAVCC_R"
           (effects
@@ -1826,7 +1804,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 35.56000000000001 180)
+        (at 26.67 44.45000000000001 180)
         (length 7.62)
         (name "MGTAVCC_R"
           (effects
@@ -1837,7 +1815,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 33.02000000000001 180)
+        (at 26.67 41.91000000000001 180)
         (length 7.62)
         (name "MGTAVCC_R"
           (effects
@@ -1848,7 +1826,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 30.48000000000001 180)
+        (at 26.67 39.37000000000001 180)
         (length 7.62)
         (name "MGTAVCC_R"
           (effects
@@ -1859,7 +1837,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 27.940000000000012 180)
+        (at 26.67 36.83000000000001 180)
         (length 7.62)
         (name "MGTAVCC_R"
           (effects
@@ -1870,7 +1848,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 25.400000000000013 180)
+        (at 26.67 34.29000000000001 180)
         (length 7.62)
         (name "MGTAVCC_R"
           (effects
@@ -1881,7 +1859,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 22.860000000000014 180)
+        (at 26.67 31.750000000000014 180)
         (length 7.62)
         (name "MGTAVCC_R"
           (effects
@@ -1892,7 +1870,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 20.320000000000014 180)
+        (at 26.67 29.210000000000015 180)
         (length 7.62)
         (name "MGTAVTT_L"
           (effects
@@ -1903,7 +1881,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 17.780000000000015 180)
+        (at 26.67 26.670000000000016 180)
         (length 7.62)
         (name "MGTAVTT_L"
           (effects
@@ -1914,7 +1892,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 15.240000000000016 180)
+        (at 26.67 24.130000000000017 180)
         (length 7.62)
         (name "MGTAVTT_L"
           (effects
@@ -1925,7 +1903,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 12.700000000000017 180)
+        (at 26.67 21.590000000000018 180)
         (length 7.62)
         (name "MGTAVTT_L"
           (effects
@@ -1936,7 +1914,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 10.160000000000018 180)
+        (at 26.67 19.05000000000002 180)
         (length 7.62)
         (name "MGTAVTT_L"
           (effects
@@ -1947,7 +1925,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 7.620000000000018 180)
+        (at 26.67 16.51000000000002 180)
         (length 7.62)
         (name "MGTAVTT_L"
           (effects
@@ -1958,7 +1936,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 5.080000000000018 180)
+        (at 26.67 13.97000000000002 180)
         (length 7.62)
         (name "MGTAVTT_L"
           (effects
@@ -1969,7 +1947,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 2.540000000000018 180)
+        (at 26.67 11.430000000000021 180)
         (length 7.62)
         (name "MGTAVTT_L"
           (effects
@@ -1980,7 +1958,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 1.7763568394002505e-14 180)
+        (at 26.67 8.890000000000022 180)
         (length 7.62)
         (name "MGTAVTT_L"
           (effects
@@ -1991,7 +1969,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -2.5399999999999823 180)
+        (at 26.67 6.350000000000022 180)
         (length 7.62)
         (name "MGTAVTT_L"
           (effects
@@ -2002,7 +1980,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -5.079999999999982 180)
+        (at 26.67 3.810000000000022 180)
         (length 7.62)
         (name "MGTAVTT_L"
           (effects
@@ -2013,7 +1991,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -7.619999999999982 180)
+        (at 26.67 1.2700000000000218 180)
         (length 7.62)
         (name "MGTAVTT_R"
           (effects
@@ -2024,7 +2002,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -10.159999999999982 180)
+        (at 26.67 -1.2699999999999783 180)
         (length 7.62)
         (name "MGTAVTT_R"
           (effects
@@ -2035,7 +2013,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -12.699999999999982 180)
+        (at 26.67 -3.8099999999999783 180)
         (length 7.62)
         (name "MGTAVTT_R"
           (effects
@@ -2046,7 +2024,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -15.23999999999998 180)
+        (at 26.67 -6.349999999999978 180)
         (length 7.62)
         (name "MGTAVTT_R"
           (effects
@@ -2057,7 +2035,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -17.77999999999998 180)
+        (at 26.67 -8.88999999999998 180)
         (length 7.62)
         (name "MGTAVTT_R"
           (effects
@@ -2068,7 +2046,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -20.31999999999998 180)
+        (at 26.67 -11.429999999999978 180)
         (length 7.62)
         (name "MGTAVTT_R"
           (effects
@@ -2079,7 +2057,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -22.859999999999978 180)
+        (at 26.67 -13.969999999999978 180)
         (length 7.62)
         (name "MGTAVTT_R"
           (effects
@@ -2090,7 +2068,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -25.399999999999977 180)
+        (at 26.67 -16.509999999999977 180)
         (length 7.62)
         (name "MGTAVTT_R"
           (effects
@@ -2101,7 +2079,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -27.939999999999976 180)
+        (at 26.67 -19.049999999999976 180)
         (length 7.62)
         (name "MGTAVTT_R"
           (effects
@@ -2112,7 +2090,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -30.479999999999976 180)
+        (at 26.67 -21.589999999999975 180)
         (length 7.62)
         (name "MGTAVTT_R"
           (effects
@@ -2123,7 +2101,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -33.019999999999975 180)
+        (at 26.67 -24.129999999999974 180)
         (length 7.62)
         (name "MGTVCCAUX_L"
           (effects
@@ -2134,7 +2112,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -35.559999999999974 180)
+        (at 26.67 -26.669999999999973 180)
         (length 7.62)
         (name "MGTVCCAUX_L"
           (effects
@@ -2145,7 +2123,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -38.09999999999997 180)
+        (at 26.67 -29.209999999999972 180)
         (length 7.62)
         (name "MGTVCCAUX_R"
           (effects
@@ -2156,7 +2134,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -40.63999999999997 180)
+        (at 26.67 -31.74999999999997 180)
         (length 7.62)
         (name "MGTVCCAUX_R"
           (effects
@@ -2167,7 +2145,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -43.17999999999997 180)
+        (at 26.67 -34.28999999999997 180)
         (length 7.62)
         (name "PS_MGTRAVCC"
           (effects
@@ -2178,7 +2156,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -45.71999999999997 180)
+        (at 26.67 -36.82999999999997 180)
         (length 7.62)
         (name "PS_MGTRAVCC"
           (effects
@@ -2189,7 +2167,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -48.25999999999997 180)
+        (at 26.67 -39.36999999999997 180)
         (length 7.62)
         (name "PS_MGTRAVCC"
           (effects
@@ -2200,7 +2178,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -50.79999999999997 180)
+        (at 26.67 -41.90999999999997 180)
         (length 7.62)
         (name "PS_MGTRAVCC"
           (effects
@@ -2210,8 +2188,63 @@
           (effects
             (font
               (size 1.27 1.27)))))
+      (pin input line
+        (at 26.67 -44.44999999999997 180)
+        (length 7.62)
+        (name "MGTRREF_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "A29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -53.33999999999997 180)
+        (at 26.67 -46.98999999999997 180)
+        (length 7.62)
+        (name "MGTAVTTRCAL_L"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "A30"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at 26.67 -49.529999999999966 180)
+        (length 7.62)
+        (name "MGTRREF_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "A6"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin power_in line
+        (at 26.67 -52.069999999999965 180)
+        (length 7.62)
+        (name "MGTAVTTRCAL_R"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "A5"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin input line
+        (at 26.67 -54.609999999999964 180)
+        (length 7.62)
+        (name "PS_MGTRREF_505"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AB28"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin power_in line
+        (at 26.67 -57.14999999999996 180)
         (length 7.62)
         (name "PS_MGTRAVTT"
           (effects
@@ -2222,7 +2255,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -55.87999999999997 180)
+        (at 26.67 -59.68999999999996 180)
         (length 7.62)
         (name "PS_MGTRAVTT"
           (effects
@@ -2233,7 +2266,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 25.4 -58.419999999999966 180)
+        (at 26.67 -62.22999999999996 180)
         (length 7.62)
         (name "PS_MGTRAVTT"
           (effects
@@ -3733,6 +3766,17 @@
           (type solid))
         (fill
           (type background)))
+      (pin input line
+        (at -43.18 77.47 0)
+        (length 7.62)
+        (name "VREF_64"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AJ11"
+          (effects
+            (font
+              (size 1.27 1.27)))))
       (pin bidirectional line
         (at 43.18 77.47 180)
         (length 7.62)
@@ -4348,6 +4392,17 @@
           (type solid))
         (fill
           (type background)))
+      (pin input line
+        (at -52.07 77.47 0)
+        (length 7.62)
+        (name "VREF_65"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AD11"
+          (effects
+            (font
+              (size 1.27 1.27)))))
       (pin bidirectional line
         (at 52.07 77.47 180)
         (length 7.62)
@@ -4963,6 +5018,17 @@
           (type solid))
         (fill
           (type background)))
+      (pin input line
+        (at -43.18 77.47 0)
+        (length 7.62)
+        (name "VREF_66"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AD12"
+          (effects
+            (font
+              (size 1.27 1.27)))))
       (pin bidirectional line
         (at 43.18 77.47 180)
         (length 7.62)
@@ -5578,6 +5644,17 @@
           (type solid))
         (fill
           (type background)))
+      (pin input line
+        (at -43.18 77.47 0)
+        (length 7.62)
+        (name "VREF_67"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "N14"
+          (effects
+            (font
+              (size 1.27 1.27)))))
       (pin bidirectional line
         (at 43.18 77.47 180)
         (length 7.62)
@@ -8788,15 +8865,15 @@
     (symbol "XCZU9EG_23_1"
       (unit_name misc0)
       (rectangle
-        (start -19.05 -22.86)
-        (end 19.05 22.86)
+        (start -16.51 -13.97)
+        (end 16.51 13.97)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
       (pin passive line
-        (at -26.67 20.32 0)
+        (at -24.13 11.43 0)
         (length 7.62)
         (name "DXN"
           (effects
@@ -8807,7 +8884,7 @@
             (font
               (size 1.27 1.27)))))
       (pin passive line
-        (at -26.67 17.78 0)
+        (at -24.13 8.89 0)
         (length 7.62)
         (name "DXP"
           (effects
@@ -8818,7 +8895,7 @@
             (font
               (size 1.27 1.27)))))
       (pin passive line
-        (at -26.67 15.240000000000002 0)
+        (at -24.13 6.3500000000000005 0)
         (length 7.62)
         (name "VREFP"
           (effects
@@ -8829,7 +8906,7 @@
             (font
               (size 1.27 1.27)))))
       (pin passive line
-        (at -26.67 12.700000000000003 0)
+        (at -24.13 3.8100000000000005 0)
         (length 7.62)
         (name "VREFN"
           (effects
@@ -8840,7 +8917,7 @@
             (font
               (size 1.27 1.27)))))
       (pin passive line
-        (at -26.67 10.160000000000004 0)
+        (at -24.13 1.2700000000000005 0)
         (length 7.62)
         (name "VP"
           (effects
@@ -8851,7 +8928,7 @@
             (font
               (size 1.27 1.27)))))
       (pin passive line
-        (at -26.67 7.620000000000004 0)
+        (at -24.13 -1.2699999999999996 0)
         (length 7.62)
         (name "VN"
           (effects
@@ -8862,7 +8939,7 @@
             (font
               (size 1.27 1.27)))))
       (pin passive line
-        (at -26.67 5.080000000000004 0)
+        (at -24.13 -3.8099999999999996 0)
         (length 7.62)
         (name "PUDC_B"
           (effects
@@ -8873,7 +8950,7 @@
             (font
               (size 1.27 1.27)))))
       (pin passive line
-        (at -26.67 2.5400000000000036 0)
+        (at -24.13 -6.35 0)
         (length 7.62)
         (name "POR_OVERRIDE"
           (effects
@@ -8884,84 +8961,7 @@
             (font
               (size 1.27 1.27)))))
       (pin passive line
-        (at -26.67 3.552713678800501e-15 0)
-        (length 7.62)
-        (name "VREF_67"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "N14"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin passive line
-        (at -26.67 -2.5399999999999965 0)
-        (length 7.62)
-        (name "VREF_66"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AD12"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin passive line
-        (at -26.67 -5.0799999999999965 0)
-        (length 7.62)
-        (name "VREF_65"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AD11"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin passive line
-        (at -26.67 -7.6199999999999966 0)
-        (length 7.62)
-        (name "VREF_64"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AJ11"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin passive line
-        (at -26.67 -10.159999999999997 0)
-        (length 7.62)
-        (name "MGTRREF_L"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "A29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin passive line
-        (at -26.67 -12.699999999999996 0)
-        (length 7.62)
-        (name "MGTRREF_R"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "A6"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin passive line
-        (at -26.67 -15.239999999999995 0)
-        (length 7.62)
-        (name "PS_MGTRREF_505"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AB28"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin passive line
-        (at -26.67 -17.779999999999994 0)
+        (at -24.13 -8.89 0)
         (length 7.62)
         (name "NC"
           (effects
@@ -8972,7 +8972,7 @@
             (font
               (size 1.27 1.27)))))
       (pin passive line
-        (at -26.67 -20.319999999999993 0)
+        (at -24.13 -11.43 0)
         (length 7.62)
         (name "NC"
           (effects

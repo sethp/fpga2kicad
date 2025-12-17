@@ -156,7 +156,7 @@ class PowerPin:
     bank: str | None
 
 @dataclass
-class UnknownPin:
+class MiscPin:
     loc: Loc
     name: str
 
@@ -200,7 +200,26 @@ class NCPin:
     loc: Loc
     # name will always be "NC"
 
-Pin = UnknownPin | PowerPin | UsrIOPin | GigXcvrPin | MIOPin | ConfigPin | DDRPin | NCPin
+@dataclass
+class GTRTermPin:
+    # e.g. MGTRREF_[LRNS]
+    # or   MGTAVTTRCAL*
+    # or   PS_MGTRAVTT
+    # or   PS_MGTRREF*
+    #
+    # NB: distinct from general analog power supply pins:
+    #  MGTAVTT_[LRNS]
+    #
+    # TODO ugh, but the PS thing is all-in-one PS_MGTRAVTT:
+    #   Analog power-supply pin for the transmitter and
+    #   receiver termination circuits for the PS-GTR
+    #   transceivers.
+
+    loc: Loc
+    name: str
+
+
+Pin = MiscPin | PowerPin | UsrIOPin | GigXcvrPin | MIOPin | ConfigPin | DDRPin | NCPin | GTRTermPin
 
 def parse_pins(rows):
     class ParseError(Exception):
@@ -294,6 +313,14 @@ def parse_pins(rows):
                     raise ParseError(n, f"unexpected extra fields for NC pin: {r}")
 
                 pin = NCPin(Loc(loc))
+            elif any(name.startswith(prefix) for prefix in [
+                'MGTRREF', 'MGTAVTTRCAL', 'PS_MGTRREF', 'PS_MGTRAVTT']):
+
+                # TODO improve error
+                if not all([f == "NA" for f in (bank, iotype, mem, reg)]):
+                    raise ParseError(n, f"unexpected extra fields for config pin: {r}")
+
+                pin = GTRTermPin(Loc(loc), name)
             elif ("GND" in name
                 or "VCC" in name
                 or "VTT" in name):
@@ -305,7 +332,7 @@ def parse_pins(rows):
                 # TODO finer classification (esp. in/out ?)
                 pin = PowerPin(Loc(loc), name, bank or None)
             else:
-                pin = UnknownPin(Loc(loc), name, r[2:])
+                pin = MiscPin(Loc(loc), name, r[2:])
 
             if not pin:
                 raise ValueError(f'failed to parse pin')
@@ -347,10 +374,6 @@ def main(ins, outs):
 
     for t, v in by_type.items():
         dbg_dump(f'{t}: {len(v)}')
-
-    dbg_dump(hdr)
-    for pin in by_type[UnknownPin]:
-        dbg_dump(pin)
 
     print("""XCZU9EG,
 Reference:,U
@@ -521,6 +544,25 @@ pin,name,type,side,unit,style,hidden""")
             "no",   # hidden
         ])
 
+    for p in by_type.pop(GTRTermPin):
+        out.writerow([
+            p.loc,
+            p.name,
+            "input" if "RREF" in p.name else "pwr", # type
+            "right", # side (left/right/top/bottom)
+            "mgt_power",
+            "line", # style (TODO ?)
+            "no",   # hidden
+        ])
+
+    # TODO we may wish to pluck pins from the pin list in a non-type-based way for these
+    # they get used below as
+    #       (misc_pins, bank_misc) = partition(lambda p: p.fields[1] == bank, misc_pins)
+    # perhaps we want just a big ol' flat list instead of a by-type map, and we can
+    # pluck things by time with an appropriate filter. O(N^2) in the number of pins,
+    # so we'll be in real trouble when AMD ships their first million pin FPGA.
+    misc_pins = by_type.pop(MiscPin)
+
     key = attrgetter('iotype')
     by_iotype = groupby(sorted(by_type.pop(UsrIOPin), key=key), key)
 
@@ -577,9 +619,21 @@ pin,name,type,side,unit,style,hidden""")
     iotype = UsrIOPin.IOType.HD
     for bank, pins in hd_by_bank:
         # TODO ontology lol
-        (power_pins, bank_pwr) = partition(lambda pp: pp.bank == bank, power_pins)
+        (power_pins, bank_pwr) = partition(lambda p: p.bank == bank, power_pins)
+        (misc_pins, bank_misc) = partition(lambda p: p.fields[1] == bank, misc_pins)
 
         unit = f'{iotype}_io_{bank}'
+        for p in sorted(bank_misc, key=lambda p: p.loc):
+            out.writerow([
+                p.loc,
+                p.name,
+                "input",
+                "left", # side (left/right/top/bottom)
+                unit, # unit
+                "line", # style (TODO ?)
+                "no",   # hidden
+            ])
+
         for p in sorted(bank_pwr, key=lambda p: p.loc):
             out.writerow([
                 p.loc,
@@ -625,7 +679,21 @@ pin,name,type,side,unit,style,hidden""")
     iotype = UsrIOPin.IOType.HP
     for bank, pins in hp_by_bank:
         # TODO ontology lol
-        (power_pins, bank_pwr) = partition(lambda pp: pp.bank == bank, power_pins)
+        (power_pins, bank_pwr) = partition(lambda p: p.bank == bank, power_pins)
+        (misc_pins, bank_misc) = partition(lambda p: p.fields[1] == bank, misc_pins)
+
+        unit = f'{iotype}_io_{bank}'
+        for p in sorted(bank_misc, key=lambda p: p.loc):
+            out.writerow([
+                p.loc,
+                p.name,
+                "input",
+                "left", # side (left/right/top/bottom)
+                unit, # unit
+                "line", # style (TODO ?)
+                "no",   # hidden
+            ])
+
 
         unit =  f'{iotype}_io_{bank}'
         for p in sorted(bank_pwr, key=lambda p: p.loc):
@@ -857,12 +925,13 @@ pin,name,type,side,unit,style,hidden""")
         ])
 
 
-    # these are for later (after the catch-all)
-    pwr, gnds = partition(lambda x: "GND" in x.name, power_pins)
+    misc_pins = list(misc_pins)
+    dbg_dump(hdr)
+    for pin in misc_pins:
+        dbg_dump(pin)
 
-    # catch-all
     n = 0
-    for p in [p for p_ty in by_type.values() for p in p_ty]:
+    for p in [p for p in [*misc_pins, *by_type.pop(NCPin)]]:
         out.writerow([
             p.loc,
             p.name if not isinstance(p, NCPin) else "NC",
@@ -873,7 +942,6 @@ pin,name,type,side,unit,style,hidden""")
             "no",   # hidden
         ])
         n += 1
-
 
     @dataclass
     class PowerSortKey:
@@ -893,6 +961,8 @@ pin,name,type,side,unit,style,hidden""")
             j, k = (["GND", "RSVDGND", "GNDADC", "GND_PSADC"].index(n) for n in (self.p.name, o.p.name))
 
             return j < k or self.p.loc < o.p.loc
+
+    pwr, gnds = partition(lambda x: "GND" in x.name, power_pins)
 
     n = 0
     for pp in sorted(pwr, key=PowerSortKey):
@@ -927,6 +997,10 @@ pin,name,type,side,unit,style,hidden""")
         ])
         n += 1
 
+    if len(by_type) != 0:
+        raise RuntimeError(
+            f"Expected all pins to be consumed, but we still have {len(by_type)} types "
+            f"left (a total of {sum(len(pp) for pp in by_type.values())} pins)")
 
 import os
 def dbg_dump(s, fd=3):
