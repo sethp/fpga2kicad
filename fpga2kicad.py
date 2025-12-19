@@ -694,8 +694,6 @@ pin,name,type,side,unit,style,hidden""")
                 "no",   # hidden
             ])
 
-
-        unit =  f'{iotype}_io_{bank}'
         for p in sorted(bank_pwr, key=lambda p: p.loc):
             out.writerow([
                 p.loc,
@@ -735,35 +733,6 @@ pin,name,type,side,unit,style,hidden""")
                 "no",   # hidden
             ])
 
-
-    # TODO are MIO pins ever not "PSMIO" iotype?
-    key = attrgetter('iotype')
-    by_iotype = groupby(sorted(by_type.pop(MIOPin), key=key), key)
-
-    for iotype, pins in by_iotype:
-        # sorted is stable, meaning any sort we apply here across all
-        # banks will hold within a bank, below
-        pins = sorted(pins, key=lambda p: LastNumKey(p.name))
-
-        key = attrgetter('bank')
-        by_bank = groupby(sorted(pins, key=key), key)
-
-        for bank, pins in by_bank:
-            n = 0
-            for p in pins:
-                out.writerow([
-                    p.loc,
-                    p.name,
-                    "bidirectional",
-                    "right", # side (left/right/top/bottom)
-                    f'{iotype}_{bank}_{n//80}', # unit
-                    "line", # style (TODO ?)
-                    "no",   # hidden
-                ])
-
-                n += 1
-
-
     def grouped(pins, key):
         it = groupby(sorted(pins, key=key), key)
         # from the docs:
@@ -772,6 +741,46 @@ pin,name,type,side,unit,style,hidden""")
         # (otherwise the check for "any more values to unpack?" advances the iterator and throws
         # away the entire group)
         return [(k, list(g)) for k, g in it]
+
+    # MIO pins are only "PSMIO" iotype (will throw otherwise)
+    # TODO better error message than "ValueError: too many values to unpack (expected 1)"
+    pins = by_type.pop(MIOPin)
+    ((iotype, pins),) = grouped(pins, attrgetter('iotype'))
+
+    # sorted is stable, meaning any sort we apply here across all
+    # banks will hold within a bank, below
+    pins = sorted(pins, key=lambda p: LastNumKey(p.name))
+
+    key = attrgetter('bank')
+    by_bank = groupby(sorted(pins, key=key), key)
+
+    for bank, pins in by_bank:
+        unit = f'{iotype}_{bank}'
+
+        # TODO ontology lol
+        (power_pins, bank_pwr) = partition(lambda p: p.bank == bank, power_pins)
+        for p in sorted(bank_pwr, key=lambda p: p.loc):
+            out.writerow([
+                p.loc,
+                p.name,
+                "pwr",
+                # TODO wish these were top, but kipart kind of blows up the size/shape
+                "left", # side (left/right/top/bottom)
+                unit,
+                "line", # style (TODO ?)
+                "no",   # hidden
+            ])
+
+        for p in pins:
+            out.writerow([
+                p.loc,
+                p.name,
+                "bidirectional",
+                "right", # side (left/right/top/bottom)
+                unit,
+                "line", # style (TODO ?)
+                "no",   # hidden
+            ])
 
     class Spacer:
         pass
@@ -853,6 +862,21 @@ pin,name,type,side,unit,style,hidden""")
             "no",   # hidden
         ])
 
+    # TODO ontology lol
+    (power_pins, bank_pwr) = partition(lambda p: p.bank == bank, power_pins)
+
+    for p in sorted(bank_pwr, key=lambda p: p.loc):
+        out.writerow([
+            p.loc,
+            p.name,
+            "pwr",
+            # TODO wish these were top, but kipart kind of blows up the size/shape
+            "left", # side (left/right/top/bottom)
+            unit, # unit
+            "line", # style (TODO ?)
+            "no",   # hidden
+        ])
+
 
     pins = by_type.pop(DDRPin)
 
@@ -879,6 +903,9 @@ pin,name,type,side,unit,style,hidden""")
     (pins, dm_pins) = partition(matching(r'PS_DDR_DM[0-9]'), pins)
     (pins, dqs_pins) = partition(matching(r'PS_DDR_DQS'), pins)
     dqs_pins = sorted(dqs_pins, key=DiffPairKey)
+
+    # TODO ontology lol
+    (power_pins, bank_pwr) = partition(lambda p: p.bank == bank, power_pins)
 
     (pins, numbered_pins) = partition(lambda p: p.name[-1].isdigit(), pins)
 
@@ -909,6 +936,7 @@ pin,name,type,side,unit,style,hidden""")
             # TODO why is this? (why group BA0 and BG0 together?)
             *spaced([pp for _, pp in grouped(numbered_pins, lambda p: p.name[-1])])
         ], "right"),
+        *sided(bank_pwr, "top")
     ]:
         if isinstance(p, Spacer):
             out.writerow(["*", "", "", side, unit, "", ""])
@@ -924,6 +952,14 @@ pin,name,type,side,unit,style,hidden""")
             "no",   # hidden
         ])
 
+    # TODO ontology lol
+    power_pins = list(power_pins)
+    if not all(p.bank == 'NA' for p in power_pins):
+        # this error message is bad, but hopefully temporary:
+        # the core idea is that we want to associate banked power pins
+        # with their bank, so if we've still got some in our bucket by
+        # this point we missed the opportunity to pluck them above
+        raise ValueError("Expected to consume all banked power pins")
 
     misc_pins = list(misc_pins)
     dbg_dump(hdr)

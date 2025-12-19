@@ -7,56 +7,56 @@
     (in_bom yes)
     (on_board yes)
     (property "Reference" "U"
-      (at -44.45 106.045 0)
+      (at -44.45 112.395 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify right)
         (hide no)))
     (property "Value" "XCZU9EG"
-      (at -44.45 103.50500000000001 0)
+      (at -44.45 109.855 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify right)
         (hide no)))
     (property "Footprint" "FFVB1156_XIL"
-      (at -44.45 102.87 0)
+      (at -44.45 109.22 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify right)
         (hide yes)))
     (property "Datasheet" "XCZU9EG-2FFVB1156I"
-      (at -44.45 102.87 0)
+      (at -44.45 109.22 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify right)
         (hide yes)))
     (property "Description" ""
-      (at -44.45 102.87 0)
+      (at -44.45 109.22 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)
         (hide yes)))
     (property "ki_keywords" "XCZU9EG-2FFVB1156I"
-      (at -44.45 102.87 0)
+      (at -44.45 109.22 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)
         (hide yes)))
     (property "ki_locked" ""
-      (at -44.45 102.87 0)
+      (at -44.45 109.22 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)
         (hide yes)))
     (property "ki_fp_filters" "FFVB1156_XIL FFVB1156_XIL-M FFVB1156_XIL-L"
-      (at -44.45 102.87 0)
+      (at -44.45 109.22 0)
       (effects
         (font
           (size 1.27 1.27))
@@ -6261,17 +6261,50 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_18_1"
-      (unit_name PSMIO_500_0)
+      (unit_name PSMIO_500)
       (rectangle
-        (start -11.43 -34.29)
-        (end 11.43 34.29)
+        (start -19.05 -34.29)
+        (end 19.05 34.29)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
+      (pin power_in line
+        (at -26.67 31.75 0)
+        (length 7.62)
+        (name "VCCO_PSIO0_500"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AE16"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin power_in line
+        (at -26.67 29.21 0)
+        (length 7.62)
+        (name "VCCO_PSIO0_500"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AG17"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin power_in line
+        (at -26.67 26.67 0)
+        (length 7.62)
+        (name "VCCO_PSIO0_500"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AK16"
+          (effects
+            (font
+              (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 31.75 180)
+        (at 26.67 31.75 180)
         (length 7.62)
         (name "PS_MIO0"
           (effects
@@ -6282,7 +6315,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 29.21 180)
+        (at 26.67 29.21 180)
         (length 7.62)
         (name "PS_MIO1"
           (effects
@@ -6293,7 +6326,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 26.67 180)
+        (at 26.67 26.67 180)
         (length 7.62)
         (name "PS_MIO2"
           (effects
@@ -6304,7 +6337,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 24.130000000000003 180)
+        (at 26.67 24.130000000000003 180)
         (length 7.62)
         (name "PS_MIO3"
           (effects
@@ -6315,7 +6348,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 21.590000000000003 180)
+        (at 26.67 21.590000000000003 180)
         (length 7.62)
         (name "PS_MIO4"
           (effects
@@ -6326,7 +6359,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 19.050000000000004 180)
+        (at 26.67 19.050000000000004 180)
         (length 7.62)
         (name "PS_MIO5"
           (effects
@@ -6337,7 +6370,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 16.510000000000005 180)
+        (at 26.67 16.510000000000005 180)
         (length 7.62)
         (name "PS_MIO6"
           (effects
@@ -6348,7 +6381,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 13.970000000000006 180)
+        (at 26.67 13.970000000000006 180)
         (length 7.62)
         (name "PS_MIO7"
           (effects
@@ -6359,7 +6392,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 11.430000000000007 180)
+        (at 26.67 11.430000000000007 180)
         (length 7.62)
         (name "PS_MIO8"
           (effects
@@ -6370,7 +6403,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 8.890000000000008 180)
+        (at 26.67 8.890000000000008 180)
         (length 7.62)
         (name "PS_MIO9"
           (effects
@@ -6381,7 +6414,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 6.350000000000008 180)
+        (at 26.67 6.350000000000008 180)
         (length 7.62)
         (name "PS_MIO10"
           (effects
@@ -6392,7 +6425,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 3.8100000000000076 180)
+        (at 26.67 3.8100000000000076 180)
         (length 7.62)
         (name "PS_MIO11"
           (effects
@@ -6403,7 +6436,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 1.2700000000000076 180)
+        (at 26.67 1.2700000000000076 180)
         (length 7.62)
         (name "PS_MIO12"
           (effects
@@ -6414,7 +6447,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -1.2699999999999925 180)
+        (at 26.67 -1.2699999999999925 180)
         (length 7.62)
         (name "PS_MIO13"
           (effects
@@ -6425,7 +6458,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -3.8099999999999925 180)
+        (at 26.67 -3.8099999999999925 180)
         (length 7.62)
         (name "PS_MIO14"
           (effects
@@ -6436,7 +6469,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -6.3499999999999925 180)
+        (at 26.67 -6.3499999999999925 180)
         (length 7.62)
         (name "PS_MIO15"
           (effects
@@ -6447,7 +6480,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -8.889999999999993 180)
+        (at 26.67 -8.889999999999993 180)
         (length 7.62)
         (name "PS_MIO16"
           (effects
@@ -6458,7 +6491,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -11.429999999999993 180)
+        (at 26.67 -11.429999999999993 180)
         (length 7.62)
         (name "PS_MIO17"
           (effects
@@ -6469,7 +6502,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -13.969999999999992 180)
+        (at 26.67 -13.969999999999992 180)
         (length 7.62)
         (name "PS_MIO18"
           (effects
@@ -6480,7 +6513,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -16.50999999999999 180)
+        (at 26.67 -16.50999999999999 180)
         (length 7.62)
         (name "PS_MIO19"
           (effects
@@ -6491,7 +6524,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -19.04999999999999 180)
+        (at 26.67 -19.04999999999999 180)
         (length 7.62)
         (name "PS_MIO20"
           (effects
@@ -6502,7 +6535,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -21.58999999999999 180)
+        (at 26.67 -21.58999999999999 180)
         (length 7.62)
         (name "PS_MIO21"
           (effects
@@ -6513,7 +6546,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -24.12999999999999 180)
+        (at 26.67 -24.12999999999999 180)
         (length 7.62)
         (name "PS_MIO22"
           (effects
@@ -6524,7 +6557,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -26.669999999999987 180)
+        (at 26.67 -26.669999999999987 180)
         (length 7.62)
         (name "PS_MIO23"
           (effects
@@ -6535,7 +6568,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -29.209999999999987 180)
+        (at 26.67 -29.209999999999987 180)
         (length 7.62)
         (name "PS_MIO24"
           (effects
@@ -6546,7 +6579,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -31.749999999999986 180)
+        (at 26.67 -31.749999999999986 180)
         (length 7.62)
         (name "PS_MIO25"
           (effects
@@ -6557,17 +6590,39 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_19_1"
-      (unit_name PSMIO_501_0)
+      (unit_name PSMIO_501)
       (rectangle
-        (start -11.43 -34.29)
-        (end 11.43 34.29)
+        (start -19.05 -34.29)
+        (end 19.05 34.29)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
+      (pin power_in line
+        (at -26.67 31.75 0)
+        (length 7.62)
+        (name "VCCO_PSIO1_501"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "L24"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin power_in line
+        (at -26.67 29.21 0)
+        (length 7.62)
+        (name "VCCO_PSIO1_501"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "M22"
+          (effects
+            (font
+              (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 31.75 180)
+        (at 26.67 31.75 180)
         (length 7.62)
         (name "PS_MIO26"
           (effects
@@ -6578,7 +6633,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 29.21 180)
+        (at 26.67 29.21 180)
         (length 7.62)
         (name "PS_MIO27"
           (effects
@@ -6589,7 +6644,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 26.67 180)
+        (at 26.67 26.67 180)
         (length 7.62)
         (name "PS_MIO28"
           (effects
@@ -6600,7 +6655,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 24.130000000000003 180)
+        (at 26.67 24.130000000000003 180)
         (length 7.62)
         (name "PS_MIO29"
           (effects
@@ -6611,7 +6666,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 21.590000000000003 180)
+        (at 26.67 21.590000000000003 180)
         (length 7.62)
         (name "PS_MIO30"
           (effects
@@ -6622,7 +6677,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 19.050000000000004 180)
+        (at 26.67 19.050000000000004 180)
         (length 7.62)
         (name "PS_MIO31"
           (effects
@@ -6633,7 +6688,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 16.510000000000005 180)
+        (at 26.67 16.510000000000005 180)
         (length 7.62)
         (name "PS_MIO32"
           (effects
@@ -6644,7 +6699,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 13.970000000000006 180)
+        (at 26.67 13.970000000000006 180)
         (length 7.62)
         (name "PS_MIO33"
           (effects
@@ -6655,7 +6710,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 11.430000000000007 180)
+        (at 26.67 11.430000000000007 180)
         (length 7.62)
         (name "PS_MIO34"
           (effects
@@ -6666,7 +6721,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 8.890000000000008 180)
+        (at 26.67 8.890000000000008 180)
         (length 7.62)
         (name "PS_MIO35"
           (effects
@@ -6677,7 +6732,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 6.350000000000008 180)
+        (at 26.67 6.350000000000008 180)
         (length 7.62)
         (name "PS_MIO36"
           (effects
@@ -6688,7 +6743,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 3.8100000000000076 180)
+        (at 26.67 3.8100000000000076 180)
         (length 7.62)
         (name "PS_MIO37"
           (effects
@@ -6699,7 +6754,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 1.2700000000000076 180)
+        (at 26.67 1.2700000000000076 180)
         (length 7.62)
         (name "PS_MIO38"
           (effects
@@ -6710,7 +6765,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -1.2699999999999925 180)
+        (at 26.67 -1.2699999999999925 180)
         (length 7.62)
         (name "PS_MIO39"
           (effects
@@ -6721,7 +6776,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -3.8099999999999925 180)
+        (at 26.67 -3.8099999999999925 180)
         (length 7.62)
         (name "PS_MIO40"
           (effects
@@ -6732,7 +6787,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -6.3499999999999925 180)
+        (at 26.67 -6.3499999999999925 180)
         (length 7.62)
         (name "PS_MIO41"
           (effects
@@ -6743,7 +6798,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -8.889999999999993 180)
+        (at 26.67 -8.889999999999993 180)
         (length 7.62)
         (name "PS_MIO42"
           (effects
@@ -6754,7 +6809,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -11.429999999999993 180)
+        (at 26.67 -11.429999999999993 180)
         (length 7.62)
         (name "PS_MIO43"
           (effects
@@ -6765,7 +6820,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -13.969999999999992 180)
+        (at 26.67 -13.969999999999992 180)
         (length 7.62)
         (name "PS_MIO44"
           (effects
@@ -6776,7 +6831,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -16.50999999999999 180)
+        (at 26.67 -16.50999999999999 180)
         (length 7.62)
         (name "PS_MIO45"
           (effects
@@ -6787,7 +6842,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -19.04999999999999 180)
+        (at 26.67 -19.04999999999999 180)
         (length 7.62)
         (name "PS_MIO46"
           (effects
@@ -6798,7 +6853,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -21.58999999999999 180)
+        (at 26.67 -21.58999999999999 180)
         (length 7.62)
         (name "PS_MIO47"
           (effects
@@ -6809,7 +6864,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -24.12999999999999 180)
+        (at 26.67 -24.12999999999999 180)
         (length 7.62)
         (name "PS_MIO48"
           (effects
@@ -6820,7 +6875,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -26.669999999999987 180)
+        (at 26.67 -26.669999999999987 180)
         (length 7.62)
         (name "PS_MIO49"
           (effects
@@ -6831,7 +6886,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -29.209999999999987 180)
+        (at 26.67 -29.209999999999987 180)
         (length 7.62)
         (name "PS_MIO50"
           (effects
@@ -6842,7 +6897,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -31.749999999999986 180)
+        (at 26.67 -31.749999999999986 180)
         (length 7.62)
         (name "PS_MIO51"
           (effects
@@ -6853,17 +6908,50 @@
             (font
               (size 1.27 1.27))))))
     (symbol "XCZU9EG_20_1"
-      (unit_name PSMIO_502_0)
+      (unit_name PSMIO_502)
       (rectangle
-        (start -11.43 -34.29)
-        (end 11.43 34.29)
+        (start -19.05 -34.29)
+        (end 19.05 34.29)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
+      (pin power_in line
+        (at -26.67 31.75 0)
+        (length 7.62)
+        (name "VCCO_PSIO2_502"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "D23"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin power_in line
+        (at -26.67 29.21 0)
+        (length 7.62)
+        (name "VCCO_PSIO2_502"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "F24"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin power_in line
+        (at -26.67 26.67 0)
+        (length 7.62)
+        (name "VCCO_PSIO2_502"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "G22"
+          (effects
+            (font
+              (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 31.75 180)
+        (at 26.67 31.75 180)
         (length 7.62)
         (name "PS_MIO52"
           (effects
@@ -6874,7 +6962,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 29.21 180)
+        (at 26.67 29.21 180)
         (length 7.62)
         (name "PS_MIO53"
           (effects
@@ -6885,7 +6973,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 26.67 180)
+        (at 26.67 26.67 180)
         (length 7.62)
         (name "PS_MIO54"
           (effects
@@ -6896,7 +6984,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 24.130000000000003 180)
+        (at 26.67 24.130000000000003 180)
         (length 7.62)
         (name "PS_MIO55"
           (effects
@@ -6907,7 +6995,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 21.590000000000003 180)
+        (at 26.67 21.590000000000003 180)
         (length 7.62)
         (name "PS_MIO56"
           (effects
@@ -6918,7 +7006,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 19.050000000000004 180)
+        (at 26.67 19.050000000000004 180)
         (length 7.62)
         (name "PS_MIO57"
           (effects
@@ -6929,7 +7017,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 16.510000000000005 180)
+        (at 26.67 16.510000000000005 180)
         (length 7.62)
         (name "PS_MIO58"
           (effects
@@ -6940,7 +7028,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 13.970000000000006 180)
+        (at 26.67 13.970000000000006 180)
         (length 7.62)
         (name "PS_MIO59"
           (effects
@@ -6951,7 +7039,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 11.430000000000007 180)
+        (at 26.67 11.430000000000007 180)
         (length 7.62)
         (name "PS_MIO60"
           (effects
@@ -6962,7 +7050,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 8.890000000000008 180)
+        (at 26.67 8.890000000000008 180)
         (length 7.62)
         (name "PS_MIO61"
           (effects
@@ -6973,7 +7061,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 6.350000000000008 180)
+        (at 26.67 6.350000000000008 180)
         (length 7.62)
         (name "PS_MIO62"
           (effects
@@ -6984,7 +7072,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 3.8100000000000076 180)
+        (at 26.67 3.8100000000000076 180)
         (length 7.62)
         (name "PS_MIO63"
           (effects
@@ -6995,7 +7083,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 1.2700000000000076 180)
+        (at 26.67 1.2700000000000076 180)
         (length 7.62)
         (name "PS_MIO64"
           (effects
@@ -7006,7 +7094,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -1.2699999999999925 180)
+        (at 26.67 -1.2699999999999925 180)
         (length 7.62)
         (name "PS_MIO65"
           (effects
@@ -7017,7 +7105,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -3.8099999999999925 180)
+        (at 26.67 -3.8099999999999925 180)
         (length 7.62)
         (name "PS_MIO66"
           (effects
@@ -7028,7 +7116,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -6.3499999999999925 180)
+        (at 26.67 -6.3499999999999925 180)
         (length 7.62)
         (name "PS_MIO67"
           (effects
@@ -7039,7 +7127,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -8.889999999999993 180)
+        (at 26.67 -8.889999999999993 180)
         (length 7.62)
         (name "PS_MIO68"
           (effects
@@ -7050,7 +7138,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -11.429999999999993 180)
+        (at 26.67 -11.429999999999993 180)
         (length 7.62)
         (name "PS_MIO69"
           (effects
@@ -7061,7 +7149,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -13.969999999999992 180)
+        (at 26.67 -13.969999999999992 180)
         (length 7.62)
         (name "PS_MIO70"
           (effects
@@ -7072,7 +7160,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -16.50999999999999 180)
+        (at 26.67 -16.50999999999999 180)
         (length 7.62)
         (name "PS_MIO71"
           (effects
@@ -7083,7 +7171,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -19.04999999999999 180)
+        (at 26.67 -19.04999999999999 180)
         (length 7.62)
         (name "PS_MIO72"
           (effects
@@ -7094,7 +7182,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -21.58999999999999 180)
+        (at 26.67 -21.58999999999999 180)
         (length 7.62)
         (name "PS_MIO73"
           (effects
@@ -7105,7 +7193,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -24.12999999999999 180)
+        (at 26.67 -24.12999999999999 180)
         (length 7.62)
         (name "PS_MIO74"
           (effects
@@ -7116,7 +7204,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -26.669999999999987 180)
+        (at 26.67 -26.669999999999987 180)
         (length 7.62)
         (name "PS_MIO75"
           (effects
@@ -7127,7 +7215,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -29.209999999999987 180)
+        (at 26.67 -29.209999999999987 180)
         (length 7.62)
         (name "PS_MIO76"
           (effects
@@ -7138,7 +7226,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 19.05 -31.749999999999986 180)
+        (at 26.67 -31.749999999999986 180)
         (length 7.62)
         (name "PS_MIO77"
           (effects
@@ -7158,6 +7246,28 @@
           (type solid))
         (fill
           (type background)))
+      (pin power_in line
+        (at -27.94 25.4 0)
+        (length 7.62)
+        (name "VCCO_PSIO3_503"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "T24"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin power_in line
+        (at -27.94 22.86 0)
+        (length 7.62)
+        (name "VCCO_PSIO3_503"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "U22"
+          (effects
+            (font
+              (size 1.27 1.27)))))
       (pin input line
         (at 27.94 25.4 180)
         (length 7.62)
@@ -7359,15 +7469,15 @@
     (symbol "XCZU9EG_22_1"
       (unit_name PSDDR_504)
       (rectangle
-        (start -21.59 -92.71000000000001)
-        (end 21.59 92.71000000000001)
+        (start -29.21 -109.22)
+        (end 29.21 109.22)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
       (pin bidirectional line
-        (at -29.21 90.17 0)
+        (at -36.83 90.17 0)
         (length 7.62)
         (name "PS_DDR_DQ0"
           (effects
@@ -7378,7 +7488,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 87.63 0)
+        (at -36.83 87.63 0)
         (length 7.62)
         (name "PS_DDR_DQ1"
           (effects
@@ -7389,7 +7499,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 85.08999999999999 0)
+        (at -36.83 85.08999999999999 0)
         (length 7.62)
         (name "PS_DDR_DQ2"
           (effects
@@ -7400,7 +7510,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 82.54999999999998 0)
+        (at -36.83 82.54999999999998 0)
         (length 7.62)
         (name "PS_DDR_DQ3"
           (effects
@@ -7411,7 +7521,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 80.00999999999998 0)
+        (at -36.83 80.00999999999998 0)
         (length 7.62)
         (name "PS_DDR_DQ4"
           (effects
@@ -7422,7 +7532,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 77.46999999999997 0)
+        (at -36.83 77.46999999999997 0)
         (length 7.62)
         (name "PS_DDR_DQ5"
           (effects
@@ -7433,7 +7543,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 74.92999999999996 0)
+        (at -36.83 74.92999999999996 0)
         (length 7.62)
         (name "PS_DDR_DQ6"
           (effects
@@ -7444,7 +7554,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 72.38999999999996 0)
+        (at -36.83 72.38999999999996 0)
         (length 7.62)
         (name "PS_DDR_DQ7"
           (effects
@@ -7455,7 +7565,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 69.84999999999995 0)
+        (at -36.83 69.84999999999995 0)
         (length 7.62)
         (name "PS_DDR_DQ8"
           (effects
@@ -7466,7 +7576,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 67.30999999999995 0)
+        (at -36.83 67.30999999999995 0)
         (length 7.62)
         (name "PS_DDR_DQ9"
           (effects
@@ -7477,7 +7587,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 64.76999999999994 0)
+        (at -36.83 64.76999999999994 0)
         (length 7.62)
         (name "PS_DDR_DQ10"
           (effects
@@ -7488,7 +7598,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 62.22999999999994 0)
+        (at -36.83 62.22999999999994 0)
         (length 7.62)
         (name "PS_DDR_DQ11"
           (effects
@@ -7499,7 +7609,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 59.68999999999994 0)
+        (at -36.83 59.68999999999994 0)
         (length 7.62)
         (name "PS_DDR_DQ12"
           (effects
@@ -7510,7 +7620,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 57.14999999999994 0)
+        (at -36.83 57.14999999999994 0)
         (length 7.62)
         (name "PS_DDR_DQ13"
           (effects
@@ -7521,7 +7631,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 54.60999999999994 0)
+        (at -36.83 54.60999999999994 0)
         (length 7.62)
         (name "PS_DDR_DQ14"
           (effects
@@ -7532,7 +7642,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 52.06999999999994 0)
+        (at -36.83 52.06999999999994 0)
         (length 7.62)
         (name "PS_DDR_DQ15"
           (effects
@@ -7543,7 +7653,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 49.529999999999944 0)
+        (at -36.83 49.529999999999944 0)
         (length 7.62)
         (name "PS_DDR_DQ16"
           (effects
@@ -7554,7 +7664,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 46.989999999999945 0)
+        (at -36.83 46.989999999999945 0)
         (length 7.62)
         (name "PS_DDR_DQ17"
           (effects
@@ -7565,7 +7675,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 44.449999999999946 0)
+        (at -36.83 44.449999999999946 0)
         (length 7.62)
         (name "PS_DDR_DQ18"
           (effects
@@ -7576,7 +7686,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 41.90999999999995 0)
+        (at -36.83 41.90999999999995 0)
         (length 7.62)
         (name "PS_DDR_DQ19"
           (effects
@@ -7587,7 +7697,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 39.36999999999995 0)
+        (at -36.83 39.36999999999995 0)
         (length 7.62)
         (name "PS_DDR_DQ20"
           (effects
@@ -7598,7 +7708,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 36.82999999999995 0)
+        (at -36.83 36.82999999999995 0)
         (length 7.62)
         (name "PS_DDR_DQ21"
           (effects
@@ -7609,7 +7719,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 34.28999999999995 0)
+        (at -36.83 34.28999999999995 0)
         (length 7.62)
         (name "PS_DDR_DQ22"
           (effects
@@ -7620,7 +7730,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 31.74999999999995 0)
+        (at -36.83 31.74999999999995 0)
         (length 7.62)
         (name "PS_DDR_DQ23"
           (effects
@@ -7631,7 +7741,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 29.20999999999995 0)
+        (at -36.83 29.20999999999995 0)
         (length 7.62)
         (name "PS_DDR_DQ24"
           (effects
@@ -7642,7 +7752,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 26.669999999999952 0)
+        (at -36.83 26.669999999999952 0)
         (length 7.62)
         (name "PS_DDR_DQ25"
           (effects
@@ -7653,7 +7763,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 24.129999999999953 0)
+        (at -36.83 24.129999999999953 0)
         (length 7.62)
         (name "PS_DDR_DQ26"
           (effects
@@ -7664,7 +7774,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 21.589999999999954 0)
+        (at -36.83 21.589999999999954 0)
         (length 7.62)
         (name "PS_DDR_DQ27"
           (effects
@@ -7675,7 +7785,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 19.049999999999955 0)
+        (at -36.83 19.049999999999955 0)
         (length 7.62)
         (name "PS_DDR_DQ28"
           (effects
@@ -7686,7 +7796,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 16.509999999999955 0)
+        (at -36.83 16.509999999999955 0)
         (length 7.62)
         (name "PS_DDR_DQ29"
           (effects
@@ -7697,7 +7807,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 13.969999999999956 0)
+        (at -36.83 13.969999999999956 0)
         (length 7.62)
         (name "PS_DDR_DQ30"
           (effects
@@ -7708,7 +7818,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 11.429999999999957 0)
+        (at -36.83 11.429999999999957 0)
         (length 7.62)
         (name "PS_DDR_DQ31"
           (effects
@@ -7719,7 +7829,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 8.889999999999958 0)
+        (at -36.83 8.889999999999958 0)
         (length 7.62)
         (name "PS_DDR_DQ32"
           (effects
@@ -7730,7 +7840,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 6.349999999999958 0)
+        (at -36.83 6.349999999999958 0)
         (length 7.62)
         (name "PS_DDR_DQ33"
           (effects
@@ -7741,7 +7851,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 3.809999999999958 0)
+        (at -36.83 3.809999999999958 0)
         (length 7.62)
         (name "PS_DDR_DQ34"
           (effects
@@ -7752,7 +7862,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 1.2699999999999578 0)
+        (at -36.83 1.2699999999999578 0)
         (length 7.62)
         (name "PS_DDR_DQ35"
           (effects
@@ -7763,7 +7873,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -1.2700000000000422 0)
+        (at -36.83 -1.2700000000000422 0)
         (length 7.62)
         (name "PS_DDR_DQ36"
           (effects
@@ -7774,7 +7884,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -3.8100000000000422 0)
+        (at -36.83 -3.8100000000000422 0)
         (length 7.62)
         (name "PS_DDR_DQ37"
           (effects
@@ -7785,7 +7895,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -6.350000000000042 0)
+        (at -36.83 -6.350000000000042 0)
         (length 7.62)
         (name "PS_DDR_DQ38"
           (effects
@@ -7796,7 +7906,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -8.890000000000043 0)
+        (at -36.83 -8.890000000000043 0)
         (length 7.62)
         (name "PS_DDR_DQ39"
           (effects
@@ -7807,7 +7917,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -11.430000000000042 0)
+        (at -36.83 -11.430000000000042 0)
         (length 7.62)
         (name "PS_DDR_DQ40"
           (effects
@@ -7818,7 +7928,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -13.970000000000041 0)
+        (at -36.83 -13.970000000000041 0)
         (length 7.62)
         (name "PS_DDR_DQ41"
           (effects
@@ -7829,7 +7939,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -16.51000000000004 0)
+        (at -36.83 -16.51000000000004 0)
         (length 7.62)
         (name "PS_DDR_DQ42"
           (effects
@@ -7840,7 +7950,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -19.05000000000004 0)
+        (at -36.83 -19.05000000000004 0)
         (length 7.62)
         (name "PS_DDR_DQ43"
           (effects
@@ -7851,7 +7961,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -21.59000000000004 0)
+        (at -36.83 -21.59000000000004 0)
         (length 7.62)
         (name "PS_DDR_DQ44"
           (effects
@@ -7862,7 +7972,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -24.130000000000038 0)
+        (at -36.83 -24.130000000000038 0)
         (length 7.62)
         (name "PS_DDR_DQ45"
           (effects
@@ -7873,7 +7983,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -26.670000000000037 0)
+        (at -36.83 -26.670000000000037 0)
         (length 7.62)
         (name "PS_DDR_DQ46"
           (effects
@@ -7884,7 +7994,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -29.210000000000036 0)
+        (at -36.83 -29.210000000000036 0)
         (length 7.62)
         (name "PS_DDR_DQ47"
           (effects
@@ -7895,7 +8005,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -31.750000000000036 0)
+        (at -36.83 -31.750000000000036 0)
         (length 7.62)
         (name "PS_DDR_DQ48"
           (effects
@@ -7906,7 +8016,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -34.290000000000035 0)
+        (at -36.83 -34.290000000000035 0)
         (length 7.62)
         (name "PS_DDR_DQ49"
           (effects
@@ -7917,7 +8027,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -36.830000000000034 0)
+        (at -36.83 -36.830000000000034 0)
         (length 7.62)
         (name "PS_DDR_DQ50"
           (effects
@@ -7928,7 +8038,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -39.37000000000003 0)
+        (at -36.83 -39.37000000000003 0)
         (length 7.62)
         (name "PS_DDR_DQ51"
           (effects
@@ -7939,7 +8049,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -41.91000000000003 0)
+        (at -36.83 -41.91000000000003 0)
         (length 7.62)
         (name "PS_DDR_DQ52"
           (effects
@@ -7950,7 +8060,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -44.45000000000003 0)
+        (at -36.83 -44.45000000000003 0)
         (length 7.62)
         (name "PS_DDR_DQ53"
           (effects
@@ -7961,7 +8071,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -46.99000000000003 0)
+        (at -36.83 -46.99000000000003 0)
         (length 7.62)
         (name "PS_DDR_DQ54"
           (effects
@@ -7972,7 +8082,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -49.53000000000003 0)
+        (at -36.83 -49.53000000000003 0)
         (length 7.62)
         (name "PS_DDR_DQ55"
           (effects
@@ -7983,7 +8093,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -52.07000000000003 0)
+        (at -36.83 -52.07000000000003 0)
         (length 7.62)
         (name "PS_DDR_DQ56"
           (effects
@@ -7994,7 +8104,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -54.61000000000003 0)
+        (at -36.83 -54.61000000000003 0)
         (length 7.62)
         (name "PS_DDR_DQ57"
           (effects
@@ -8005,7 +8115,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -57.15000000000003 0)
+        (at -36.83 -57.15000000000003 0)
         (length 7.62)
         (name "PS_DDR_DQ58"
           (effects
@@ -8016,7 +8126,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -59.690000000000026 0)
+        (at -36.83 -59.690000000000026 0)
         (length 7.62)
         (name "PS_DDR_DQ59"
           (effects
@@ -8027,7 +8137,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -62.230000000000025 0)
+        (at -36.83 -62.230000000000025 0)
         (length 7.62)
         (name "PS_DDR_DQ60"
           (effects
@@ -8038,7 +8148,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -64.77000000000002 0)
+        (at -36.83 -64.77000000000002 0)
         (length 7.62)
         (name "PS_DDR_DQ61"
           (effects
@@ -8049,7 +8159,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -67.31000000000003 0)
+        (at -36.83 -67.31000000000003 0)
         (length 7.62)
         (name "PS_DDR_DQ62"
           (effects
@@ -8060,7 +8170,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -69.85000000000004 0)
+        (at -36.83 -69.85000000000004 0)
         (length 7.62)
         (name "PS_DDR_DQ63"
           (effects
@@ -8071,7 +8181,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -72.39000000000004 0)
+        (at -36.83 -72.39000000000004 0)
         (length 7.62)
         (name "PS_DDR_DQ64"
           (effects
@@ -8082,7 +8192,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -74.93000000000005 0)
+        (at -36.83 -74.93000000000005 0)
         (length 7.62)
         (name "PS_DDR_DQ65"
           (effects
@@ -8093,7 +8203,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -77.47000000000006 0)
+        (at -36.83 -77.47000000000006 0)
         (length 7.62)
         (name "PS_DDR_DQ66"
           (effects
@@ -8104,7 +8214,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -80.01000000000006 0)
+        (at -36.83 -80.01000000000006 0)
         (length 7.62)
         (name "PS_DDR_DQ67"
           (effects
@@ -8115,7 +8225,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -82.55000000000007 0)
+        (at -36.83 -82.55000000000007 0)
         (length 7.62)
         (name "PS_DDR_DQ68"
           (effects
@@ -8126,7 +8236,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -85.09000000000007 0)
+        (at -36.83 -85.09000000000007 0)
         (length 7.62)
         (name "PS_DDR_DQ69"
           (effects
@@ -8137,7 +8247,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -87.63000000000008 0)
+        (at -36.83 -87.63000000000008 0)
         (length 7.62)
         (name "PS_DDR_DQ70"
           (effects
@@ -8148,7 +8258,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at -29.21 -90.17000000000009 0)
+        (at -36.83 -90.17000000000009 0)
         (length 7.62)
         (name "PS_DDR_DQ71"
           (effects
@@ -8159,7 +8269,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 90.17 180)
+        (at 36.83 90.17 180)
         (length 7.62)
         (name "PS_DDR_A0"
           (effects
@@ -8170,7 +8280,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 87.63 180)
+        (at 36.83 87.63 180)
         (length 7.62)
         (name "PS_DDR_A1"
           (effects
@@ -8181,7 +8291,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 85.08999999999999 180)
+        (at 36.83 85.08999999999999 180)
         (length 7.62)
         (name "PS_DDR_A2"
           (effects
@@ -8192,7 +8302,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 82.54999999999998 180)
+        (at 36.83 82.54999999999998 180)
         (length 7.62)
         (name "PS_DDR_A3"
           (effects
@@ -8203,7 +8313,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 80.00999999999998 180)
+        (at 36.83 80.00999999999998 180)
         (length 7.62)
         (name "PS_DDR_A4"
           (effects
@@ -8214,7 +8324,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 77.46999999999997 180)
+        (at 36.83 77.46999999999997 180)
         (length 7.62)
         (name "PS_DDR_A5"
           (effects
@@ -8225,7 +8335,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 74.92999999999996 180)
+        (at 36.83 74.92999999999996 180)
         (length 7.62)
         (name "PS_DDR_A6"
           (effects
@@ -8236,7 +8346,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 72.38999999999996 180)
+        (at 36.83 72.38999999999996 180)
         (length 7.62)
         (name "PS_DDR_A7"
           (effects
@@ -8247,7 +8357,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 69.84999999999995 180)
+        (at 36.83 69.84999999999995 180)
         (length 7.62)
         (name "PS_DDR_A8"
           (effects
@@ -8258,7 +8368,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 67.30999999999995 180)
+        (at 36.83 67.30999999999995 180)
         (length 7.62)
         (name "PS_DDR_A9"
           (effects
@@ -8269,7 +8379,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 64.76999999999994 180)
+        (at 36.83 64.76999999999994 180)
         (length 7.62)
         (name "PS_DDR_A10"
           (effects
@@ -8280,7 +8390,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 62.22999999999994 180)
+        (at 36.83 62.22999999999994 180)
         (length 7.62)
         (name "PS_DDR_A11"
           (effects
@@ -8291,7 +8401,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 59.68999999999994 180)
+        (at 36.83 59.68999999999994 180)
         (length 7.62)
         (name "PS_DDR_A12"
           (effects
@@ -8302,7 +8412,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 57.14999999999994 180)
+        (at 36.83 57.14999999999994 180)
         (length 7.62)
         (name "PS_DDR_A13"
           (effects
@@ -8313,7 +8423,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 54.60999999999994 180)
+        (at 36.83 54.60999999999994 180)
         (length 7.62)
         (name "PS_DDR_A14"
           (effects
@@ -8324,7 +8434,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 52.06999999999994 180)
+        (at 36.83 52.06999999999994 180)
         (length 7.62)
         (name "PS_DDR_A15"
           (effects
@@ -8335,7 +8445,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 49.529999999999944 180)
+        (at 36.83 49.529999999999944 180)
         (length 7.62)
         (name "PS_DDR_A16"
           (effects
@@ -8346,7 +8456,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 46.989999999999945 180)
+        (at 36.83 46.989999999999945 180)
         (length 7.62)
         (name "PS_DDR_A17"
           (effects
@@ -8357,7 +8467,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 41.90999999999995 180)
+        (at 36.83 41.90999999999995 180)
         (length 7.62)
         (name "PS_DDR_DM0"
           (effects
@@ -8368,7 +8478,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 39.36999999999995 180)
+        (at 36.83 39.36999999999995 180)
         (length 7.62)
         (name "PS_DDR_DM1"
           (effects
@@ -8379,7 +8489,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 36.82999999999995 180)
+        (at 36.83 36.82999999999995 180)
         (length 7.62)
         (name "PS_DDR_DM2"
           (effects
@@ -8390,7 +8500,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 34.28999999999995 180)
+        (at 36.83 34.28999999999995 180)
         (length 7.62)
         (name "PS_DDR_DM3"
           (effects
@@ -8401,7 +8511,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 31.74999999999995 180)
+        (at 36.83 31.74999999999995 180)
         (length 7.62)
         (name "PS_DDR_DM4"
           (effects
@@ -8412,7 +8522,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 29.20999999999995 180)
+        (at 36.83 29.20999999999995 180)
         (length 7.62)
         (name "PS_DDR_DM5"
           (effects
@@ -8423,7 +8533,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 26.669999999999952 180)
+        (at 36.83 26.669999999999952 180)
         (length 7.62)
         (name "PS_DDR_DM6"
           (effects
@@ -8434,7 +8544,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 24.129999999999953 180)
+        (at 36.83 24.129999999999953 180)
         (length 7.62)
         (name "PS_DDR_DM7"
           (effects
@@ -8445,7 +8555,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 21.589999999999954 180)
+        (at 36.83 21.589999999999954 180)
         (length 7.62)
         (name "PS_DDR_DM8"
           (effects
@@ -8456,7 +8566,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 13.969999999999956 180)
+        (at 36.83 13.969999999999956 180)
         (length 7.62)
         (name "PS_DDR_DQS_P0"
           (effects
@@ -8467,7 +8577,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 11.429999999999957 180)
+        (at 36.83 11.429999999999957 180)
         (length 7.62)
         (name "PS_DDR_DQS_N0"
           (effects
@@ -8478,7 +8588,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 8.889999999999958 180)
+        (at 36.83 8.889999999999958 180)
         (length 7.62)
         (name "PS_DDR_DQS_P1"
           (effects
@@ -8489,7 +8599,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 6.349999999999958 180)
+        (at 36.83 6.349999999999958 180)
         (length 7.62)
         (name "PS_DDR_DQS_N1"
           (effects
@@ -8500,7 +8610,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 3.809999999999958 180)
+        (at 36.83 3.809999999999958 180)
         (length 7.62)
         (name "PS_DDR_DQS_P2"
           (effects
@@ -8511,7 +8621,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 1.2699999999999578 180)
+        (at 36.83 1.2699999999999578 180)
         (length 7.62)
         (name "PS_DDR_DQS_N2"
           (effects
@@ -8522,7 +8632,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -1.2700000000000422 180)
+        (at 36.83 -1.2700000000000422 180)
         (length 7.62)
         (name "PS_DDR_DQS_P3"
           (effects
@@ -8533,7 +8643,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -3.8100000000000422 180)
+        (at 36.83 -3.8100000000000422 180)
         (length 7.62)
         (name "PS_DDR_DQS_N3"
           (effects
@@ -8544,7 +8654,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -6.350000000000042 180)
+        (at 36.83 -6.350000000000042 180)
         (length 7.62)
         (name "PS_DDR_DQS_P4"
           (effects
@@ -8555,7 +8665,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -8.890000000000043 180)
+        (at 36.83 -8.890000000000043 180)
         (length 7.62)
         (name "PS_DDR_DQS_N4"
           (effects
@@ -8566,7 +8676,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -11.430000000000042 180)
+        (at 36.83 -11.430000000000042 180)
         (length 7.62)
         (name "PS_DDR_DQS_P5"
           (effects
@@ -8577,7 +8687,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -13.970000000000041 180)
+        (at 36.83 -13.970000000000041 180)
         (length 7.62)
         (name "PS_DDR_DQS_N5"
           (effects
@@ -8588,7 +8698,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -16.51000000000004 180)
+        (at 36.83 -16.51000000000004 180)
         (length 7.62)
         (name "PS_DDR_DQS_P6"
           (effects
@@ -8599,7 +8709,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -19.05000000000004 180)
+        (at 36.83 -19.05000000000004 180)
         (length 7.62)
         (name "PS_DDR_DQS_N6"
           (effects
@@ -8610,7 +8720,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -21.59000000000004 180)
+        (at 36.83 -21.59000000000004 180)
         (length 7.62)
         (name "PS_DDR_DQS_P7"
           (effects
@@ -8621,7 +8731,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -24.130000000000038 180)
+        (at 36.83 -24.130000000000038 180)
         (length 7.62)
         (name "PS_DDR_DQS_N7"
           (effects
@@ -8632,7 +8742,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -26.670000000000037 180)
+        (at 36.83 -26.670000000000037 180)
         (length 7.62)
         (name "PS_DDR_DQS_P8"
           (effects
@@ -8643,7 +8753,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -29.210000000000036 180)
+        (at 36.83 -29.210000000000036 180)
         (length 7.62)
         (name "PS_DDR_DQS_N8"
           (effects
@@ -8654,7 +8764,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -34.290000000000035 180)
+        (at 36.83 -34.290000000000035 180)
         (length 7.62)
         (name "PS_DDR_ACT_N"
           (effects
@@ -8665,7 +8775,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -36.830000000000034 180)
+        (at 36.83 -36.830000000000034 180)
         (length 7.62)
         (name "PS_DDR_ALERT_N"
           (effects
@@ -8676,7 +8786,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -39.37000000000003 180)
+        (at 36.83 -39.37000000000003 180)
         (length 7.62)
         (name "PS_DDR_PARITY"
           (effects
@@ -8687,7 +8797,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -41.91000000000003 180)
+        (at 36.83 -41.91000000000003 180)
         (length 7.62)
         (name "PS_DDR_RAM_RST_N"
           (effects
@@ -8698,7 +8808,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -44.45000000000003 180)
+        (at 36.83 -44.45000000000003 180)
         (length 7.62)
         (name "PS_DDR_ZQ"
           (effects
@@ -8709,7 +8819,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -49.53000000000003 180)
+        (at 36.83 -49.53000000000003 180)
         (length 7.62)
         (name "PS_DDR_BA0"
           (effects
@@ -8720,7 +8830,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -52.07000000000003 180)
+        (at 36.83 -52.07000000000003 180)
         (length 7.62)
         (name "PS_DDR_BG0"
           (effects
@@ -8731,7 +8841,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -54.61000000000003 180)
+        (at 36.83 -54.61000000000003 180)
         (length 7.62)
         (name "PS_DDR_CK0"
           (effects
@@ -8742,7 +8852,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -57.15000000000003 180)
+        (at 36.83 -57.15000000000003 180)
         (length 7.62)
         (name "PS_DDR_CKE0"
           (effects
@@ -8753,7 +8863,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -59.690000000000026 180)
+        (at 36.83 -59.690000000000026 180)
         (length 7.62)
         (name "PS_DDR_CK_N0"
           (effects
@@ -8764,7 +8874,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -62.230000000000025 180)
+        (at 36.83 -62.230000000000025 180)
         (length 7.62)
         (name "PS_DDR_CS_N0"
           (effects
@@ -8775,7 +8885,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -64.77000000000002 180)
+        (at 36.83 -64.77000000000002 180)
         (length 7.62)
         (name "PS_DDR_ODT0"
           (effects
@@ -8786,7 +8896,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -69.85000000000004 180)
+        (at 36.83 -69.85000000000004 180)
         (length 7.62)
         (name "PS_DDR_BA1"
           (effects
@@ -8797,7 +8907,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -72.39000000000004 180)
+        (at 36.83 -72.39000000000004 180)
         (length 7.62)
         (name "PS_DDR_BG1"
           (effects
@@ -8808,7 +8918,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -74.93000000000005 180)
+        (at 36.83 -74.93000000000005 180)
         (length 7.62)
         (name "PS_DDR_CK1"
           (effects
@@ -8819,7 +8929,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -77.47000000000006 180)
+        (at 36.83 -77.47000000000006 180)
         (length 7.62)
         (name "PS_DDR_CKE1"
           (effects
@@ -8830,7 +8940,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -80.01000000000006 180)
+        (at 36.83 -80.01000000000006 180)
         (length 7.62)
         (name "PS_DDR_CK_N1"
           (effects
@@ -8841,7 +8951,7 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -82.55000000000007 180)
+        (at 36.83 -82.55000000000007 180)
         (length 7.62)
         (name "PS_DDR_CS_N1"
           (effects
@@ -8852,13 +8962,90 @@
             (font
               (size 1.27 1.27)))))
       (pin bidirectional line
-        (at 29.21 -85.09000000000007 180)
+        (at 36.83 -85.09000000000007 180)
         (length 7.62)
         (name "PS_DDR_ODT1"
           (effects
             (font
               (size 1.27 1.27))))
         (number "AJ26"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -7.62 116.84 270)
+        (length 7.62)
+        (name "VCCO_PSDDR_504"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AG27"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -5.08 116.84 270)
+        (length 7.62)
+        (name "VCCO_PSDDR_504"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AJ24"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at -2.54 116.84 270)
+        (length 7.62)
+        (name "VCCO_PSDDR_504"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AJ28"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 0.0 116.84 270)
+        (length 7.62)
+        (name "VCCO_PSDDR_504"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AL24"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 2.54 116.84 270)
+        (length 7.62)
+        (name "VCCO_PSDDR_504"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AL29"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 5.08 116.84 270)
+        (length 7.62)
+        (name "VCCO_PSDDR_504"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AN25"
+          (effects
+            (font
+              (size 1.27 1.27)))))
+      (pin bidirectional line
+        (at 7.62 116.84 270)
+        (length 7.62)
+        (name "VCCO_PSDDR_504"
+          (effects
+            (font
+              (size 1.27 1.27))))
+        (number "AN30"
           (effects
             (font
               (size 1.27 1.27))))))
@@ -8985,15 +9172,15 @@
     (symbol "XCZU9EG_24_1"
       (unit_name pwr0)
       (rectangle
-        (start -20.32 -102.87)
-        (end 20.32 102.87)
+        (start -20.32 -96.52)
+        (end 20.32 96.52)
         (stroke
           (width 0.254)
           (type solid))
         (fill
           (type background)))
       (pin power_in line
-        (at -27.94 100.33 0)
+        (at -27.94 93.98 0)
         (length 7.62)
         (name "VCCADC"
           (effects
@@ -9004,7 +9191,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 97.78999999999999 0)
+        (at -27.94 91.44 0)
         (length 7.62)
         (name "VCCAUX"
           (effects
@@ -9015,7 +9202,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 95.24999999999999 0)
+        (at -27.94 88.89999999999999 0)
         (length 7.62)
         (name "VCCAUX"
           (effects
@@ -9026,7 +9213,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 92.70999999999998 0)
+        (at -27.94 86.35999999999999 0)
         (length 7.62)
         (name "VCCAUX_IO"
           (effects
@@ -9037,7 +9224,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 90.16999999999997 0)
+        (at -27.94 83.81999999999998 0)
         (length 7.62)
         (name "VCCAUX_IO"
           (effects
@@ -9048,7 +9235,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 87.62999999999997 0)
+        (at -27.94 81.27999999999997 0)
         (length 7.62)
         (name "VCCAUX_IO"
           (effects
@@ -9059,7 +9246,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 85.08999999999996 0)
+        (at -27.94 78.73999999999997 0)
         (length 7.62)
         (name "VCCBRAM"
           (effects
@@ -9070,7 +9257,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 82.54999999999995 0)
+        (at -27.94 76.19999999999996 0)
         (length 7.62)
         (name "VCCBRAM"
           (effects
@@ -9081,7 +9268,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 80.00999999999995 0)
+        (at -27.94 73.65999999999995 0)
         (length 7.62)
         (name "VCCBRAM"
           (effects
@@ -9092,7 +9279,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 77.46999999999994 0)
+        (at -27.94 71.11999999999995 0)
         (length 7.62)
         (name "VCCBRAM"
           (effects
@@ -9103,7 +9290,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 74.92999999999994 0)
+        (at -27.94 68.57999999999994 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9114,7 +9301,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 72.38999999999993 0)
+        (at -27.94 66.03999999999994 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9125,7 +9312,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 69.84999999999992 0)
+        (at -27.94 63.499999999999936 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9136,7 +9323,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 67.30999999999992 0)
+        (at -27.94 60.95999999999994 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9147,7 +9334,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 64.76999999999991 0)
+        (at -27.94 58.41999999999994 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9158,7 +9345,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 62.22999999999991 0)
+        (at -27.94 55.87999999999994 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9169,7 +9356,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 59.68999999999991 0)
+        (at -27.94 53.33999999999994 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9180,7 +9367,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 57.14999999999991 0)
+        (at -27.94 50.79999999999994 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9191,7 +9378,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 54.609999999999914 0)
+        (at -27.94 48.25999999999994 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9202,7 +9389,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 52.069999999999915 0)
+        (at -27.94 45.71999999999994 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9213,7 +9400,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 49.529999999999916 0)
+        (at -27.94 43.17999999999994 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9224,7 +9411,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 46.98999999999992 0)
+        (at -27.94 40.639999999999944 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9235,7 +9422,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 44.44999999999992 0)
+        (at -27.94 38.099999999999945 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9246,7 +9433,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 41.90999999999992 0)
+        (at -27.94 35.559999999999945 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9257,7 +9444,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 39.36999999999992 0)
+        (at -27.94 33.019999999999946 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9268,7 +9455,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 36.82999999999992 0)
+        (at -27.94 30.479999999999947 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9279,7 +9466,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 34.28999999999992 0)
+        (at -27.94 27.939999999999948 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9290,7 +9477,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 31.749999999999922 0)
+        (at -27.94 25.39999999999995 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9301,7 +9488,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 29.209999999999923 0)
+        (at -27.94 22.85999999999995 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9312,7 +9499,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 26.669999999999924 0)
+        (at -27.94 20.31999999999995 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9323,7 +9510,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 24.129999999999924 0)
+        (at -27.94 17.77999999999995 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9334,7 +9521,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 21.589999999999925 0)
+        (at -27.94 15.239999999999952 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9345,7 +9532,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 19.049999999999926 0)
+        (at -27.94 12.699999999999953 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9356,7 +9543,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 16.509999999999927 0)
+        (at -27.94 10.159999999999954 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9367,7 +9554,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 13.969999999999928 0)
+        (at -27.94 7.619999999999954 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9378,7 +9565,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 11.429999999999929 0)
+        (at -27.94 5.079999999999954 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9389,7 +9576,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 8.88999999999993 0)
+        (at -27.94 2.539999999999954 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9400,7 +9587,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 6.3499999999999295 0)
+        (at -27.94 -4.618527782440651e-14 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9411,7 +9598,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 3.8099999999999294 0)
+        (at -27.94 -2.540000000000046 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9422,7 +9609,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 1.2699999999999294 0)
+        (at -27.94 -5.080000000000046 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9433,7 +9620,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -1.2700000000000706 0)
+        (at -27.94 -7.620000000000046 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9444,7 +9631,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -3.8100000000000707 0)
+        (at -27.94 -10.160000000000046 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9455,7 +9642,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -6.350000000000071 0)
+        (at -27.94 -12.700000000000045 0)
         (length 7.62)
         (name "VCCINT"
           (effects
@@ -9466,7 +9653,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -8.890000000000072 0)
+        (at -27.94 -15.240000000000045 0)
         (length 7.62)
         (name "VCCINT_IO"
           (effects
@@ -9477,7 +9664,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -11.43000000000007 0)
+        (at -27.94 -17.780000000000044 0)
         (length 7.62)
         (name "VCCINT_IO"
           (effects
@@ -9488,7 +9675,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -13.97000000000007 0)
+        (at -27.94 -20.320000000000043 0)
         (length 7.62)
         (name "VCCINT_IO"
           (effects
@@ -9499,7 +9686,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -16.51000000000007 0)
+        (at -27.94 -22.860000000000042 0)
         (length 7.62)
         (name "VCCINT_IO"
           (effects
@@ -9510,194 +9697,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -19.050000000000068 0)
-        (length 7.62)
-        (name "VCCO_PSDDR_504"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG27"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -21.590000000000067 0)
-        (length 7.62)
-        (name "VCCO_PSDDR_504"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AJ24"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -24.130000000000067 0)
-        (length 7.62)
-        (name "VCCO_PSDDR_504"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AJ28"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -26.670000000000066 0)
-        (length 7.62)
-        (name "VCCO_PSDDR_504"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AL24"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -29.210000000000065 0)
-        (length 7.62)
-        (name "VCCO_PSDDR_504"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AL29"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -31.750000000000064 0)
-        (length 7.62)
-        (name "VCCO_PSDDR_504"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AN25"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -34.29000000000006 0)
-        (length 7.62)
-        (name "VCCO_PSDDR_504"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AN30"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -36.83000000000006 0)
-        (length 7.62)
-        (name "VCCO_PSIO0_500"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AE16"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -39.37000000000006 0)
-        (length 7.62)
-        (name "VCCO_PSIO0_500"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AG17"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -41.91000000000006 0)
-        (length 7.62)
-        (name "VCCO_PSIO0_500"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "AK16"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -44.45000000000006 0)
-        (length 7.62)
-        (name "VCCO_PSIO1_501"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "L24"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -46.99000000000006 0)
-        (length 7.62)
-        (name "VCCO_PSIO1_501"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "M22"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -49.53000000000006 0)
-        (length 7.62)
-        (name "VCCO_PSIO2_502"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "D23"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -52.07000000000006 0)
-        (length 7.62)
-        (name "VCCO_PSIO2_502"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "F24"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -54.610000000000056 0)
-        (length 7.62)
-        (name "VCCO_PSIO2_502"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "G22"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -57.150000000000055 0)
-        (length 7.62)
-        (name "VCCO_PSIO3_503"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "T24"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -59.690000000000055 0)
-        (length 7.62)
-        (name "VCCO_PSIO3_503"
-          (effects
-            (font
-              (size 1.27 1.27))))
-        (number "U22"
-          (effects
-            (font
-              (size 1.27 1.27)))))
-      (pin power_in line
-        (at -27.94 -62.230000000000054 0)
+        (at -27.94 -25.40000000000004 0)
         (length 7.62)
         (name "VCC_PSADC"
           (effects
@@ -9708,7 +9708,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -64.77000000000005 0)
+        (at -27.94 -27.94000000000004 0)
         (length 7.62)
         (name "VCC_PSADC"
           (effects
@@ -9719,7 +9719,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -67.31000000000006 0)
+        (at -27.94 -30.48000000000004 0)
         (length 7.62)
         (name "VCC_PSAUX"
           (effects
@@ -9730,7 +9730,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -69.85000000000007 0)
+        (at -27.94 -33.02000000000004 0)
         (length 7.62)
         (name "VCC_PSAUX"
           (effects
@@ -9741,7 +9741,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -72.39000000000007 0)
+        (at -27.94 -35.56000000000004 0)
         (length 7.62)
         (name "VCC_PSAUX"
           (effects
@@ -9752,7 +9752,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -74.93000000000008 0)
+        (at -27.94 -38.10000000000004 0)
         (length 7.62)
         (name "VCC_PSAUX"
           (effects
@@ -9763,7 +9763,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -77.47000000000008 0)
+        (at -27.94 -40.640000000000036 0)
         (length 7.62)
         (name "VCC_PSBATT"
           (effects
@@ -9774,7 +9774,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -80.01000000000009 0)
+        (at -27.94 -43.180000000000035 0)
         (length 7.62)
         (name "VCC_PSDDR_PLL"
           (effects
@@ -9785,7 +9785,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -82.5500000000001 0)
+        (at -27.94 -45.720000000000034 0)
         (length 7.62)
         (name "VCC_PSDDR_PLL"
           (effects
@@ -9796,7 +9796,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -85.0900000000001 0)
+        (at -27.94 -48.26000000000003 0)
         (length 7.62)
         (name "VCC_PSINTFP"
           (effects
@@ -9807,7 +9807,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -87.63000000000011 0)
+        (at -27.94 -50.80000000000003 0)
         (length 7.62)
         (name "VCC_PSINTFP"
           (effects
@@ -9818,7 +9818,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -90.17000000000012 0)
+        (at -27.94 -53.34000000000003 0)
         (length 7.62)
         (name "VCC_PSINTFP"
           (effects
@@ -9829,7 +9829,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -92.71000000000012 0)
+        (at -27.94 -55.88000000000003 0)
         (length 7.62)
         (name "VCC_PSINTFP"
           (effects
@@ -9840,7 +9840,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -95.25000000000013 0)
+        (at -27.94 -58.42000000000003 0)
         (length 7.62)
         (name "VCC_PSINTFP"
           (effects
@@ -9851,7 +9851,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -97.79000000000013 0)
+        (at -27.94 -60.96000000000003 0)
         (length 7.62)
         (name "VCC_PSINTFP"
           (effects
@@ -9862,7 +9862,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at -27.94 -100.33000000000014 0)
+        (at -27.94 -63.50000000000003 0)
         (length 7.62)
         (name "VCC_PSINTFP"
           (effects
@@ -9873,7 +9873,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 27.94 100.33 180)
+        (at -27.94 -66.04000000000003 0)
         (length 7.62)
         (name "VCC_PSINTFP_DDR"
           (effects
@@ -9884,7 +9884,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 27.94 97.78999999999999 180)
+        (at -27.94 -68.58000000000004 0)
         (length 7.62)
         (name "VCC_PSINTFP_DDR"
           (effects
@@ -9895,7 +9895,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 27.94 95.24999999999999 180)
+        (at -27.94 -71.12000000000005 0)
         (length 7.62)
         (name "VCC_PSINTFP_DDR"
           (effects
@@ -9906,7 +9906,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 27.94 92.70999999999998 180)
+        (at -27.94 -73.66000000000005 0)
         (length 7.62)
         (name "VCC_PSINTLP"
           (effects
@@ -9917,7 +9917,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 27.94 90.16999999999997 180)
+        (at -27.94 -76.20000000000006 0)
         (length 7.62)
         (name "VCC_PSINTLP"
           (effects
@@ -9928,7 +9928,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 27.94 87.62999999999997 180)
+        (at -27.94 -78.74000000000007 0)
         (length 7.62)
         (name "VCC_PSINTLP"
           (effects
@@ -9939,7 +9939,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 27.94 85.08999999999996 180)
+        (at -27.94 -81.28000000000007 0)
         (length 7.62)
         (name "VCC_PSINTLP"
           (effects
@@ -9950,7 +9950,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 27.94 82.54999999999995 180)
+        (at -27.94 -83.82000000000008 0)
         (length 7.62)
         (name "VCC_PSINTLP"
           (effects
@@ -9961,7 +9961,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 27.94 80.00999999999995 180)
+        (at -27.94 -86.36000000000008 0)
         (length 7.62)
         (name "VCC_PSINTLP"
           (effects
@@ -9972,7 +9972,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 27.94 77.46999999999994 180)
+        (at -27.94 -88.90000000000009 0)
         (length 7.62)
         (name "VCC_PSPLL"
           (effects
@@ -9983,7 +9983,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 27.94 74.92999999999994 180)
+        (at -27.94 -91.4400000000001 0)
         (length 7.62)
         (name "VCC_PSPLL"
           (effects
@@ -9994,7 +9994,7 @@
             (font
               (size 1.27 1.27)))))
       (pin power_in line
-        (at 27.94 72.38999999999993 180)
+        (at -27.94 -93.9800000000001 0)
         (length 7.62)
         (name "VCC_PSPLL"
           (effects
